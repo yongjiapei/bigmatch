@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>评委信息</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap clearfix">
+			<div class="fl usl">
+				<div class="xi2r1 usl1 textcenter">
+					<div class="xi2r1top">
+						<i><img id="userAvatar" src=""></i>
+						<h3 class="mt_10" id="userName">加载中...</h3>
+						<p class="mt_10" id="userInfo">加载中...</p>
+					</div>
+					<div class="xi2r1bot mt_25">
+						<a href="fabu.html" class="active">发布项目</a>
+						<a href="pingwei_home.html">完善个人信息</a>
+					</div>
+				</div>
+				<div class="usl2 usl2_pw mt_15">
+					<a href="user.html" class="usnava usnava1">我的消息</a>
+					<a href="user_wdgz.html" class="usnava usnava2">我的关注</a>
+					<a href="user_wdxm.html" class="usnava usnava3">我的项目</a>
+					<a href="user_wdbm.html" class="usnava usnava4">我的报名</a>
+					<a href="pingwei_info2.html" class="usnava usnava3">我评审的项目</a>
+					<a href="user_wdsc.html" class="usnava usnava5">我的收藏</a>
+					<a href="user_wdpl.html" class="usnava usnava6">我的评论</a>
+					<a href="user_zhaq.html" class="usnava usnava7">账户安全</a>
+				</div>
+			</div>
+			<div class="fr usr">
+				<div class="usrtop disflex">
+					<div class="flex1 usrt_l">
+						<a href="javascript:">个人信息</a>
+					</div>
+				</div>
+				<div class="padding20 pb40">
+					<div class="pw_tip">
+						当前申请认证评委的审核状态为： <i class="colorred" id="status"></i>
+					</div>
+					<div class="grxx grxx_pw">
+						<div class="bmba disflex">
+							<span class="bmbal">用户头像：</span>
+							<div class="bmbar flex1 marl20">
+                                <input type="hidden" id="avatar"> <!-- 头像 -->
+								<div class="bmbar_file disflex">
+									<!--已上传状态-->
+									<div class="bmbar_filea bmbar_filea_img posrelative" style="margin-right: 10px">
+										<img id="imgfile_path" src=""/>
+									</div>
+									<div class="bmbar_filea posrelative" style="margin-right: 10px">
+										<input type="file" name="" id="imgfile" value="">
+										<i><img src="../images/add_03.png"><p>点击上传</p></i>
+									</div>
+									<div class="bmbar_file_txt bmbar_file_txt_user flex1">
+										<p>支持JPG、JPEG、PNG图片格式</br />建议尺寸：200 * 200像素</br />大小：不超过2M</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal">用户昵称：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="nickname" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>真实姓名：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="realname" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>身份证号：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="cardid" value="">
+								<p class="tips mt_10 color999">只用做平台信息认证，不对外泄露</p>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>出生年月：</span>
+							<div class="bmbar bmbar_ipt bmbar_ipt_time flex1 marl20">
+								<input placeholder="请选择" type="text" class="sang_Calender" id="birthday"  value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>性别：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="gender">
+									<option value="">请选择</option>
+                                    <option value="0">保密</option>
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+								</select>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>学历：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="education">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>单位名称：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="company" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>职位：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="position" value="">
+							</div>
+						</div>
+
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>联系地址：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20 disflex">
+								<div class="bmbar_ipt_three">
+									<select id="prov_name">
+										<option value="">请选择</option>
+										<option value="">北京市</option>
+										<option value="">上海市</option>
+									</select>
+								</div>
+								<div class="bmbar_ipt_three marl20">
+									<select id="city_name">
+										<option value="">请选择</option>
+										<option value="">北京市</option>
+										<option value="">上海市</option>
+									</select>
+								</div>
+								<div class="bmbar_ipt_three marl20">
+									<select id="addressid">
+										<option value="">请选择</option>
+										<option value="">北京市</option>
+										<option value="">上海市</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"></span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="address" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>联系电话：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入" name="" readonly id="phone" value="" />
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>电子邮箱：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入" name="" id="email" value="" />
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>评委类型：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="user_type">
+									<option value="">请选择</option>
+									<option value="1" selected>创业导师</option>
+									<option value="2">投资人</option>
+									<option value="3">专家学者</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="usertype3" class="userType" style="display: none">
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>研究领域：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="research"></textarea>
+								</div>
+							</div>
+						</div>
+						<div id="usertype1" class="userType" style="display: none">
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>主要从业经历：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="experience"></textarea>
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>主要业绩及案例：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="demo"></textarea>
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>获得社会荣誉：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="honor"></textarea>
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>个人简介：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="description"></textarea>
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>推荐机构：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<input type="text" placeholder="请输入" name="" id="recommend" value="" />
+								</div>
+							</div>
+						</div>
+						<div id="usertype2" class="userType" style="display: none">
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>身份类别</span>
+								<div class="bmbar bmbar_radio flex1 marl20" id="Ident"> </div>
+							</div>
+
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>投资阶段：</span>
+								<div class="bmbar bmbar_radio flex1 marl20" id="ProjectPhase"></div>
+							</div>
+
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>投资地区：</span>
+								<div class="bmbar bmbar_radio flex1 marl20" id="ProvList"></div>
+							</div>
+
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>投资关注领域：</span>
+								<div class="bmbar bmbar_radio flex1 marl20" id="industry">
+								</div>
+							</div>
+
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>投资额度：</span>
+								<div class="bmbar bmbar_radio flex1 marl20" id="Investment"></div>
+							</div>
+
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>币种类型：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<select id="AmountType" class="currency_type">
+										<option value="">请选择</option>
+									</select>
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>提供的资源：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<input type="text" placeholder="请输入" name="" id="resources" value="" />
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>所在企业名称：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<input type="text" placeholder="请输入" name="" id="business_name" value="" />
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>企业地址：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<input type="text" placeholder="请输入" name="" id="business_address" value="" />
+								</div>
+							</div>
+							<div class="bmba disflex">
+								<span class="bmbal"><i class="colorred">*</i>企业介绍：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea placeholder="请输入" name="" rows="" cols="" id="business_content"></textarea>
+								</div>
+							</div>
+
+							<div class="bmba bmba_user_i bmba_sbm_mg0 disflex" id="invest_case">
+								<span class="bmbal"></span>
+								<div class="flex1 marl20">
+									<div class="bmba_sbm bmba_sbmcp">
+										<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="addCase()"  value="添加案例">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="bmba bmba_sbm_mg0 disflex">
+							<span class="bmbal"></span>
+							<div class="flex1 marl20">
+								<div class="bmba_sbm">
+									<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData()" value="申请认证" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../js/datetime.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+<script>
+    /*获取地区*/
+    getArea()
+    /*获取学历*/
+    getEducation()
+    /*获取项目阶段*/
+    getProjectPhaseChecked()
+    /*获取地区数据*/
+    getProvListChecked()
+    /*获取行业领域*/
+    getIndustryChecked()
+    /*身份类别*/
+    getIdent()
+    /*投资额度*/
+    getInvestmentChecked()
+    /*投资币种*/
+    getAmountType()
+
+	/*选择用户类型*/
+	$('#user_type').change(function () {
+	    $('.userType').hide();
+		switch ($(this).val()) {
+			case "1":
+			    $('#usertype1').show()
+			    break;
+            case "2":
+                $('#usertype2').show()
+                break;
+            case "3":
+                $('#usertype1').show()
+                $('#usertype3').show()
+                break;
+        }
+    })
+
+    /*获取评委信息*/
+    url_get('/judges/getJudDetail',{
+        token:getCookie('token')
+    },function (res) { //初始化数据
+        $("#imgfile_path").attr("src", imgpath+res.data['avatar']);
+        $('#avatar').val(res.data['avatar']); //头像
+        $('#nickname').val(res.data['nickname']); //昵称
+        $('#realname').val(res.data['realname']); //真实姓名
+        $('#cardid').val(res.data['cardid']); //身份证号
+
+        $('#birthday').val(getTime(res.data['birthday'])); //出生年月
+        $('#gender option').each(function () { //性别
+            $(this).prop('selected',false)
+            if($(this).attr('value') == res.data['gender'] ){
+                $(this).prop('selected',true)
+            }
+        });
+        $('#phone').val(res.data['phone']); //手机号
+        $('#email').val(res.data['email']); //电子邮箱
+
+        /*学历加载完成之后 设置默认值*/
+        var haveeducation = setInterval(function () {
+            if($('#education option').length > 1){
+                $('#education option').each(function () { //学历
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == res.data['education'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveeducation);
+            }
+        },500)
+
+        $('#company').val(res.data['company']); //单位名称
+        $('#position').val(res.data['position']); //职位
+        $('#phone').val(res.data['phone']); //联系电话
+        $('#address').val(res.data['address']); //详细地址
+        $('#email').val(res.data['email']); //电子邮箱
+        $('#status').html(getStatusType(res.data['status'])); //审核状态
+        //设置地区默认值
+        setArea(res.data['addressid']);
+
+        $('#user_type option').each(function () { //评委类型
+            $(this).prop('selected',false)
+            if($(this).attr('value') == res.data['user_type'] ){
+                $(this).prop('selected',true)
+                $('#user_type').change();
+            }
+        });
+
+        /*创业导师 和 专家学者 共用字段 */
+        if(res.data['user_type'] == 1 || res.data['user_type'] == 3  ){
+            $('#experience').val(res.data['experience']); //主要从业经历
+            $('#demo').val(res.data['demo']); //主要业绩及案例
+            $('#honor').val(res.data['honor']); //获得社会荣誉
+            $('#honor').val(res.data['honor']); //获得社会荣誉
+            $('#description').val(res.data['description']); //个人简介
+            $('#recommend').val(res.data['recommend']); //推荐机构
+        }
+        /*专家学者 */
+        if(res.data['user_type'] == 3 ){
+            $('#research').val(res.data['research']); //研究领域
+        }
+        /* 投资人 */
+        if(res.data['user_type'] == 2){
+            //身份类别
+            var haveIdent = setInterval(function () {
+                if($('#Ident input').length > 1){
+                    $('#Ident input').each(function () {
+                        var that = this;
+                        $(that).prop('checked',false)
+                        for(var i in res.data['ide_category']){
+                            if($(that).attr('value') == res.data['ide_category'][i] ){
+                                $(that).prop('checked',true)
+                            }
+                        }
+                    });
+                    clearInterval(haveIdent);
+                }
+            },500)
+            //投资阶段
+            var haveProjectPhase = setInterval(function () {
+                if($('#ProjectPhase input').length > 1){
+                    $('#ProjectPhase input').each(function () {
+                        var that = this;
+                        $(that).prop('checked',false)
+                        for(var i in res.data['invest_stage']){
+                            if($(that).attr('value') == res.data['invest_stage'][i] ){
+                                $(that).prop('checked',true)
+                            }
+                        }
+                    });
+                    clearInterval(haveProjectPhase);
+                }
+            },500)
+            //投资地区
+            var haveProvList = setInterval(function () {
+                if($('#ProvList input').length > 1){
+                    $('#ProvList input').each(function () {
+                        var that = this;
+                        $(that).prop('checked',false)
+                        for(var i in res.data['invest_address']){
+                            if($(that).attr('value') == res.data['invest_address'][i] ){
+                                $(that).prop('checked',true)
+                            }
+                        }
+                    });
+                    clearInterval(haveProvList);
+                }
+            },500)
+            //投资关注领域
+            var haveindustry = setInterval(function () {
+                if($('#industry input').length > 1){
+                    $('#industry input').each(function () {
+                        var that = this;
+                        $(that).prop('checked',false)
+                        for(var i in res.data['invest_field']){
+                            if($(that).attr('value') == res.data['invest_field'][i] ){
+                                $(that).prop('checked',true)
+                            }
+                        }
+                    });
+                    clearInterval(haveindustry);
+                }
+            },500)
+            //投资关注领域
+            var haveInvestment = setInterval(function () {
+                if($('#Investment input').length > 1){
+                    $('#Investment input').each(function () {
+                        var that = this;
+                        $(that).prop('checked',false)
+                        for(var i in res.data['invest_quota']){
+                            if($(that).attr('value') == res.data['invest_quota'][i] ){
+                                $(that).prop('checked',true)
+                            }
+                        }
+                    });
+                    clearInterval(haveInvestment);
+                }
+            },500)
+            //币种类型
+            var haveAmountType = setInterval(function () {
+                if($('#AmountType option').length > 1){
+                    $('#AmountType option').each(function () {
+                        $(this).prop('selected',false)
+                        if($(this).attr('value') == res.data['currency_type'] ){
+                            $(this).prop('selected',true)
+                        }
+                    });
+                    clearInterval(haveAmountType);
+                }
+            },500)
+
+            $('#resources').val(res.data['resources']); //提供的资源
+            $('#business_name').val(res.data['business_name']); //所在企业名称
+            $('#business_address').val(res.data['business_address']); //企业地址
+            $('#business_content').val(res.data['business_content']); //企业介绍
+
+            /*投资案例*/
+            var list =  res.data['invest_case'];
+            for (var i in list) {
+                $('#invest_case').before('<div class="invest_case">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                    '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>项目名称：</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="name" value="'+list[i]['name']+'" />\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                    '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>项目地址：</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="address" value="'+list[i]['address']+'" />\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                    '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>投资时间：</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<input type="date" placeholder="请输入" name="" class="invest_time" value="'+list[i]['invest_time']+'" />\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                    '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>投资金额：</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="invest_amount" value="'+list[i]['invest_amount']+'" />\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t</div>')
+            }
+
+        }
+
+    })
+    /*添加案例*/
+    function addCase() {
+        $('#invest_case').before('<div class="invest_case">\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>项目名称：</span>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="name" value="" />\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>项目地址：</span>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="address" value="" />\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>投资时间：</span>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="date" placeholder="请输入" name="" class="invest_time" value="" />\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>投资金额：</span>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入" name="" class="invest_amount" value="" />\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t</div>')
+    }
+
+/*审核状态 */
+    function getStatusType(v) {
+        switch (v) {
+            case 1:
+                return '未提交';
+                break;
+            case 2:
+                return '待审核';
+                break;
+            case 4:
+                return '认证成功';
+                break;
+            case 3:
+                return '被拒绝';
+                break;
+            default:
+                return '';
+                break;
+        }
+    }
+    
+    
+    function saveData() {
+        var data = {'token':getCookie('token')};
+        var nickname = $('#nickname').val(); //昵称
+        if(nickname == ''){layer.msg('请填写昵称',{icon:2,time:2000}); return }else{ data['nickname'] = nickname;}
+        var realname = $('#realname').val(); //真实姓名
+        if(realname == ''){layer.msg('请填写真实姓名',{icon:2,time:2000}); return }else{ data['realname'] = realname;}
+        var avatar = $('#avatar').val(); //头像
+        if(avatar == ''){ layer.msg('请上传头像',{icon:2,time:2000});return }else{ data['avatar'] = avatar;}
+        var cardid = $('#cardid').val(); //身份证号
+        if(cardid == '' || !isCardNo(cardid)){layer.msg('请填写正确的身份证号',{icon:2,time:2000}); return }else{ data['cardid'] = cardid;}
+        var birthday = $('#birthday').val(); //出生年月
+        if(birthday == ''){layer.msg('请填写出生年月',{icon:2,time:2000}); return }else{ data['birthday'] = birthday;}
+        var gender = $('#gender').val(); //性别
+        if(gender == ''){layer.msg('请选择性别',{icon:2,time:2000}); return }else{ data['gender'] = gender;}
+        var education = $('#education').val(); //学历
+        if(education == ''){layer.msg('请选择学历',{icon:2,time:2000}); return }else{ data['education'] = education;}
+        var company = $('#company').val(); //单位名称
+        if(company == ''){layer.msg('请填写单位名称',{icon:2,time:2000}); return }else{ data['company'] = company;}
+        var position= $('#position').val(); //职位
+        if(position == ''){layer.msg('请填写职位',{icon:2,time:2000}); return }else{ data['position'] = position;}
+        var addressid = $('#addressid').val(); //联系地址
+        if(addressid == ''){layer.msg('请选择联系地址',{icon:2,time:2000}); return }else{ data['addressid'] = addressid;}
+        var address = $('#address').val(); //联系地址
+        if(address == ''){layer.msg('请填写详细地址',{icon:2,time:2000}); return }else{ data['address'] = address;}
+        var phone = $('#phone').val(); //联系电话
+        if(phone == '' || !isPhoneNo(phone)){layer.msg('请填写正确的联系电话',{icon:2,time:2000}); return }else{ data['phone'] = phone;}
+        var email = $('#email').val(); //电子邮箱
+        if(email == ''){layer.msg('请填写电子邮箱',{icon:2,time:2000}); return }else{ data['email'] = email;}
+        var user_type = $('#user_type').val(); //评委类型
+        if(user_type == ''){layer.msg('请选择评委类型',{icon:2,time:2000}); return }else{ data['user_type'] = user_type;}
+
+        if(user_type == 1){ //创业导师 和 专家学者 公共
+            var experience = $('#experience').val(); //主要从业经历
+            if(experience == ''){layer.msg('请填写主要从业经历',{icon:2,time:2000}); return }else{ data['experience'] = experience;}
+            var demo = $('#demo').val(); //主要业绩及案例
+            if(demo == ''){layer.msg('请填写主要业绩及案例',{icon:2,time:2000}); return }else{ data['demo'] = demo;}
+            var honor = $('#honor').val(); //获得社会荣誉
+            if(honor == ''){layer.msg('请填写获得社会荣誉',{icon:2,time:2000}); return }else{ data['honor'] = honor;}
+            var description = $('#description').val(); //个人简介
+            if(description == ''){layer.msg('请填写个人简介',{icon:2,time:2000}); return }else{ data['description'] = description;}
+            var recommend = $('#recommend').val(); //推荐机构
+            if(recommend == ''){layer.msg('请填写推荐机构',{icon:2,time:2000}); return }else{ data['recommend'] = recommend;}
+        }
+        if(user_type ==3){ // 专家学者
+            var experience = $('#experience').val(); //主要从业经历
+            if(experience == ''){layer.msg('请填写主要从业经历',{icon:2,time:2000}); return }else{ data['experience_shcolar'] = experience;}
+            var demo = $('#demo').val(); //主要业绩及案例
+            if(demo == ''){layer.msg('请填写主要业绩及案例',{icon:2,time:2000}); return }else{ data['demo_shcolar'] = demo;}
+            var honor = $('#honor').val(); //获得社会荣誉
+            if(honor == ''){layer.msg('请填写获得社会荣誉',{icon:2,time:2000}); return }else{ data['honor_shcolar'] = honor;}
+            var description = $('#description').val(); //个人简介
+            if(description == ''){layer.msg('请填写个人简介',{icon:2,time:2000}); return }else{ data['description_shcolar'] = description;}
+            var recommend = $('#recommend').val(); //推荐机构
+            if(recommend == ''){layer.msg('请填写推荐机构',{icon:2,time:2000}); return }else{ data['recommend_shcolar'] = recommend;}
+            var research = $('#research').val(); //研究领域
+            if(research == ''){layer.msg('请填写研究领域',{icon:2,time:2000}); return }else{ data['research'] = research;}
+        }
+        if(user_type ==2) { // 投资人
+            var ide_category = '';//身份类别
+            $('#Ident input:checked').each(function () {  ide_category += $(this).val() + ',';  })
+            if (ide_category == '') {layer.msg('请选择身份类别',{icon:2,time:2000});  return } else { data['ide_category'] = ide_category.slice(0, -1); }
+            var invest_stage = '';//投资阶段
+            $('#ProjectPhase input:checked').each(function () {  invest_stage += $(this).val() + ',';  })
+            if (invest_stage == '') {layer.msg('请选择投资阶段',{icon:2,time:2000});   return } else { data['invest_stage'] = invest_stage.slice(0, -1); }
+            var invest_address = '';//投资地区
+            $('#ProvList input:checked').each(function () {  invest_address += $(this).val() + ',';  })
+            if (invest_address == '') {layer.msg('请选择投资地区',{icon:2,time:2000});   return } else { data['invest_address'] = invest_address.slice(0, -1); }
+            var invest_field = '';//投资关注领域
+            $('#industry input:checked').each(function () {  invest_field += $(this).val() + ',';  })
+            if (invest_field == '') {layer.msg('请选择投资关注领域',{icon:2,time:2000});  return } else { data['invest_field'] = invest_field.slice(0, -1); }
+            var invest_quota = '';//投资额度
+            $('#Investment input:checked').each(function () {  invest_quota += $(this).val() + ',';  })
+            if (invest_quota == '') {layer.msg('请选择投资额度',{icon:2,time:2000});   return } else { data['invest_quota'] = invest_quota.slice(0, -1); }
+
+            var currency_type = $('#AmountType').val(); //币种类型
+            if(currency_type == ''){layer.msg('请选择币种类型',{icon:2,time:2000}); return }else{ data['currency_type'] = currency_type;}
+            var resources = $('#resources').val(); //提供的资源
+            if(resources == ''){layer.msg('请填写提供的资源',{icon:2,time:2000}); return }else{ data['resources'] = resources;}
+            var business_name = $('#business_name').val(); //所在企业名称
+            if(business_name == ''){layer.msg('请填写所在企业名称',{icon:2,time:2000}); return }else{ data['business_name'] = business_name;}
+            var business_address = $('#business_address').val(); //企业地址
+            if(business_address == ''){layer.msg('请填写企业地址',{icon:2,time:2000}); return }else{ data['business_address'] = business_address;}
+            var business_content = $('#business_content').val(); //企业介绍
+            if(business_content == ''){layer.msg('请填写企业介绍',{icon:2,time:2000}); return }else{ data['business_content'] = business_content;}
+
+            $('.invest_case').each(function (i) {
+                data['invest_case['+i+'][name]'] = $(this).find('.name').val();
+                data['invest_case['+i+'][address]'] = $(this).find('.address').val();
+                data['invest_case['+i+'][invest_time]'] = $(this).find('.invest_time').val();
+                data['invest_case['+i+'][invest_amount]'] = $(this).find('.invest_amount').val();
+            })
+        }
+
+		url_post('/judges/setJudComment',data,function (res) {
+            layer.msg(res['msg'],{icon:2,time:2000});
+        })
+
+    }
+
+</script>

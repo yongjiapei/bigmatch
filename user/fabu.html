@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>发布项目</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap bgwhite bordetrbl">
+			<div class="usrtop usrtopcp disflex">
+				<div class="flex1 usrt_l">
+					<a href="fabu.html" class="active">项目信息</a>
+					<a href="fabu2.html">企业团队信息</a>
+					<a href="fabu3.html">附件信息</a>
+				</div>
+			</div>
+			<div class="fb_pd">
+				<div class="bmb bmbcp">
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目名称</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<input type="text" placeholder="请输入" name="" id="name" value="" />
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>行业领域</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<select id="industry">
+								<option value="">请选择</option>
+							</select>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>所在地区</span>
+						<div class="bmbar bmbar_ipt flex1 marl20 disflex">
+							<div class="bmbar_ipt_three">
+								<select id="prov_name">
+									<option value="">请选择</option>
+								</select>
+							</div>
+							<div class="bmbar_ipt_three marl20">
+								<select id="city_name">
+									<option value="">请选择</option>
+								</select>
+							</div>
+							<div class="bmbar_ipt_three marl20">
+								<select id="addressid">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="bmba bmba_yyzz disflex">
+						<span class="bmbal"><i class="colorred">*</i>封面主图</span>
+						<div class="bmbar flex1 marl20">
+							<input type="hidden" id="avatar"> <!-- 头像 -->
+							<div class="bmbar_file disflex">
+								<!--已上传状态-->
+								<div class="bmbar_filea bmbar_filea_img posrelative" style="display: none;">
+									<img id="imgfile_path" src=""/> <!-- ../images/m1pic2_03.jpg -->
+								</div>
+								<div class="bmbar_filea posrelative">
+									<input type="file" name="" id="imgfile" value="" />
+									<i><img src="../images/add_03.png"/><p>点击上传</p></i>
+								</div>
+								<div class="bmbar_file_txt marl20">
+									<h3>温馨提示：</h3>
+									<p>1、建议上传图片尺寸宽度不超过1000像素；</p>
+									<p>2、支持格式jpg、png、jpge,大小不超过2M;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目阶段</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<select id="ProjectPhase">
+								<option value="">请选择</option>
+							</select>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目简介</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="description"></textarea>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目优势</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="advantage"></textarea>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>市场前景</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="future"></textarea>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目进展</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="debrief"></textarea>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>团队素质</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="quality"></textarea>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>社会效益</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="主要描述项目定位、产品功能、目标用户、商业模式等的准确性、可行性、创新性（限2000字）" id="results"></textarea>
+						</div>
+					</div>
+					<div class="bmba bmba_user_i bmba_sbm_mg0 disflex">
+						<span class="bmbal"></span>
+						<div class="flex1 marl20">
+							<div class="bmba_sbm bmba_sbmcp">
+								<input class="bmba_sbma" type="submit" onclick="saveData('save')"  value="暂存">
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData('next')" value="下一步">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+</html>
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    /*地区设置*/
+    getArea();
+    /*行业领域*/
+    getIndustry();
+    /*获取项目阶段*/
+    getProjectPhase();
+
+    // if(getCookie('pro')){
+    if(localStorage.getItem('pro')){
+        defValue()
+	}
+
+	var proId = getParams('id');
+    if(proId){
+        url_get('/myproject/getMyProjectDetail',{id:proId},function (res) {
+            /*将数据存到cookie 中*/
+            setCookie('pro',JSON.stringify(res.data))
+            defValue()
+        })
+	}
+
+	/*默认值*/
+	function defValue() {
+        // var data = JSON.parse(getCookie('pro'));
+        var data = JSON.parse(localStorage.getItem('pro'));
+        $('#name').val(data['name']);
+        $('#avatar').val(data['thumb']);
+        if(data['thumb']){
+            $("#imgfile_path").parent().show();
+            $('#imgfile_path').attr('src',imgpath+data['thumb']);
+		}
+
+
+        var haveindustry = setInterval(function () {
+            if($('#industry option').length > 1){
+                $('#industry option').each(function () { //学历
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == data['industry'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveindustry);
+            }
+        },500)
+
+        var haveProjectPhase = setInterval(function () {
+            if($('#ProjectPhase option').length > 1){
+                $('#ProjectPhase option').each(function () { //学历
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == data['phase'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveProjectPhase);
+            }
+        },500)
+
+        setArea(data['addressid']);
+        // setArea('310101');
+        $('#description').val(data['description']);
+        $('#advantage').val(data['advantage']);
+        $('#future').val(data['future']);
+        $('#debrief').val(data['debrief']);
+        $('#quality').val(data['quality']);
+        $('#results').val(data['results']);
+    }
+
+    function saveData(type) {
+		var data = {
+		    'token':getCookie('token'),
+			'submit':1,
+			'project_id':getCookie('project_id')?getCookie('project_id'):0,
+            subject:'',//企业主体: 1:企业 2:团队
+			sub_name:'',//	string 	*共用 名称
+			register_time:'',//string 	*共用 注册时间
+			logo:'',//string 	*共用 企业logo
+			is_show:'',//	int 	*共用 是否公开企业信息
+			sub_description:'',//string 	*共用 公司/团队简介
+			cardid:'',//	string 	统一社会信用代码
+			legal_name:'',//string 	法定代表人
+			address:'',//string 	注册地址
+			web_url :'',//	string 	官网地址
+			license:'',//	string 	营业执照
+			business_type:'',// 	int 	公司规模:subject = 1
+			finan :'',//	int 	融资需求
+			team_type:'',// 	int 	团队规模:subject = 2
+			people:'',//	array 	*共用 成员:二维数组
+			plan :'',//	json 	项目计划书:[{‘name’:’a’，path:’apath’},{‘name’:’b’，path:’bpath’}]
+			ppt :'',//	json 	路演ppt:[{‘name’:’a’，path:’apath’},{‘name’:’b’，path:’bpath’}]
+			video:'',//json 	宣传视频 :[{‘name’:’a’，path:’apath’},{‘name’:’b’，path:’bpath’}]
+			other:'',//	json 	其它附件 :[{‘name’:’a’，path:’apath’},{‘name’:’b’，path:’bpath’}]
+			is_show_file :'',// 	int 	附件是否展示
+		};
+
+        var name = $('#name').val(); //项目名称
+        if(name == ''){ layer.msg('请填写项目名称',{icon:2,time:2000}); return }else{ data['name'] = name;}
+        var thumb = $('#avatar').val(); //封面主图
+        if(thumb == ''){ layer.msg('请上传封面主图',{icon:2,time:2000}); return }else{ data['thumb'] = thumb;}
+        var industry = $('#industry').val(); //行业领域
+        if(industry == ''){ layer.msg('请选择行业领域',{icon:2,time:2000}); return }else{ data['industry'] = industry;}
+        var addressid = $('#addressid').val(); //所在地区
+        if(addressid == ''){ layer.msg('请选择所在地区',{icon:2,time:2000}); return }else{ data['addressid'] = addressid;}
+        var phase = $('#ProjectPhase').val(); //项目阶段
+        if(phase == ''){ layer.msg('请填写项目阶段',{icon:2,time:2000}); return }else{ data['phase'] = phase;}
+        var description = $('#description').val(); //项目简介
+        if(description == ''){ layer.msg('请填写项目简介',{icon:2,time:2000});return }else{ data['description'] = description;}
+        var advantage = $('#advantage').val(); //项目优势
+        if(advantage == ''){ layer.msg('请填写项目优势',{icon:2,time:2000}); return }else{ data['advantage'] = advantage;}
+        var future = $('#future').val(); //市场前景
+        if(future == ''){ layer.msg('请填写市场前景',{icon:2,time:2000}); return }else{ data['future'] = future;}
+        var debrief = $('#debrief').val(); //项目进展
+        if(debrief == ''){ layer.msg('请填写项目进展',{icon:2,time:2000}); return }else{ data['debrief'] = debrief;}
+        var quality = $('#quality').val(); //团队素质
+        if(quality == ''){ layer.msg('请填写团队素质',{icon:2,time:2000}); return }else{ data['quality'] = quality;}
+        var results = $('#results').val(); //社会效益
+        if(results == ''){ layer.msg('请填写社会效益',{icon:2,time:2000}); return }else{ data['results'] = results;}
+
+        /*将数据存到cookie 中*/
+		console.log(JSON.stringify(data))
+        // setCookie('pro',JSON.stringify(data))
+        localStorage.setItem('pro',JSON.stringify(data))
+
+		if(type == 'next'){
+		    url_post('/myproject/pushProjectComment',data,function (res) {
+		        setCookie('project_id',res.data['project_id'])
+				location.href = 'fabu2.html';
+            })
+		}else{
+		     layer.msg('保存成功!',{  icon:1,time:2000 });
+		}
+
+    }
+    
+    
+</script>

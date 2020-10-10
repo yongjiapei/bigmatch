@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>附件信息</title>
+	</head>
+	<body>
+
+	<div class="head">
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="us_pd bghui">
+		<div class="wrap bgwhite bordetrbl">
+			<div class="usrtop usrtopcp disflex">
+				<div class="flex1 usrt_l">
+					<a href="fabu.html">项目信息</a>
+					<a href="fabu2.html">企业团队信息</a>
+					<a href="fabu3.html" class="active">附件信息</a>
+				</div>
+			</div>
+			<div class="fb_pd fb_pd_3">
+				<div class="bmb bmbcp">
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目计划书</span>
+						<div class="bmbar flex1 marl20" id="file_plan">
+							<div class="disflex flex_center bmbafile2">
+								<div class="bmbafile2a posrelative">
+									<input type="hidden" autocomplete="off" id="val_plan">
+									<input type="file" name="" id="plan" value="" accept=".JPG,.JPEG,.BMP,.PNG,.PDF,.ZIP,.PPT,.PPTX,.DOC,.DOCX,.RAR">
+									<p>+ 项目计划书</p>
+								</div>
+								<div class="bmbafile2_txt flex1">
+									文件要求为JPG,JPEG,BMP,PNG,PDF,ZIP,PPT,PPTX,DOC/DOCX,RAR格式,最多不能超过4个文件,大小不超过50M
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal">路演PPT</span>
+						<div class="bmbar flex1 marl20" id="file_ppt">
+							<div class="disflex flex_center bmbafile2">
+								<div class="bmbafile2a posrelative">
+									<input type="hidden" autocomplete="off" id="val_ppt">
+									<input type="file" name="" id="ppt" value="" accept=".PPT,.PPTX,.PDF,.ZIP,.RAR">
+									<p>+ 路演PPT</p>
+								</div>
+								<div class="bmbafile2_txt flex1">
+									文件要求为PPT,PPTX,PDF,ZIP,RAR格式,最多不能超过4个文件,大小不超过50M
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal">宣传视频</span>
+						<div class="bmbar flex1 marl20" id="file_video">
+							<div class="disflex flex_center bmbafile2">
+								<div class="bmbafile2a posrelative">
+									<input type="hidden" autocomplete="off" id="val_video">
+									<input type="file" name="" id="video" value="" accept=".3GP,.MP4,.RMVB,.AV">
+									<p>+ 宣传视频</p>
+								</div>
+								<div class="bmbafile2_txt flex1">
+									文件要求为3GP、MP4、RMVB、AVI格式,最多不能超过4个文件,大小不超过100M
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal">其他附件</span>
+						<div class="bmbar flex1 marl20" id="file_other">
+							<div class="disflex flex_center bmbafile2">
+								<div class="bmbafile2a posrelative">
+									<input type="hidden" autocomplete="off" id="val_other">
+									<input type="file" name="" id="other" value="" accept=".JPG,.JPEG,.BMP,.PNG,.PDF,.DOC,.DOCX,.PPT,.PPTX,.ZIP,.RAR">
+									<p>+ 其他附件</p>
+								</div>
+								<div class="bmbafile2_txt flex1">
+									文件要求为JPG、JPEG、BMP、PNG、PDF、DOC/DOCX、PPT、PPTX,ZIP,RAR格式,最多不能超过4个文件,大小不超过50M，其他附件可以是专利、著作权、荣誉资质等
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>是否公开附件信息</span>
+						<div class="bmbar bmbar_radio flex1 marl20" id="is_show_file">
+							<label><input type="radio" name="isshow"  value="1" checked />保密(附件信息隐藏)</label>
+							<label><input type="radio" name="isshow" value="2" />公开</label>
+						</div>
+					</div>
+					<div class="bmba bmba_user_i bmba_sbm_mg0 disflex">
+						<span class="bmbal"></span>
+						<div class="flex1 marl20">
+							<div class="bmba_sbm bmba_sbmcp">
+								<a href="fabu2.html"><input class="bmba_sbma" type="submit"value="返回上一步"></a>
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData('fabu')" value="提交发布">
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData('save')" value="保存">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+
+
+	</body>
+</html>
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    uploadFile('plan');
+    uploadFile('ppt');
+    uploadFile('video');
+    uploadFile('other');
+
+    // if(getCookie('pro')){
+    if(localStorage.getItem('pro')){
+        // var data = JSON.parse(getCookie('pro'));
+        var data = JSON.parse(localStorage.getItem('pro'));
+        $('#is_show_file option').each(function () { //是否公开主体信息
+            $(this).prop('checked',false)
+            if($(this).attr('value') == data['is_show_file'] ){
+                $(this).prop('checked',true)
+            }
+        });
+
+        var list = data['plan'];
+
+        for (var i in list) {
+            if(list[i]['name'] == '')continue
+			var str = $('#val_plan').val();
+            str += list[i]['name']+';'+list[i]['path']+'^'
+            $('#val_plan').val(str);
+            $('#file_plan').append('<div class="bmbafile_a mt_25 disflex flex_center">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_l disflex flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t<i><img src="../images/xmjhs_03.png"/></i>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbafile_a_l_txt flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>'+list[i]['name']+'</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<span></span>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>')
+        }
+        list = data['ppt'];
+        for (var i in list) {
+            if(list[i]['name'] == '')continue
+            var str = $('#val_ppt').val();
+            str += list[i]['name']+';'+list[i]['path']+'^'
+            $('#val_ppt').val(str);
+            $('#file_ppt').append('<div class="bmbafile_a mt_25 disflex flex_center">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_l disflex flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t<i><img src="../images/xmjhs_03.png"/></i>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbafile_a_l_txt flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>'+list[i]['name']+'</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<span></span>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>')
+        }
+        list = data['video'];
+        for (var i in list) {
+            if(list[i]['name'] == '')continue
+            var str = $('#val_video').val();
+            str += list[i]['name']+';'+list[i]['path']+'^'
+            $('#val_video').val(str);
+            $('#file_video').append('<div class="bmbafile_a mt_25 disflex flex_center">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_l disflex flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t<i><img src="../images/xmjhs_03.png"/></i>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbafile_a_l_txt flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>'+list[i]['name']+'</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<span></span>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>')
+        }
+
+        list = data['other'];
+        for (var i in list) {
+            if(list[i]['name'] == '')continue
+            var str = $('#val_other').val();
+            str += list[i]['name']+';'+list[i]['path']+'^'
+            $('#val_other').val(str);
+            $('#file_other').append('<div class="bmbafile_a mt_25 disflex flex_center">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_l disflex flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t<i><img src="../images/xmjhs_03.png"/></i>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbafile_a_l_txt flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>'+list[i]['name']+'</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<span></span>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>')
+        }
+
+	}
+
+
+	/*附件上传*/
+    function uploadFile(id) {
+        /*头像上传*/
+        $("#"+id).change(function(e) {
+            /*回显*/
+            var file = e.target.files[0];
+            var name = file.name,
+                size = sizeTostr(file.size),
+				time = getNowTime();
+
+            /*回显附件信息*/
+            $("#file_"+id).append('\t\t\t\t\t\t\t<div class="bmbafile_a mt_25 disflex flex_center">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_l disflex flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t<i><img src="../images/xmjhs_03.png"/></i>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbafile_a_l_txt flex1">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>'+name+'</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<span>大小：'+size+'</span>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbafile_a_r disflex">\n' +
+                '\t\t\t\t\t\t\t\t\t<span>上传时间：'+time+'</span>\n' +
+                '\t\t\t\t\t\t\t\t\t<a onclick="delThis(this,\''+id+'\',\''+name+'\')" style="cursor: pointer">删除</a>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>');
+
+
+            /*上传*/
+            var formData = new FormData();
+            formData.append("imgfile",file);
+
+            $.ajax({
+                url:domain+'/upload/push',
+                dataType:'json',
+                type:'POST',
+                data: formData,
+                processData : false, // 使数据不做处理
+                contentType : false, // 不要设置Content-Type请求头
+                success: function(res){
+                    if($('#val_'+id).val() == ''){
+                        $('#val_'+id).val(name+';'+res.data['url']);
+					}else{
+                        $('#val_'+id).val($('#val_'+id).val()+"^"+name+';'+res.data['url']);
+					}
+                    console.log(res['msg']);
+                }
+            });
+        });
+    }
+
+    /*删除附件*/
+    function delThis(obj,id,name) {
+        var path =  $('#val_'+id).val(),
+			arr = path.split('^');
+        for(var i in arr){ //删除表单里面的数据
+            if(arr[i].indexOf(name) > -1){
+                arr.splice(i,1);
+			}
+		}
+        $('#val_'+id).val(arr.join('^'));
+
+		$(obj).parent().parent().remove();
+    }
+
+    /*保存发布*/
+	function saveData(type) {
+        var data = JSON.parse(localStorage.getItem('pro'));
+        data['submit'] = 3
+	    var plan_val = $('#val_plan').val(), //项目计划书
+            ppt_val = $('#val_ppt').val(), //路演PPT
+            video_val = $('#val_video').val(), //宣传视频
+            other_val = $('#val_other').val(); //其它附件
+
+	    if(plan_val == ''){ alert('请上传项目计划书');return }else{ data['plan'] = handleData(plan_val) }
+		data['ppt'] = handleData(ppt_val)
+	    data['video'] = handleData(video_val)
+	    data['other'] = handleData(other_val)
+        data['is_show_file'] = $('#is_show_file input:checked').val();
+//         localStorage.setItem('pro',JSON.stringify(data))
+// alert('看看数据')
+// return ;
+
+	    if(type == 'save'){ //保存
+            localStorage.removeItem('pro');
+            delCookie('project_id');
+            url_post('/myproject/pushProjectComment',data,function (res) {
+                location.href = '/user/user_wdxm.html?type=wfb';
+            })
+		}else{ //发布
+            data['submit'] = 4
+            localStorage.removeItem('pro');
+            delCookie('project_id');
+            url_post('/myproject/pushProjectComment',data,function (res) {
+                location.href = '/user/user_wdxm.html?type=fb';
+            })
+		}
+
+    }
+
+    function handleData(data) {
+		var arr = data.split('^');
+		var brr = [];
+		var temp = [];
+		for(var i in arr){
+            temp = arr[i].split(';');
+		    brr.push({
+				name:temp[0],
+                path:temp[1],
+			})
+		}
+		return brr;
+    }
+
+
+</script>

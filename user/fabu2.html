@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>企业团队信息</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap bgwhite bordetrbl">
+			<div class="usrtop usrtopcp disflex">
+				<div class="flex1 usrt_l">
+					<a href="fabu.html">项目信息</a>
+					<a href="fabu2.html" class="active">企业团队信息</a>
+					<a href="fabu3.html">附件信息</a>
+				</div>
+			</div>
+			<div class="fb_pd">
+				<div class="bmb bmbcp">
+
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i>项目主体</span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<select id="subject">
+								<option value="1">企业</option>
+								<option value="2">团队(未注册企业)</option>
+							</select>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i><i class="zhuti_name">公司名称</i></span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<input type="text" placeholder="企业" name="" id="sub_name" value="" />
+						</div>
+					</div>
+
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i><i class="zhuti_name">公司logo</i></span>
+						<div class="bmbar flex1 marl20">
+							<input type="hidden" id="avatar"> <!-- logo -->
+							<div class="bmbar_file disflex">
+								<!--已上传状态-->
+								<div class="bmbar_filea bmbar_filea_img posrelative" style="display: none">
+									<img id="imgfile_path" src=""/>
+								</div>
+								<div class="bmbar_filea posrelative">
+									<input type="file" id="imgfile" value="" />
+									<i><img src="../images/add_03.png"/><p>点击上传</p></i>
+								</div>
+								<div class="bmbar_file_txt marl20">
+									<h3>温馨提示：</h3>
+									<p>1、建议上传图片尺寸为 200* 200像素或等比例图片;</p>
+									<p>2、支持格式jpg、png、jpge,大小不超过2M;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="qiye">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>统一社会信用代码</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入" id="cardid" value="" />
+							</div>
+						</div>
+					</div>
+					<div class="qiye">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>法定代表人</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入"  id="legal_name" value="" />
+							</div>
+						</div>
+					</div>
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i><i class="zhuti_name">注册时间</i></span>
+						<div class="bmbar bmbar_ipt bmbar_ipt_time flex1 marl20">
+							<input class="sang_Calender" type="text" placeholder="请选择" name="" id="register_time" value="" />
+						</div>
+					</div>
+
+					<div class="qiye">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>注册地址</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入" id="address" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="tuandui" style="display: none">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>团队规模</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="TeamScale">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="qiye">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>公司规模</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="BusScale">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="qiye">
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>融资需求</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="BusFinance">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal">企业网站</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input type="text" placeholder="请输入" id="web_url" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i><i class="zhuti_name">公司介绍</i></span>
+						<div class="bmbar bmbar_ipt flex1 marl20">
+							<textarea placeholder="请输入" id="sub_description"></textarea>
+						</div>
+					</div>
+
+					<div class="bmba bmba_user_i bmba_sbm_mg0 disflex" id="people">
+						<span class="bmbal"></span>
+						<div class="flex1 marl20">
+							<div class="bmba_sbm bmba_sbmcp">
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="addPeople()" value="添加成员">
+							</div>
+						</div>
+					</div>
+					<div class="qiye">
+
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>营业执照</span>
+							<div class="bmbar flex1 marl20">
+
+								<div class="bmbar_file disflex">
+									<!--已上传状态-->
+									<div class="bmbar_filea bmbar_filea_img posrelative" style="display: none">
+										<img id="license_path" src=""/>
+									</div>
+									<div class="bmbar_filea posrelative">
+										<input type="file" name="" id="license_file" value="" />
+										<input type="hidden" id="license">
+										<i><img src="../images/add_03.png"/><p>点击上传</p></i>
+									</div>
+									<div class="bmbar_file_txt marl20">
+										<h3>温馨提示：</h3>
+										<p>1、建议上传图片尺寸为 200* 200像素或等比例图片;</p>
+										<p>2、支持格式jpg、png、jpge,大小不超过2M;</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bmba disflex">
+						<span class="bmbal"><i class="colorred">*</i><i class="zhuti_name">是否公开公司信息</i></span>
+						<div class="bmbar bmbar_radio flex1 marl20" id="is_show">
+							<label><input type="radio" name="baomi" value="1" checked />保密(<i class="zhuti_name">企业信息隐藏</i>)</label>
+							<label><input type="radio" name="baomi" value="2" />公开</label>
+						</div>
+					</div>
+					<div class="bmba bmba_user_i bmba_sbm_mg0 disflex">
+						<span class="bmbal"></span>
+						<div class="flex1 marl20">
+							<div class="bmba_sbm bmba_sbmcp">
+								<a href="fabu.html"><input class="bmba_sbma" type="submit" value="返回上一步"></a>
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData('next')" value="下一步">
+								<input class="bmba_sbma bmba_sbma_active" type="submit" onclick="saveData('save')" value="保存">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	<script src="../js/datetime.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+	var arr = [
+	    ['公司名称','公司logo','注册时间','公司介绍','是否公开公司信息','企业信息隐藏'],
+	    ['团队名称','团队logo','成立时间','团队介绍','是否公开团队信息','团队信息隐藏'],
+	];
+
+    /*公司规模*/
+    getBusScale()
+    /*团队规模*/
+    getTeamScale()
+    /*融资需求*/
+    getBusFinance()
+
+	/*项目主体切换*/
+	$('#subject').change(function () {
+		if($(this).val() == 1){
+		    $('.zhuti_name').each(function (index) {
+				$(this).html(arr[0][index])
+            })
+
+		    $('.qiye').show();
+		    $('.tuandui').hide();
+		}else{
+            $('.zhuti_name').each(function (index) {
+                $(this).html(arr[1][index])
+            })
+            $('.qiye').hide();
+            $('.tuandui').show();
+		}
+    })
+
+	/*如果第二部数据有 赋值*/
+    // if(getCookie('pro')){
+    if(localStorage.getItem('pro')){
+        // var data = JSON.parse(getCookie('pro'));
+        var data = JSON.parse(localStorage.getItem('pro'));
+        console.log(data);
+        console.log(data['subject'] );
+
+        $('#subject option').each(function () { //项目主体
+            $(this).prop('selected',false)
+            if($(this).attr('value') == data['subject'] ){
+                $(this).prop('selected',true)
+                $(this).change();
+            }
+        });
+
+        $('#sub_name').val(data['sub_name']); //主体名称
+
+        $('#avatar').val(data['logo']);//主体logo
+		if(data['logo']){
+            $('#imgfile_path').parent().show()
+		}
+
+        $('#imgfile_path').attr('src',imgpath+data['logo']);
+        $('#register_time').val(data['register_time']);//注册时间
+        $('#sub_description').val(data['sub_description']);//主体介绍
+        $('#is_show input').each(function () { //是否公开主体信息
+            $(this).prop('checked',false)
+            if($(this).attr('value') == data['is_show'] ){
+                $(this).prop('checked',true)
+            }
+        });
+        $('#cardid').val(data['cardid']);//统一社会信用代码
+        $('#legal_name').val(data['legal_name']);//法定代表人
+        $('#address').val(data['address']);//注册地址
+        $('#web_url').val(data['web_url']);//企业网站
+        $('#license').val(data['license']);//营业执照
+        if(data['license']){
+            $('#license_path').parent().show()
+        }
+        $('#license_path').attr('src',imgpath+data['license']);
+
+        var haveBusScale = setInterval(function () {
+            if($('#BusScale option').length > 1){
+                $('#BusScale option').each(function () { //公司规模
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == data['business_type'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveBusScale);
+            }
+        },500)
+
+        var haveBusFinance = setInterval(function () {
+            if($('#BusFinance option').length > 1){
+                $('#BusFinance option').each(function () { //融资需求
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == data['finan'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveBusFinance);
+            }
+        },500)
+
+        var haveTeamScale = setInterval(function () {
+            if($('#TeamScale option').length > 1){
+                $('#TeamScale option').each(function () { //融资需求
+                    $(this).prop('selected',false)
+                    if($(this).attr('value') == data['team_type'] ){
+                        $(this).prop('selected',true)
+                    }
+                });
+                clearInterval(haveTeamScale);
+            }
+        },500)
+
+		var list = data['people'];
+		for (var i in list) {
+            $('#people').before('<div  class="people">\n' +
+                '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                '\t\t\t\t\t\t\t<span class="bmbal">主要成员</span>\n' +
+                '\t\t\t\t\t\t\t<div class="bmbar flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbar_file disflex">\n' +
+                '\t\t\t\t\t\t\t\t\t<!--已上传状态-->\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbar_filea bmbar_filea_img posrelative">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<img src="'+imgpath+list[i]['thumb']+'"/>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbar_filea posrelative">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<input type="file" name="" class="thumb_file" value="" />\n' +
+                '\t\t\t\t\t\t\t\t\t\t<input type="hidden" class="thumb" value="'+list[i]['thumb']+'">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<i><img src="../images/add_03.png"/><p>上传头像</p></i>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t\t<div class="bmbar_file_txt marl20">\n' +
+                '\t\t\t\t\t\t\t\t\t\t<h3>温馨提示：</h3>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>1、建议上传图片尺寸为 200* 200像素或等比例图片;</p>\n' +
+                '\t\t\t\t\t\t\t\t\t\t<p>2、支持格式jpg、png、jpge,大小不超过2M;</p>\n' +
+                '\t\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                '\t\t\t\t\t\t\t<span class="bmbal">姓名</span>\n' +
+                '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t<textarea placeholder="请输入真实姓名" class="name">'+list[i]['name']+'</textarea>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                '\t\t\t\t\t\t\t<span class="bmbal">职务</span>\n' +
+                '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t<textarea placeholder="请输入" class="position">'+list[i]['position']+'</textarea>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+                '\t\t\t\t\t\t\t<span class="bmbal">个人简介</span>\n' +
+                '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t<textarea placeholder="请输入" class="description">'+list[i]['description']+'</textarea>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t</div>')
+		}
+
+        thumbFile();//
+
+    }
+
+	/*添加成员*/
+	function addPeople() {
+		$('#people').before('\t\t\t\t\t<div  class="people">\n' +
+            '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t<span class="bmbal">主要成员</span>\n' +
+            '\t\t\t\t\t\t\t<div class="bmbar flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmbar_file disflex">\n' +
+            '\t\t\t\t\t\t\t\t\t<!--已上传状态-->\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar_filea bmbar_filea_img posrelative" style="display: none;">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<img src=""/>\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar_filea posrelative">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="file" name="" class="thumb_file" value="" />\n' +
+            '\t\t\t\t\t\t\t\t\t\t<input type="hidden" class="thumb">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<i><img src="../images/add_03.png"/><p>上传头像</p></i>\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t\t<div class="bmbar_file_txt marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t\t<h3>温馨提示：</h3>\n' +
+            '\t\t\t\t\t\t\t\t\t\t<p>1、建议上传图片尺寸为 200* 200像素或等比例图片;</p>\n' +
+            '\t\t\t\t\t\t\t\t\t\t<p>2、支持格式jpg、png、jpge,大小不超过2M;</p>\n' +
+            '\t\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t<span class="bmbal">姓名</span>\n' +
+            '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t<input type="text" placeholder="请输入真实姓名" class="name">\n' +
+            '\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t<span class="bmbal">职务</span>\n' +
+            '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t<input type="text"  placeholder="请输入" class="position"></input>\n' +
+            '\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t<div class="bmba disflex">\n' +
+            '\t\t\t\t\t\t\t<span class="bmbal">个人简介</span>\n' +
+            '\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t<textarea placeholder="请输入" class="description"></textarea>\n' +
+            '\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t</div>')
+
+        thumbFile();//
+    }
+
+    /*保存数据*/
+    function saveData(type) {
+        // var data = JSON.parse(getCookie('pro'));
+        var data = JSON.parse(localStorage.getItem('pro'));
+        console.log(data['submit']);
+        data['submit'] = 2;
+        data['project_id'] = getCookie('project_id');
+        console.log(data['submit']);
+
+        var subject = $('#subject').val(); //项目主体
+        if(subject == ''){layer.msg('请选择项目主体',{icon:2,time:2000}); return }else{ data['subject'] = subject;}
+        var sub_name = $('#sub_name').val(); //主体名称
+        if(sub_name == ''){layer.msg('请填写名称',{icon:2,time:2000}); return }else{ data['sub_name'] = sub_name;}
+        var logo = $('#avatar').val(); //主体logo
+        if(logo == ''){layer.msg('请上传logo',{icon:2,time:2000}); return }else{ data['logo'] = logo;}
+        var register_time = $('#register_time').val(); //注册时间
+        if(register_time == ''){layer.msg('请填写时间',{icon:2,time:2000}); return }else{ data['register_time'] = register_time;}
+        var sub_description = $('#sub_description').val(); //主体介绍
+        if(sub_description == ''){layer.msg('请填写介绍',{icon:2,time:2000}); return }else{ data['sub_description'] = sub_description;}
+        var is_show = $('#is_show input:checked').val(); //是否公开主体信息
+        if(is_show == ''){layer.msg('请填写是否公开信息',{icon:2,time:2000});return }else{ data['is_show'] = is_show;}
+
+        if(subject == 1){ //企业
+            var cardid = $('#cardid').val(); //统一社会信用代码
+            if(cardid == ''){layer.msg('请填写统一社会信用代码',{icon:2,time:2000}); return }else{ data['cardid'] = cardid;}
+            var legal_name = $('#legal_name').val(); //法定代表人
+            if(legal_name == ''){layer.msg('请填写法定代表人',{icon:2,time:2000}); return }else{ data['legal_name'] = legal_name;}
+            var address = $('#address').val(); //注册地址
+            if(address == ''){layer.msg('请填写注册地址',{icon:2,time:2000}); return }else{ data['address'] = address;}
+            var business_type = $('#BusScale').val(); //公司规模
+            if(business_type == ''){layer.msg('请填写规模',{icon:2,time:2000}); return }else{ data['business_type'] = business_type;}
+            var finan = $('#BusFinance').val(); //融资需求
+            if(finan == ''){layer.msg('请填写融资需求',{icon:2,time:2000}); return }else{ data['finan'] = finan;}
+            var web_url = $('#web_url').val(); //企业网站
+            // if(web_url == ''){layer.msg('请填写企业网站',{icon:2,time:2000}); return }else{ data['web_url'] = web_url;}
+            var license = $('#license').val(); //营业执照
+            if(license == ''){layer.msg('请填写营业执照',{icon:2,time:2000}); return }else{ data['license'] = license;}
+		}
+		if(subject == 2){ //团体
+            var team_type = $('#TeamScale').val(); //团队规模
+            if(team_type == ''){layer.msg('请填写规模',{icon:2,time:2000}); return }else{ data['team_type'] = team_type;}
+		}
+
+		var plist = {};
+        data['people']=[];
+        var num=0;
+		$('.people').each(function (i) {
+            plist={};
+            plist['name'] = $(this).find('.name').val();
+            plist['position'] = $(this).find('.position').val();
+            plist['description'] = $(this).find('.description').val();
+            plist['thumb'] = $(this).find('.thumb').val();
+
+		    data['people'][num] = plist;
+		    num++;
+        })
+
+
+		// setCookie('pro',JSON.stringify(data))
+        localStorage.setItem('pro',JSON.stringify(data))
+
+        if(type == 'next'){
+            url_post('/myproject/pushProjectComment',data,function (res) {
+                location.href = 'fabu3.html';
+            })
+        }else{
+            layer.msg('保存成功!',{  icon:1,time:2000 });
+		}
+
+
+    }
+
+    /*上传营业执照*/
+    $("#license_file").change(function(e) {
+        /*回显*/
+        var file = e.target.files[0];
+        var imgSrc;
+        if (!/image\/\w+/.test(file.type)) {
+            layer.msg('只能上传图片',{icon:2,time:2000});
+            return false;
+        }
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function() {
+            imgSrc = this.result;
+            $("#license_path").parent().show();
+            $("#license_path").attr("src", imgSrc);
+        };
+
+        /*上传*/
+        var formData = new FormData();
+        formData.append("imgfile",$('#license_file')[0].files[0]);
+
+        $.ajax({
+            url:domain+'/upload/push',
+            dataType:'json',
+            type:'POST',
+            data: formData,
+            processData : false, // 使数据不做处理
+            contentType : false, // 不要设置Content-Type请求头
+            success: function(res){
+                $('#license').val(res.data['url']);
+                console.log(res['msg']);
+            }
+        });
+    });
+
+    /*添加上传事件*/
+    function thumbFile(){
+        /*上传成员照片*/
+        $(".thumb_file").change(function(e) {
+            var that = this;
+            /*回显*/
+            var file = e.target.files[0];
+            var imgSrc;
+            if (!/image\/\w+/.test(file.type)) {
+                alert("只能上传图片！");
+                return false;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function() {
+                imgSrc = this.result;
+                $(that).parent().prev().show();
+                $(that).parent().prev().find('img').attr("src", imgSrc);
+            };
+
+            /*上传*/
+            var formData = new FormData();
+            formData.append("imgfile",$(that)[0].files[0]);
+
+            $.ajax({
+                url:domain+'/upload/push',
+                dataType:'json',
+                type:'POST',
+                data: formData,
+                processData : false, // 使数据不做处理
+                contentType : false, // 不要设置Content-Type请求头
+                success: function(res){
+                    $(that).next().val(res.data['url']);
+                    console.log(res['msg']);
+                }
+            });
+        });
+	}
+
+
+</script>

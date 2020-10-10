@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>我的评论</title>
+		<style>
+			.wdpl{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap clearfix">
+			<div class="fl usl">
+				<div class="xi2r1 usl1 textcenter">
+					<div class="xi2r1top">
+						<i><img id="userAvatar" src=""></i>
+						<h3 class="mt_10" id="userName">加载中...</h3>
+						<p class="mt_10" id="userInfo">加载中...</p>
+					</div>
+					<div class="xi2r1bot mt_25">
+						<a href="fabu.html" class="active">发布项目</a>
+						<a href="user_wsgrxx.html">完善个人信息</a>
+					</div>
+				</div>
+				<div class="usl2 mt_15">
+					<a href="user.html" class="usnava usnava1">我的消息</a>
+					<a href="user_wdgz.html" class="usnava usnava2">我的关注</a>
+					<a href="user_wdxm.html" class="usnava usnava3">我的项目</a>
+					<a href="user_wdbm.html" class="usnava usnava4">我的报名</a>
+					<a href="pingwei_info2.html" class="usnava usnava3">我评审的项目</a>
+					<a href="user_wdsc.html" class="usnava usnava5">我的收藏</a>
+					<a href="user_wdpl.html" class="usnava usnava6 usnava_active">我的评论</a>
+					<a href="user_zhaq.html" class="usnava usnava7">账户安全</a>
+				</div>
+			</div>
+			<div class="fr usr">
+				<div class="usrtop disflex">
+					<div class="flex1 usrt_l">
+						<a onclick="getList1(this,'/member/getProjectCommentAndPraiseList')" class="wdpl active">项目</a>
+						<a onclick="getList2(this,'/member/getCourseCommentAndPraiseList')" class="wdpl">课程</a>
+						<a onclick="getList3(this,'/member/getNewsCommentAndPraiseList')" class="wdpl">资讯</a>
+					</div>
+				</div>
+				<div class="padding20 pb40 pt0">
+					<div class="wdsc">
+						<div class="clearfix" id="wdplList">
+
+						</div>
+						
+						<div class="page mt_40 clearfix">
+							<div class="clearfix pagebox" id="page"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+</html>
+
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$('.wdpl.active').click();
+
+    function onPage(page) {
+        var index = $('.wdsc.active').index();
+
+        if(index == 0){
+            getList1($('.wdsc.active')[0],'/member/getProjectCommentAndPraiseList')
+        }else if(index == 1){
+            getList2($('.wdsc.active')[0],'/member/getCourseCommentAndPraiseList')
+        }else{
+            getList3($('.wdsc.active')[0],'/member/getNewsCommentAndPraiseList')
+        }
+    }
+
+
+	/*项目*/
+	function getList1(obj,url,page=1){
+        $('.wdpl').removeClass('active');
+        $(obj).addClass('active');
+
+        url_get(url,{
+            token:getCookie('token'),
+            page:page,
+            size:pageSize
+        },function (res) {
+            $('#wdplList').html('');
+            var list = res.data.list;
+            var content = '';
+            for (var i in list) {
+                if(list[i]['type'] == 1){
+                    content =  '<p class="flex1">'+ list[i]['content']+'</p><span>'+getTime(list[i]['create_time'])+'</span>\n';
+				}
+                $('#wdplList').append('<div class="xi1 ci1 mt_30"><div class="disflex">\n' +
+					'\t\t\t\t\t\t\t\t<a href="/xmk_info.html?id='+ list[i]['project_id'] +'"><div class="xi1l" style="background: url('+ imgpath + list[i]['thumb'] +') no-repeat center;"></div></a>\n' +
+					'\t\t\t\t\t\t\t\t<div class="xi1m flex1">\n' +
+					'\t\t\t\t\t\t\t\t\t<h3><a href="/xmk_info.html?id='+ list[i]['project_id'] +'">'+ list[i]['name'] +'</a></h3>\n' +
+					'\t\t\t\t\t\t\t\t\t<div class="xi1mw clearfix">\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>行业领域:</span>' + list[i]['industry'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>官网:</span>' + list[i]['web_url'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>所在地区:</span>' + list[i]['address'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>融资需求:</span>' + list[i]['finan'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>项目阶段:</span>' + list[i]['phase'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<p class="fl" style="width: 50%;"><span>项目主题:</span>' + list[i]['subject'] +'</p>\n' +
+					'\t\t\t\t\t\t\t\t\t</div>\n' +
+					'\t\t\t\t\t\t\t\t\t<div class="fl wdscxmi mt_10">\n' +
+					'\t\t\t\t\t\t\t\t\t\t<span class="color999"><img class="middle mr5" src="../images/eye_03.png">'+ list[i]['browse'] +'</span>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<span class="color999"><img class="middle mr5" src="../images/pl_03.png">'+ list[i]['comment'] +'</span>\n' +
+					'\t\t\t\t\t\t\t\t\t\t<span class="color999"><img class="middle mr5" src="../images/zan_03.png">'+ list[i]['praiseNum'] +'</span>\n' +
+					'\t\t\t\t\t\t\t\t\t</div>\n' +
+					'\t\t\t\t\t\t\t\t</div></div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="mt_20 disflex xi1_tip" >'+content+'</div>\n' +
+					'\t\t\t\t\t\t\t</div>');
+            }
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+	}
+	/*课程*/
+    function getList2(obj,url,page=1){
+        $('.wdpl').removeClass('active');
+        $(obj).addClass('active');
+
+        url_get(url,{
+            token:getCookie('token'),
+            page:page,
+            size:pageSize
+        },function (res) {
+            $('#wdplList').html('');
+            var list = res.data.list;
+            var tag = '',content='';
+            for (var i in list) {
+                tag = '';
+                for(var t in list[i]['tag']){
+                    tag += '<span class="biaoqian">'+list[i]['tag'][t]+'</span>';
+				}
+                if(list[i]['m_type'] == 1){
+                    content =  '<p class="flex1">'+ list[i]['content']+'</p><span>'+getTime(list[i]['create_time'])+'</span>\n';
+                }
+
+                $('#wdplList').append('<div class="xi1 ci1 mt_30">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="disflex">\n' +
+                    '\t\t\t\t\t\t\t\t\t<a href="/cypx_info.html?id='+ list[i]['obj_id'] +'"><div class="xi1l" style="background: url(' + imgpath + list[i]['thumb'] + ') no-repeat center;"></div></a>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="xi1m flex1">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<h3><a href="/cypx_info.html?id='+ list[i]['obj_id'] +'">' + list[i]['title'] + '</a></h3>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<div class="xi1mw clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<p class="fl"><img class="middle mr5" src="../images/cysxico2_03.png"/>' + list[i]['direction'] + '</p>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<p class="fl"><img class="middle mr5" src="../images/cysxico4_03.png"/>'+getTime(list[i]['begin_time'])+'  至  '+getTime(list[i]['end_time'])+'</p>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<p class="fl"><img class="middle mr5" src="../images/cysxico1_03.png"/>'+ (list[i]['type'] == 1?'线上直播 ':'线下培训') + '</p>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<div class="mt_10">' + tag + '</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="xi1r marl20">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<div class="xi1r3 xi1r3_cp mt_30 clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<div class="fl">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t\t<span class="color999"><img class="middle mr5" src="../images/eye_03.png">' + list[i]['browse'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t\t<span class="color999"><img class="middle mr5" src="../images/pl_03.png">' + list[i]['commentNum'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="mt_20 disflex xi1_tip">'+content+'</div>\n' +
+                    '\t\t\t\t\t\t\t</div>');
+            }
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+    /*资讯*/
+    function getList3(obj,url,page=1){
+        $('.wdpl').removeClass('active');
+        $(obj).addClass('active');
+
+        url_get(url,{
+            token:getCookie('token'),
+            page:page,
+            size:pageSize
+        },function (res) {
+            $('#wdplList').html('');
+            var list = res.data.list;
+            var tag = '',content='';
+            for (var i in list) {
+                tag = '<span class="biaoqian">' + list[i]['tag'] + '</span>';
+                if (list[i]['type'] == 1) {
+                    content = '<p class="flex1">' + list[i]['content'] + '</p><span>' + getTime(list[i]['publish_time']) + '</span>\n';
+                }
+
+                $('#wdplList').append('<a href="../sszx_info.html?id=' + list[i]['obj_id'] + '" class="ssza hvimghover flex_center xi1 ci1 mt_30"><div class="disflex">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="sszaimg">\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="hvimg" style="background: url(' + imgpath + list[i]['image'] + ') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="sszatxt marl20 flex1">\n' +
+                    '\t\t\t\t\t\t\t\t\t<h3>' + list[i]['title'] + '</h3>\n' +
+                    '\t\t\t\t\t\t\t\t\t<p>' + list[i]['description'] + '</p>\n' +
+                    '\t\t\t\t\t\t\t\t\t<span class="disblock">来自：' + list[i]['source'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="sszatxtb clearfix mt_10">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<div class="fl sszx_bq">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<i>' + list[i]['tags'] + '</i>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<div class="fr">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="../images/eye_03.png">' + list[i]['show_num'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t\t<span class="marl20"><img class="middle mr5" src="../images/cy2aico2_03.png">发布时间：' + list[i]['c_time'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div></div>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="mt_20 disflex xi1_tip">' + content + '</div>\n' +
+                    '\t\t\t\t\t\t\t</a>')
+            }
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+
+</script>

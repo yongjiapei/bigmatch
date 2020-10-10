@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>完善个人信息</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap clearfix">
+			<div class="fl usl">
+				<div class="xi2r1 usl1 textcenter">
+					<div class="xi2r1top">
+						<i><img id="userAvatar" src=""></i>
+						<h3 class="mt_10" id="userName">加载中...</h3>
+						<p class="mt_10" id="userInfo">加载中...</p>
+					</div>
+					<div class="xi2r1bot mt_25">
+						<a href="fabu.html" class="active">发布项目</a>
+						<a href="user_wsgrxx.html">完善个人信息</a>
+					</div>
+				</div>
+				<div class="usl2 mt_15">
+					<a href="user.html" class="usnava usnava1 usnava_active">我的消息</a>
+					<a href="user_wdgz.html" class="usnava usnava2">我的关注</a>
+					<a href="user_wdxm.html" class="usnava usnava3">我的项目</a>
+					<a href="user_wdbm.html" class="usnava usnava4">我的报名</a>
+					<a href="pingwei_info2.html" class="usnava usnava3">我评审的项目</a>
+					<a href="user_wdsc.html" class="usnava usnava5">我的收藏</a>
+					<a href="user_wdpl.html" class="usnava usnava6">我的评论</a>
+					<a href="user_zhaq.html" class="usnava usnava7">账户安全</a>
+				</div>
+			</div>
+			<div class="fr usr">
+				<div class="usrtop disflex">
+					<div class="flex1 usrt_l">
+						<a href="user.html">个人信息</a>
+					</div>
+				</div>
+				<div class="padding20 pb40 pt0">
+					<div class="grxx">
+						<div class="bmba disflex">
+							<span class="bmbal">用户头像：</span>
+							<div class="bmbar flex1 marl20">
+								<input type="hidden" id="avatar"> <!-- 头像 -->
+								<div class="bmbar_file disflex">
+									<!--已上传状态-->
+									<div class="bmbar_filea bmbar_filea_img posrelative" style="margin-right: 10px;display: none">
+										<img id="imgfile_path" src=""/>
+									</div>
+									<div class="bmbar_filea posrelative" style="margin-right: 10px">
+										<input type="file" name="" id="imgfile" value="123">
+										<i><img src="../images/add_03.png"><p>点击上传</p></i>
+									</div>
+									<div class="bmbar_file_txt bmbar_file_txt_user flex1">
+										<p>支持JPG、JPEG、PNG图片格式</br />建议尺寸：200 * 200像素</br />大小：不超过2M</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal">用户昵称：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="nickname"  value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>真实姓名：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="realname" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>性别：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="gender">
+									<option value="">请选择</option>
+									<option value="0">保密</option>
+									<option value="1">男</option>
+									<option value="2">女</option>
+								</select>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>手机号：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" readonly id="phone" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>电子邮箱：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="email" id="email" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>学历：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<select id="education">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>毕业院校：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="school" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>单位名称：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="company" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>职位：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="position" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>联系地址：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20 disflex">
+								<div class="bmbar_ipt_three">
+									<select id="prov_name">
+										<option value="">请选择</option>
+									</select>
+								</div>
+								<div class="bmbar_ipt_three marl20">
+									<select id="city_name">
+										<option value="">请选择</option>
+									</select>
+								</div>
+								<div class="bmbar_ipt_three marl20">
+									<select id="addressid">
+										<option value="">请选择</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"></span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<input placeholder="请输入" type="text" id="address" value="">
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal"><i class="colorred">*</i>个人简介：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<textarea placeholder="请输入" name="" rows="" id="description" cols=""></textarea>
+							</div>
+						</div>
+						<div class="bmba disflex">
+							<span class="bmbal">个人签名：</span>
+							<div class="bmbar bmbar_ipt flex1 marl20">
+								<textarea placeholder="请输入" name="" rows="" id="sortdes" cols=""></textarea>
+							</div>
+						</div>
+						<div class="grxx_b" id="honhors">
+							<div class="bmba disflex">
+								<span class="bmbal">获得荣誉：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<a onclick="addHonhor()" class="bmbara" style="cursor: pointer">+添加荣誉</a>
+								</div>
+							</div>
+						</div>
+						<div class="bmba bmba_sbm_mg0 disflex">
+							<span class="bmbal"></span>
+							<div class="flex1 marl20">
+								<div class="bmba_sbm">
+									<input class="bmba_sbma bmba_sbma_active" type="submit" name="" id="" onclick="saveData()" value="保存" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../js/datetime.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
+<script>
+
+    getArea()
+    getEducation();
+    getUserDetail();
+
+    /*获取用户详细信息*/
+	function getUserDetail(){
+        url_get('/member/getUserDetail',{
+            token:getCookie('token')
+        },function (res) {
+            if( res.data['avatar']){
+                $("#imgfile_path").parent().show();
+                $("#imgfile_path").attr("src", imgpath+ res.data['avatar']);
+			}
+
+            $('#avatar').val(res.data['avatar']); //头像
+            $('#nickname').val(res.data['nickname']); //昵称
+            $('#realname').val(res.data['realname']); //真实姓名
+            $('#gender option').each(function () { //性别
+                $(this).prop('selected',false)
+                if($(this).attr('value') == res.data['gender'] ){
+                    $(this).prop('selected',true)
+                }
+            });
+            $('#phone').val(res.data['phone']); //手机号
+            $('#email').val(res.data['email']); //电子邮箱
+
+			/*学历加载完成之后 设置默认值*/
+			var haveeducation = setInterval(function () {
+				if($('#education option').length > 1){
+                    $('#education option').each(function () { //学历
+                        $(this).prop('selected',false)
+                        if($(this).attr('value') == res.data['education'] ){
+                            $(this).prop('selected',true)
+                        }
+                    });
+                    clearInterval(haveeducation);
+				}
+            },500)
+
+            $('#school').val(res.data['school']); //毕业院校
+            $('#company').val(res.data['company']); //单位名称
+            $('#position').val(res.data['position']); //职位
+            $('#description').val(res.data['description']); //个人简介
+            $('#sortdes').val(res.data['sortdes']); //个人签名
+            $('#address').val(res.data['address']); //详细地址
+            //设置地区默认值
+			setArea(res.data['addressid']);
+			/*渲染荣誉*/
+            setHonhor(res.data['honor']);
+
+        })
+	}
+
+	/*渲染所有的荣誉*/
+	function setHonhor(Honhors) {
+		$('.honhors').remove()
+		for(var i in Honhors){
+		    $('#honhors').append('<div class="bmba disflex honhors">\n' +
+                '\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>获得荣誉：</span>\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t\t<input placeholder="请输入获得荣誉，例如：中国青年创业大赛一等奖" type="text" id="honhors_description'+i+'" value="'+Honhors[i]['description']+'">\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t<div class="bmba disflex honhors">\n' +
+                '\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>时间：</span>\n' +
+                '\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt bmbar_ipt_time flex1 marl20">\n' +
+                '\t\t\t\t\t\t\t\t\t<input placeholder="请选择" type="text" class="sang_Calender" id="honhors_gettime'+i+'" value="'+Honhors[i]['gettime']+'">\n' +
+                '\t\t\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t\t\t</div>');
+		}
+    }
+    /*添加荣誉*/
+    function addHonhor() {
+		var i = $('.honhors').length/2;
+        $('#honhors').append('<div class="bmba disflex honhors">\n' +
+            '\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>获得荣誉：</span>\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t<input placeholder="请输入获得荣誉，例如：中国青年创业大赛一等奖" type="text" id="honhors_description'+i+'" value="">\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t<div class="bmba disflex honhors">\n' +
+            '\t\t\t\t\t\t\t\t<span class="bmbal"><i class="colorred">*</i>时间：</span>\n' +
+            '\t\t\t\t\t\t\t\t<div class="bmbar bmbar_ipt bmbar_ipt_time flex1 marl20">\n' +
+            '\t\t\t\t\t\t\t\t\t<input placeholder="请选择" type="date" class="sang_Calender" id="honhors_gettime'+i+'" value="">\n' +
+            '\t\t\t\t\t\t\t\t</div>\n' +
+            '\t\t\t\t\t\t\t</div>');
+
+    }
+
+
+
+    /*提交保存数据*/
+	function saveData() {
+	    var nickname = $('#nickname').val(); //昵称
+		if(nickname == ''){ layer.msg('请填写昵称',{icon:2,time:2000}); return }
+        var realname = $('#realname').val(); //真实姓名
+        if(realname == ''){ layer.msg('请填写真实姓名',{icon:2,time:2000});return }
+        var avatar = $('#avatar').val(); //头像
+        if(avatar == ''){ layer.msg('请上传头像',{icon:2,time:2000}); return }
+        var email = $('#email').val(); //电子邮箱
+        if(email == ''){ layer.msg('请填写电子邮箱',{icon:2,time:2000}); return }
+        var school = $('#school').val(); //毕业院校
+        if(school == ''){ layer.msg('请填写毕业院校',{icon:2,time:2000}); return }
+        var company = $('#company').val(); //单位名称
+        if(company == ''){ layer.msg('请填写单位名称',{icon:2,time:2000}); return }
+        var position= $('#position').val(); //职位
+        if(position == ''){ layer.msg('请填写职位',{icon:2,time:2000}); return }
+        var description= $('#description').val(); //个人简介
+        if(description == ''){ layer.msg('请填写个人简介',{icon:2,time:2000}); return }
+        var sortdes= $('#sortdes').val(); //个人签名
+        if(sortdes == ''){ layer.msg('请填写个人签名',{icon:2,time:2000}); return }
+        var address= $('#address').val(); //详细地址
+        if(address == ''){ layer.msg('请填写详细地址',{icon:2,time:2000}); return }
+        var gender= $('#gender').val(); //性别
+        if(gender == ''){ layer.msg('请选择性别',{icon:2,time:2000}); return }
+		var education= $('#education').val(); //学历
+        if(education == ''){ layer.msg('请选择学历',{icon:2,time:2000}); return }
+        var addressid= $('#addressid').val(); //学历
+        if(addressid == ''){ layer.msg('请选择地址',{icon:2,time:2000}); return }
+
+        var data = {
+            token:getCookie('token'),
+            nickname:nickname,
+            realname:realname,
+            avatar:avatar,
+            email:email,
+            school:school,
+            company:company,
+            position:position,
+            description:description,
+            sortdes:sortdes,
+            address:address,
+            gender:gender,
+            education:education,
+            addressid:addressid,
+        };
+
+        setCookie('nickname',realname); //	用户昵称
+        setCookie('realname',realname); //	用户昵称
+
+        var plist = {};
+        data['honor']={};
+        var num=0;
+        for(var i =0;i<$('.honhors').length/2; i++){
+            plist={};
+            plist['description'] = $('#honhors_description'+i).val();
+            plist['gettime'] = $('#honhors_gettime'+i).val();
+
+            data['honor'][num] = plist;
+            num++;
+        }
+
+        url_post('/member/setUserDetail',data,function (res) {
+
+            layer.msg(res.msg,{icon:1,time:2000});
+        })
+        
+    }
+
+
+
+</script>
+

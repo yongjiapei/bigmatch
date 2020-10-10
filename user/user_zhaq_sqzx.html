@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+		<title>账户安全-注销账号</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="../index.html" class="nava">首 页</a></span>
+					<span><a href="../cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="../xmk.html" class="nava">项目库</a></span>
+					<span><a href="../pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="../cypx.html" class="nava">创业培训</a></span>
+					<span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="../zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="us_pd bghui">
+		<div class="wrap clearfix">
+			<div class="fl usl">
+				<div class="xi2r1 usl1 textcenter">
+					<div class="xi2r1top">
+						<i><img id="userAvatar" src=""></i>
+						<h3 class="mt_10" id="userName">加载中...</h3>
+						<p class="mt_10" id="userInfo">加载中...</p>
+					</div>
+					<div class="xi2r1bot mt_25">
+						<a href="fabu.html" class="active">发布项目</a>
+						<a href="user_wsgrxx.html">完善个人信息</a>
+					</div>
+				</div>
+				<div class="usl2 mt_15">
+					<a href="user.html" class="usnava usnava1">我的消息</a>
+					<a href="user_wdgz.html" class="usnava usnava2">我的关注</a>
+					<a href="user_wdxm.html" class="usnava usnava3">我的项目</a>
+					<a href="user_wdbm.html" class="usnava usnava4">我的报名</a>
+					<a href="pingwei_info2.html" class="usnava usnava3">我评审的项目</a>
+					<a href="user_wdsc.html" class="usnava usnava5">我的收藏</a>
+					<a href="user_wdpl.html" class="usnava usnava6">我的评论</a>
+					<a href="user_zhaq.html" class="usnava usnava7 usnava_active">账户安全</a>
+				</div>
+			</div>
+			<div class="fr usr">
+				<div class="usrtop disflex">
+					<div class="flex1 usrt_l">
+						<a href="javascript:history.back(-1)"><  注销账号</a>
+					</div>
+				</div>
+				<div class="padding20 pb40 pt0">
+					<div class="grxx zhaq">
+						<div class="clearfix mt_5">
+							<div class="bmba bmba_user_i disflex">
+								<span class="bmbal">已绑定手机号码：</span>
+								<div class="bmbar bmbar_p flex1 marl20">
+									<p><b id="userPhone"></b></p>
+								</div>
+							</div>
+							<div class="bmba bmba_user_i disflex">
+								<span class="bmbal">注销原因：</span>
+								<div class="bmbar bmbar_ipt flex1 marl20">
+									<textarea class="ht" placeholder="请说明注销账号的原因~" name="" rows="" id="content" cols=""></textarea>
+								</div>
+							</div>
+							<div class="bmba bmba_user_i bmba_sbm_mg0 disflex">
+								<span class="bmbal"></span>
+								<div class="flex1 marl20">
+									<div class="bmba_sbm bmba_sbmcp">
+										<input class="bmba_sbma bmba_sbma_active" type="submit" name="" id="" onclick="cancel()" value="确认">
+										<a href="/user/user_zhaq.html"><input class="bmba_sbma" type="submit" name="" id="" value="取消"></a>
+									</div>
+									<div class="sqzx_txt mt_30">
+										<span class="colorred">温馨提示：</span>
+										<h3>一、注销账号必须符合以下条件：</h3>
+										<p>1、近一个月内不存在更换手机号、更换邮箱或个人信息修改的操作</p>
+										<p>2、账户处于正常状态，不存在被禁用等限制情况。</p>
+										<h3>二、注销后的账号，相关信息会被清空且无法找回，无法进行相关操作</h3>
+										<p>1、无法登录、报名、收藏、点赞、下载、评论</p>
+										<p>2、账号中的收藏、关注、点赞、评论将被清空；</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="../images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+</html>
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+	function cancel() {
+		url_post('/security/cancel',{
+            token:getCookie('token'),
+            phone:getCookie('phone'),
+            content:$('#content').val(),
+		},function (res) {
+			alert(res['msg']);
+
+			delCookie('token');
+			delCookie('group');
+			delCookie('nickname');
+			delCookie('phone');
+			delCookie('avatar');
+			delCookie('typeName');
+			delCookie('address_prov');
+			delCookie('realname');
+			delCookie('avatar');
+			delCookie('email');
+			location.href = '/index.html';
+        })
+    }
+</script>

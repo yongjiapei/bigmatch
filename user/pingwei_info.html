@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/sanren.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/public.js" type="text/javascript" charset="utf-8"></script>    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/islogin.js" type="text/javascript" charset="utf-8"></script>
+    <title>评审的项目</title>
+</head>
+<body>
+
+<div class="head">
+    <div class="hd1">
+        <div class="wrap clearfix">
+            <span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+            <div class="fr hd1r">
+                <span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+                <span>
+						<a href=""><img class="middle mr5" src="../images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="../images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+                <span><a href="/helpcenter.html">联系我们</a></span>
+                <span><a href="/helpcenter.html">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="hd2">
+        <div class="wrap disflex h100 flex_center">
+            <a href="../index.html" class="logo"><img src="../images/logo_03.png"/></a>
+            <div class="flex1 nav clearfix">
+                <span><a href="../index.html" class="nava">首 页</a></span>
+                <span><a href="../cybs.html" class="nava">创业比赛</a></span>
+                <span><a href="../xmk.html" class="nava">项目库</a></span>
+                <span><a href="../pwzj.html" class="nava">评委专家</a></span>
+                <span><a href="../cypx.html" class="nava">创业培训</a></span>
+                <span><a href="../sszx.html" class="nava">赛事资讯</a></span>
+                <span><a href="../zlxz.html" class="nava">资料下载</a></span>
+            </div>
+            <div class="hd2r disflex">
+                <a href="fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="../images/hdrico_03.png"/>发布项目</a>
+                <div class="hd2ra hd2ra2">
+                    <a href="../login.html">登录</a> 丨 <a href="../reg.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="us_pd bghui">
+    <div class="wrap clearfix">
+        <div class="fl usl">
+            <div class="xi2r1 usl1 textcenter">
+                <div class="xi2r1top">
+                    <i><img id="userAvatar" src=""></i>
+                    <h3 class="mt_10" id="userName">加载中...</h3>
+                    <p class="mt_10" id="userInfo">加载中...</p>
+                </div>
+                <div class="xi2r1bot mt_25">
+                    <a href="fabu.html" class="active">发布项目</a>
+                    <a href="pingwei_home.html">完善个人信息</a>
+                </div>
+            </div>
+            <div class="usl2 usl2_pw mt_15">
+                <a href="user.html" class="usnava usnava1">我的消息</a>
+                <a href="user_wdgz.html" class="usnava usnava2">我的关注</a>
+                <a href="user_wdxm.html" class="usnava usnava3">我的项目</a>
+                <a href="user_wdbm.html" class="usnava usnava4">我的报名</a>
+                <a href="pingwei_info2.html" class="usnava usnava3 usnava_active">我评审的项目</a>
+                <a href="user_wdsc.html" class="usnava usnava5">我的收藏</a>
+                <a href="user_wdpl.html" class="usnava usnava6">我的评论</a>
+                <a href="user_zhaq.html" class="usnava usnava7">账户安全</a>
+            </div>
+        </div>
+        <div class="fr usr">
+            <div class="usrtop disflex">
+                <div class="flex1 usrt_l">
+                    <a href="pingwei_info.html" class="active">待评审</a>
+                    <a href="pingwei_info2.html">已评审</a>
+                </div>
+            </div>
+            <div class="padding20 pb40">
+                <div class="wdbm">
+                    <div class="cy2topr disflex flex_center">
+                        <span>项目名称：</span>
+                        <input class="cy2topript" type="text" placeholder="请输入项目名称" name="" id="name" value=""/>
+                        <!--<span class="marl20">报名状态：</span>-->
+                        <!--<select name="">-->
+                        <!--<option value="">请选择</option>-->
+                        <!--<option value="">已报名</option>-->
+                        <!--<option value="">未报名</option>-->
+                        <!--</select>-->
+                        <input class="cy2toprsbm marl20" type="submit" name="" onclick="getList()" value="查 询"/>
+                        <input class="cy2toprsbm marl20" type="submit" name="" id="" value="提交评审"/>
+                    </div>
+                    <div class="clearfix mt_15">
+                        <table class="schtab schtab_cp schtab_pw bgwhite w100 borls" border="0" cellspacing="0"
+                               cellpadding="0" id="tab">
+                            <tr>
+                                <th>
+                                    <span class="ucheck ucheck_wt ucheck_all">
+                                        <input type="checkbox" name="" id="" value=""/>
+                                    </span>项目名称
+                                </th>
+                                <th>所属地区</th>
+                                <th>工业领域</th>
+                                <th>项目负责人</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="page mt_40 clearfix">
+                        <div class="clearfix pagebox" id="page"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <div class="wrap">
+        <div class="ft1 disflex">
+            <div class="ft1l disflex">
+                <div class="ft1la">
+                    <h3>友情链接</h3>
+                    <p><a href="">中国青年创业就业基金会</a></p>
+                    <p><a href="">团务百科</a></p>
+                    <p><a href="">青年之间</a></p>
+                    <p><a href="">中国青年创业就业大赛</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>关于我们</h3>
+                    <p><a href="">平台介绍</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">用户服务协议</a></p>
+                    <p><a href="">投诉建议</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>服务与支持</h3>
+                    <p><a href="">新手帮助</a></p>
+                    <p><a href="">主办方申请入驻</a></p>
+                    <p><a href="">赛事管理系统</a></p>
+                </div>
+            </div>
+            <div class="ft1r flex1 disflex">
+                <div class="ft1ra textcenter">
+                    <img src="../images/ewm1_05.png"/>
+                    <p>评委小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="../images/ewm2_05.png"/>
+                    <p>用户小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="../images/ewm3_05.png"/>
+                    <p>微信公众号</p>
+                </div>
+            </div>
+        </div>
+        <div class="ft2 clearfix">
+            <p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+            <span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+        </div>
+    </div>
+</div>
+
+
+<!--评分隐藏弹窗-->
+<div class="tc pf_tc">
+    <div class="disflex w100 h100 flex_center">
+        <div class="tcbox">
+            <div class="tcbox_top flex_center posrelative disflex">
+                <h3 class="flex1">项目评审</h3>
+                <i class="close_tc"><img src="../images/close_03.png"/></i>
+            </div>
+            <div class="sxtcw posrelative">
+                <div class="pf1">
+                    <h3>评分标准：</h3>
+                    <p>【分值为15分项】优秀：15~11分、一般：10~6分、差：5~1分</p>
+                    <p>【分值为10分项】优秀：10~7分、一般：6~4分、差：3~1分</p>
+                </div>
+                <div class="pf2 mt_20">
+                    <table class="w100 pf2tab" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th>评分指标</th>
+                            <th width="430">要素说明</th>
+                            <th>分值</th>
+                            <th>我的评分</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="textcenter txt">
+                                    创业机会描述
+                                </div>
+                            </td>
+                            <td>
+                                <div class="txt">
+                                    清晰的产业背景和市场竞争环境，市场机会和有效的市场需求;所面
+                                    对的目标顾客群、在市场调查的基础上，分析面对的市场状况、发
+                                    展趋势、潜力、竞争状况，包括竞争分析、目标市场定位，市场容
+                                    量估算等。
+                                </div>
+                            </td>
+                            <td>
+                                <div class="textcenter txt">
+                                    1~15分
+                                </div>
+                            </td>
+                            <td>
+                                <div class="textcenter txt_ipt">
+                                    <input type="text" name="" id="" value="10"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="textcenter txt">
+                                    创业机会描述
+                                </div>
+                            </td>
+                            <td>
+                                <div class="txt">
+                                    清晰的产业背景和市场竞争环境，市场机会和有效的市场需求;所面
+                                    对的目标顾客群、在市场调查的基础上，分析面对的市场状况、发
+                                    展趋势、潜力、竞争状况，包括竞争分析、目标市场定位，市场容
+                                    量估算等。
+                                </div>
+                            </td>
+                            <td>
+                                <div class="textcenter txt">
+                                    1~15分
+                                </div>
+                            </td>
+                            <td>
+                                <div class="textcenter txt_ipt">
+                                    <input type="text" name="" id="" value="10"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sxtcb textcenter mt_30">
+                    <a href="javascript:" class="sxtcba close_tc">取 消</a>
+                    <input class="sxtcba sxtcba_active1" type="submit" name="" id="" value="保 存"/>
+                    <input class="sxtcba sxtcba_active" type="submit" name="" id="" value="提 交"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function pingfen() {
+        $(".pf_tc").addClass("tc_active")
+    }
+
+    $(".close_tc").click(function () {
+        $(".tc").removeClass("tc_active")
+    })
+</script>
+
+<script src="../js/datetime.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/footer.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
+<script>
+
+    function onPage(page) {
+        getList(page);
+    }
+
+    getList()
+
+    function getList(page = 1) {
+        url_get('/judges/getJudWaitProject', {
+            token: getCookie('token'),
+            page: page,
+            size: pageSize,
+            name: $('#name').val()
+        }, function (res) {
+            $('.trs').remove();
+            var list = res.data['list'];
+            for (var i in list) {
+                $('#tab').append('<tr class="trs">\n' +
+                    '         <td><span class="ucheck ucheck_a"> <input type="checkbox" project_id="'+list[i]['project_id']+'" name="" id="" value=""/> </span>'+list[i]['name']+'</td>\n' +
+                    '         <td>'+list[i]['address']+'</td>\n' +
+                    '         <td>'+list[i]['industry']+'</td>\n' +
+                    '         <td>'+list[i]['nickname']+'</td>\n' +
+                    '         <td>'+list[i]['status']+'</td>\n' +
+                    '         <td>\n' +
+                    '             <div class="czbox textcenter">\n' +
+                    '                 <p><a href="">查看</a></p>\n' +
+                    '                 <p><a href="">提交</a></p>\n' +
+                    '                 <p><a href="javascript:" onclick="pingfen()">修改评分</a></p>\n' +
+                    '                 <p><a href="">商业计划书</a></p>\n' +
+                    '             </div>\n' +
+                    '         </td>\n' +
+                    '     </tr>');
+            }
+
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+</script>
