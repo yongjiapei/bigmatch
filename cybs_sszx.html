@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>赛事资讯</title>
+		<style>
+			.chbnr{
+				right: 10%;
+				top: 20%;
+				z-index: 999;
+			}
+			#lanmu{
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<!--<div class="ch_bn posrelative" style="background: url(images/bh_bn_01.jpg) no-repeat center;">-->
+		<!--<div class="wrap posrelative h100">-->
+
+		<!--</div>-->
+		<!---->
+	<!--</div>-->
+	<div class="chbnr textcenter" >
+		<h3>报名时间</h3>
+		<p id="begin_time">2020-07-01  12:00 </p>
+		<p>至</p>
+		<p id="end_time">2020-07-30  12:00</p>
+		<a id="wybm" style="display: none">我要报名</a>
+	</div>
+
+	<div class="swiper-container swiper-container-bn">
+		<div class="swiper-wrapper swiper-wrapper-bn" id="banner"> </div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+	</div>
+
+
+	<div class="chnav">
+		<div class="wrap clearfix" id="lanmu"> </div>
+	</div>
+	
+	<div class="cy_bg">
+		<div class="wrap bgwhite borls">
+			<div class="sszw" id="news"> </div>
+			<!--<div class="page mt_40 clearfix">-->
+				<!--<div class="clearfix pagebox">-->
+				<!--</div>-->
+			<!--</div>-->
+			<br /><br />
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+
+<script>
+    var match_id = getParams('id');
+
+    $('#wybm').click(function () {
+        location.href = "cybs_cjbm.html?id="+match_id;
+    })
+
+    /*获取轮播图*/
+    url_get("/match/matchinfo", {match_id:match_id}, function (res) {
+        /*判断是不是显示报名*/
+        if(res.data['form'] == 1){
+            $('#wybm').show();
+            $('#begin_time').html(getTime(res.data['begin_time']));
+            $('#end_time').html(getTime(res.data['end_time']));
+        }
+
+        $('#banner').html('');
+        var list = res.data['banner'].split(',');
+        for (var i in list) {
+            $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank"  data-background="' + imgpath + list[i] + '"  style="background: rgba(0, 0, 0, 0) url(' + imgpath + list[i] + ') repeat scroll center;background-size: cover"></a> </div>');
+        }
+
+        new Swiper('.swiper-container-bn', {
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,//修改swiper的父元素时，自动初始化swiper
+            navigation: {
+                nextEl: '.swiper-button-next-bn',
+                prevEl: '.swiper-button-prev-bn',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        /*固定顶部*/
+        //initiating jQuery
+        jQuery(function($) {
+            $(document).ready( function() {
+                //enabling stickUp on the '.navbar-wrapper' class
+                $('.chnav').stickUp();
+            });
+        });
+    })
+
+
+
+
+
+    /*栏目列表*/
+    url_get("/matchcolumn/get_column", {match_id:match_id}, function (res) {
+        $('#lanmu').html('<a href="cybs_home.html?id='+match_id+'">首页</a>');
+        /*6 	参赛项目 【通过 赛事子系统->参赛项目接口获取】
+        7 	评委导师【通过 赛事子系统->评委导师接口获取】
+        8 	赛事资讯 【通过 赛事子系统->赛事资讯接口获取】*/
+        for (var i in res.data) {
+            if(i>9)continue;
+            if(res.data[i]['column_type'] == 6){/*参赛项目 */
+                $('#lanmu').append('<a href="cybs_csxm.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+            }else if(res.data[i]['column_type'] == 7){/*评委导师*/
+                $('#lanmu').append('<a href="cybs_home.html?id='+match_id+'&typeid='+res.data[i]['column_type']+'">'+res.data[i]['name']+'</a>');
+            }else if(res.data[i]['column_type'] == 10){/*赛事资讯列表*/
+                $('#lanmu').append('<a class="active" href="cybs_sszx.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+            }else{
+                $('#lanmu').append('<a href="cybs_home.html?id='+match_id+'&typeid='+res.data[i]['column_type']+'" >'+res.data[i]['name']+'</a>');
+            }
+        }
+    })
+
+	url_post('/matchcolumn/get_column_news',{
+        match_id:match_id,
+        page:1
+	},function (res) {
+		$('#news').html('');
+		var list = res.data;
+		for(var i in list){
+            $('#news').append('<a href="cybs_sszx_info.html?id='+match_id+'&newid='+list[i]['id']+'" class="ssza disflex hvimghover">\n' +
+                '\t\t\t\t\t<div class="sszaimg">\n' +
+                '\t\t\t\t\t\t<div class="hvimg" style="background: url('+imgpath+list[i]['thumb']+') no-repeat center;"></div>\n' +
+                '\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t<div class="sszatxt marl20 flex1">\n' +
+                '\t\t\t\t\t\t<h3>'+list[i]['title']+'</h3>\n' +
+                '\t\t\t\t\t\t<p>'+list[i]['description']+'</p>\n' +
+                '\t\t\t\t\t\t<div class="sszatxtb clearfix">\n' +
+                '\t\t\t\t\t\t\t<span class="fl"><img class="middle mr5" src="images/eye_03.png"/>'+list[i]['show_num']+'</span>\n' +
+                '\t\t\t\t\t\t\t<span class="fr">发布时间：'+getTime(list[i]['create_time'])+'</span>\n' +
+                '\t\t\t\t\t\t</div>\n' +
+                '\t\t\t\t\t</div>\n' +
+                '\t\t\t\t</a>')
+		}
+    })
+
+
+</script>

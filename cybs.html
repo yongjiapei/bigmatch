@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>创业比赛</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="index.html" class="nava">首 页</a></span>
+					<span class="active"><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="xmk.html" class="nava">项目库</a></span>
+					<span><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="cypx.html" class="nava">创业培训</a></span>
+					<span><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="listbn">
+		<img class="disblock w100" src="images/hpctbg_02.jpg"/>
+	</div>
+	<div class="sch_pd cy_pd">
+		<div class="wrap">
+			<div class="list_nav">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>创业比赛</span>
+			</div>
+			<div class="mt_35 cy1 bgwhite">
+				<div class="clearfix">
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico1_03.png"/>所属地区</span>
+						<div class="cylar flex1 disflex">
+							<i cname="area" value="" class="area li active">全部</i>
+							<div class="cylarbox posrelative">
+								<a href="javascript:" class="cylarmore" id="province"><span class="sp1">更多></span><span class="sp2">收起></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico2_03.png"/>赛事规模</span>
+						<div class="cylar flex1 disflex">
+							<i cname="scale" value="" class="scale li active">全部</i>
+							<div class="cylarbox posrelative" id="matchScale"> </div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico3_03.png"/>赛事分类</span>
+						<div class="cylar flex1 disflex">
+							<i cname="cname" value="" class="cname li active">全部</i>
+							<div class="cylarbox posrelative" id="matchClass"> </div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico4_03.png"/>截止时间</span>
+						<div class="cylar flex1 disflex">
+							<i cname="etime" value="" class="etime li active">全部</i>
+							<div class="cylarbox posrelative" id="deadline"> </div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico5_03.png"/>比赛状态</span>
+						<div class="cylar flex1 disflex">
+							<i cname="state" value="" class="state li active">全部</i>
+							<div class="cylarbox posrelative" id="matchState"></div>
+						</div>
+					</div>
+				</div>
+				<div class="cy1ba disflex">
+					<span class="cylal"><img class="middle mr5" src="images/cysxico6_03.png"/>查询条件</span>
+					<div class="cy1bar flex1">
+						<span style="display: none;" id="area">所属地区：<i>全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="scale">赛事规模：<i>全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="cname">赛事分类：<i>全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="etime">截止时间：<i>全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="state">比赛状态：<i>全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="cy2 mt_35">
+				<div class="cy2top clearfix">
+					<span class="fl">共 <i id="total"></i>条数据</span>
+					<div class="fr cy2topr disflex">
+						<span>排序：</span>
+						<select id="sort" onchange="getData()">
+							<option value="1">最新发布</option>
+							<option value="2">浏览量</option>
+							<option value="3">报名数</option>
+						</select>
+						<div class="cy2topr_sc clearfix marl20">
+							<input class="ipt1" placeholder="请输入关键字查询" type="text" name="" id="search" value="" />
+							<input class="ipt2" type="submit" name="" onclick="getData()" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="cy2w clearfix"  id="list">
+
+				</div>
+				<div class="page mt_40 clearfix">
+					<div class="clearfix pagebox" id="page"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+        /*流量统计 	类型 1创业比赛 2赛事咨询 3培训课程 4评委专家 5项目库 6首页 7资料下载*/
+        setbrowse(1);
+
+        get_province('area')
+        matchScale('scale')
+        matchClass('cname')
+        deadline('etime')
+        matchState('state')
+
+        $(".sp1").click(function(){ //展开
+            $(this).toggle();
+            $(this).siblings(".sp2").toggle();
+            $(this).parents(".cylarbox").addClass("cylarbox_active")
+        })
+        $(".sp2").click(function(){ // 收起
+            $(this).toggle();
+            $(this).siblings(".sp1").toggle();
+            $(this).parents(".cylarbox").removeClass("cylarbox_active")
+        })
+
+        /*前台列表选中事件*/
+        function addCheck() {
+            $(".cylar i").unbind("click").click(function(){ //单选项
+                $(this).parents(".cylarbox").siblings(".li").removeClass("active")
+                $(this).siblings("i").removeClass("active")
+                $(this).addClass("active")
+                $('#'+$(this).attr('cname')).find('i').eq(0).html($(this).html());
+
+                if($(this).html() == '全部'){
+                    $('#'+$(this).attr('cname')).hide();
+                }else{
+                    $('#'+$(this).attr('cname')).show();
+                }
+
+                getData();
+            })
+            $(".cylar i.li").unbind("click").click(function(){ //全部
+                $(this).siblings(".cylarbox").find("i").removeClass("active")
+                $(this).addClass("active")
+                $('#'+$(this).attr('cname')).find('i').eq(0).html($(this).html());
+
+                $('#'+$(this).attr('cname')).hide();
+                getData();
+            })
+        }
+
+
+        /*删除筛选条件*/
+        function delThis(obj) {
+            var idname = $(obj).parent().parent().attr('id');
+            $('#'+idname).find('i').eq(0).html('全部');
+            $('.'+idname).removeClass('active');
+            $('.'+idname+'.li').addClass('active');
+            // $(obj).parent().parent().remove();
+            $('#'+idname).hide();
+        }
+
+        function getStatus(v){
+            //比赛状态 0,全部，1,预热2：报名中，3，进行中，4已结束
+			if(v == 1){
+			    return '<i class="cy2ati cy2ati_lv">预热中</i>';
+			}else if(v == 2){
+                return '<i class="cy2ati cy2ati_huang">报名中</i>';
+			}else if(v == 3){
+                return '<i class="cy2ati cy2ati_lan">进行中</i>';
+            }else if(v == 4){
+                return '<i class="cy2ati cy2ati_hui">已结束</i>';
+			}
+		}
+
+        getData();
+        function onPage(page) {
+            getData( page);
+        }
+        function getData(page=1) {
+            var data ={ //$('.area.active').attr('value'),
+                area:$('.area.active').attr('value'),
+                category:$('.cname.active').attr('value'),
+                scope:$('.scale.active').attr('value'),
+                term :$('.etime.active').attr('value'),
+                state :$('.state.active').attr('value'),
+                sort : $('#sort').val(),
+                search : $('#search').val(),
+				order :'DESC',
+				offset 	:page,
+				limit :pageSize
+			};
+
+            url_post('/Match/matchList',data,function (res) {
+				$('#total').html(res.data['total']);
+				$('#list').html('')
+				var list = res.data['rows'];
+				for (var i in list){
+					var scope = '全国';//list[i]['scope']
+                    $('#matchScale i').each(function () {
+                        if(+($(this).attr('value')-1) == list[i]['scope']){
+                            scope = $(this).html();
+                        }
+                    })
+                    $('#list').append('<a href="cybs_home.html?id='+list[i]['id']+'" target="_blank" class="cy2a disblock hvimghover">\n' +
+                        '\t\t\t\t\t\t<div class="img"><div class="hvimg" style="background: url('+imgpath+list[i]['banner']+') no-repeat center;"></div></div>\n' +
+                        '\t\t\t\t\t\t<div class="cy2aborder">\n' +
+                        '\t\t\t\t\t\t\t<div class="cy2at posrelative">\n' +
+                        '\t\t\t\t\t\t\t\t'+getStatus(list[i]['match_state'])+'\n' +
+                        '\t\t\t\t\t\t\t\t<h3>'+list[i]['name']+'</h3>\n' +
+                        '\t\t\t\t\t\t\t\t<p>'+list[i]['address']+'</p>\n' +
+                        '\t\t\t\t\t\t\t\t<p>'+getTime(list[i]['begin_time'])+' 至  '+getTime(list[i]['end_time'])+'</p>\n' +
+                        '\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t<div class="cy2ab clearfix">\n' +
+                        '\t\t\t\t\t\t\t\t<div class="">\n' +
+                        '\t\t\t\t\t\t\t\t\t<i class="biaoqian">'+scope+'</i>\n' +
+                        '\t\t\t\t\t\t\t\t\t<i class="biaoqian">'+list[i]['type_name']+'</i>\n' +
+                        '\t\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t\t<div class="flex1 cy2abr">\n' +
+                        '\t\t\t\t\t\t\t\t\t<span class="ml10"><img class="middle mr5" src="images/eye_03.png"/>'+list[i]['show_num']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t\t<span class="ml10"><img class="middle mr5" src="images/ren_03.png"/>'+list[i]['attend_num']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t\t<span class="ml10"><img class="middle mr5" src="images/dayin_03.png"/>'+list[i]['limit_num']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t</a>');
+				}
+
+                $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+            })
+
+        }
+
+
+
+
+
+        /*比赛地区接口*/
+        function get_province(cname) {
+            url_get('/match/get_province','',function (res) {
+                for (var i in res.data){
+                    $('#province').before('<i cname="'+cname+'" class="'+cname+'" value="'+res.data[i]['prov_code']+'">'+res.data[i]['prov_name']+'</i>');
+                }
+                addCheck()
+            })
+        }
+        /*赛事规模*/
+        function matchScale(cname) {
+            url_get('/match/matchScale','',function (res) {
+                for (var i in res.data){
+                    $('#matchScale').append('<i cname="'+cname+'" class="'+cname+'" value="'+res.data[i]['id']+'">'+res.data[i]['name']+'</i>');
+                }
+                addCheck()
+            })
+        }
+        /*赛事分类*/
+        function matchClass(cname) {
+            url_get('/Match/matchClass','',function (res) {
+                for (var i in res.data){
+                    $('#matchClass').append('<i cname="'+cname+'" class="'+cname+'" value="'+res.data[i]['id']+'">'+res.data[i]['name']+'</i>');
+                }
+                addCheck()
+            })
+        }
+        /*截止时间*/
+        function deadline(cname) {
+            url_get('/Match/deadline','',function (res) {
+                for (var i in res.data){
+                    $('#deadline').append('<i cname="'+cname+'" class="'+cname+'" value="'+res.data[i]['id']+'">'+res.data[i]['name']+'</i>');
+                }
+                addCheck()
+            })
+        }
+        /*比赛状态接口*/
+        function matchState(cname) {
+            url_get('/Match/matchState','',function (res) {
+                for (var i in res.data){
+                    $('#matchState').append('<i cname="'+cname+'" class="'+cname+'" value="'+res.data[i]['id']+'">'+res.data[i]['name']+'</i>');
+                }
+                addCheck()
+            })
+        }
+
+	</script>
+	</body>
+</html>

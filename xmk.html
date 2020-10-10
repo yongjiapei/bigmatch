@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>项目库</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="helpcenter.html">联系我们</a></span>
+					<span><a href="helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="index.html" class="nava">首 页</a></span>
+					<span><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span class="active"><a href="xmk.html" class="nava">项目库</a></span>
+					<span><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="cypx.html" class="nava">创业培训</a></span>
+					<span><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sch_pd cy_pd">
+		<div class="wrap">
+			<div class="list_nav">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>项目库</span>
+			</div>
+			<div class="mt_35 cy1 bgwhite">
+				<div class="clearfix">
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico1_03.png"/>比赛地区</span>
+						<div class="cylar flex1 disflex">
+							<i cname="area" class="area li active" value="">全部</i>
+							<div class="cylarbox posrelative">
+								<a href="javascript:" class="cylarmore" id="ProvList"><span class="sp1">更多></span><span class="sp2">收起></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico2_03.png"/>行业领域</span>
+						<div class="cylar flex1 disflex">
+							<i cname="hangye" class="hangye li active" value="">全部</i>
+							<div class="cylarbox posrelative">
+								<a href="javascript:" class="cylarmore" id="Industry"><span class="sp1">更多></span><span class="sp2">收起></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico3_03.png"/>项目阶段</span>
+						<div class="cylar flex1 disflex">
+							<i cname="jieduan" class="jieduan li active" value="">全部</i>
+							<div class="cylarbox posrelative">
+								<a href="javascript:" class="cylarmore" id="projectPhase"><span class="sp1">更多></span><span class="sp2">收起></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="cy1a disflex">
+						<span class="cylal"><img class="middle mr5" src="images/cysxico4_03.png"/>融资需求</span>
+						<div class="cylar flex1 disflex">
+							<i cname="rzxq" class="rzxq li active" value="">全部</i>
+							<div class="cylarbox posrelative">
+								<a id="financingNeeds"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cy1ba disflex">
+					<span class="cylal"><img class="middle mr5" src="images/cysxico6_03.png"/>查询条件</span>
+					<div class="cy1bar flex1">
+						<span style="display: none;" id="area">所属地区：<i >全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="hangye">行业领域：<i >全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="jieduan">项目阶段：<i >全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+						<span style="display: none;" id="rzxq">融资需求：<i >全部</i><i><img onclick="delThis(this)" src="images/cysxclose_03.png"/></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="cy2 mt_35">
+				<div class="cy2top clearfix">
+					<span class="fl">共<i id="total">加载中...</i>条数据</span>
+					<div class="fr cy2topr disflex">
+						<span>排序：</span>
+						<select id="sort" onchange="searchData()">
+							<option value="">请选择</option>
+							<option value="0">最新发布</option>
+							<option value="1">浏览量</option>
+							<option value="2">评论数</option>
+							<option value="3">点赞数</option>
+						</select>
+						<div class="cy2topr_sc clearfix marl20">
+							<input class="ipt1" placeholder="请输入关键字查询" type="text" id="search" />
+							<input class="ipt2" type="submit" onclick="searchData()" value=""/>
+						</div>
+					</div>
+				</div>
+				<div class="m4w clearfix" id="projectList">
+
+				</div>
+				<div class="page mt_40 clearfix">
+					<div class="clearfix pagebox" id="page"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+        /*流量统计 	类型 1创业比赛 2赛事咨询 3培训课程 4评委专家 5项目库 6首页 7资料下载*/
+        setbrowse(5);
+        $(".sp1").click(function(){ //展开
+            $(this).toggle();
+            $(this).siblings(".sp2").toggle();
+            $(this).parents(".cylarbox").addClass("cylarbox_active")
+        })
+        $(".sp2").click(function(){ // 收起
+            $(this).toggle();
+            $(this).siblings(".sp1").toggle();
+            $(this).parents(".cylarbox").removeClass("cylarbox_active")
+        })
+
+        /*获取地区数据 项目库*/
+        getProvList_i('area');
+        /*获取行业领域 项目库*/
+        Industry('hangye')
+        /*获取项目阶段 项目库*/
+        projectPhase('jieduan')
+        /*获取融资需求 项目库*/
+        financingNeeds('rzxq')
+
+        /*前台列表选中事件*/
+        function addCheck() {
+            $(".cylar i").unbind("click").click(function(){ //单选项
+                $(this).parents(".cylarbox").siblings(".li").removeClass("active")
+                $(this).siblings("i").removeClass("active")
+                $(this).addClass("active")
+                $('#'+$(this).attr('cname')).find('i').eq(0).html($(this).html());
+                if($(this).html() == '全部'){
+                    $('#'+$(this).attr('cname')).hide();
+				}else{
+                    $('#'+$(this).attr('cname')).show();
+				}
+                searchData()
+            })
+            $(".cylar i.li").unbind("click").click(function(){ //全部
+                $(this).siblings(".cylarbox").find("i").removeClass("active")
+                $(this).addClass("active")
+                $('#'+$(this).attr('cname')).find('i').eq(0).html($(this).html());
+
+                $('#'+$(this).attr('cname')).hide();
+                searchData()
+            })
+
+
+        }
+
+        /*删除筛选条件*/
+        function delThis(obj) {
+            var idname = $(obj).parent().parent().attr('id');
+            $('#'+idname).find('i').eq(0).html('全部');
+            $('.'+idname).removeClass('active');
+            $('.'+idname+'.li').addClass('active');
+            // $(obj).parent().parent().remove();
+            $('#'+idname).hide();
+            searchData()
+        }
+
+
+
+        searchData()
+
+        function onPage(page) {
+            searchData( page);
+        }
+
+        /*查询数据*/
+        function searchData(page="1") {
+            var area = $('.area.active').attr('value'),
+                hangye = $('.hangye.active').attr('value'),
+                jieduan = $('.jieduan.active').attr('value'),
+                rzxq = $('.rzxq.active').attr('value'),
+                search = $('#search').val();
+
+/*search 	否 	string 	关键字
+industry 	否 	string 	行业领域
+project_phase 	否 	string 	项目阶段
+financing_needs 	否 	string 	融资需求
+sort 	否 	string 	排序字段
+order 	否 	string 	排序方式 ASC 或者 DESC
+offset 	是 	string 	页码
+limit 	是 	string 	每页数量*/
+            var data ={
+                search:search,
+                industry:hangye,
+                project_phase:jieduan,
+                financing_needs:rzxq,
+                area_code:area,
+                sort:$('#sort').val(),
+                order:'DESC',
+                offset:page,
+                limit :pageSize
+            };
+
+            url_post('/Project/projectList',data,function (res) {
+                $('#total').html(res.data['total'])
+                $('#projectList').html('');
+				var list = res.data['rows'];
+                for(var i in list){
+                    $('#projectList').append('<a myhref="xmk_info.html?id='+list[i]['id']+'" onclick="isLogin(this)" class="m4a disblock hvimghover">\n' +
+                        '\t\t\t\t\t\t<div class="img borls">\n' +
+                        '\t\t\t\t\t\t\t<div class="hvimg" style="background: url('+imgpath+list[i]['thumb']+') no-repeat center;"></div>\n' +
+                        '\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t<div class="txt">\n' +
+                        '\t\t\t\t\t\t\t<h3>'+list[i]['name']+'</h3>\n' +
+                        '\t\t\t\t\t\t\t<p>'+list[i]['description']+'</p>\n' +
+                        '\t\t\t\t\t\t\t<div class="txtb clearfix">\n' +
+                        '\t\t\t\t\t\t\t\t<span ><img class="middle mr5" src="images/eye_03.png">'+list[i]['browse']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t<span ><img class="middle mr5" src="images/pl_03.png">'+list[i]['comment']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t<span class="addPraise" pid="'+list[i]['id']+'"><img class="middle mr5" src="images/zan_03.png">'+list[i]['praise']+'</span>\n' +
+                        '\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t<div class="txtf mt_10 clearfix disflex flex_center">\n' +
+                        '\t\t\t\t\t\t\t\t<div class="disflex txtfl flex_center flex1">\n' +
+                        '\t\t\t\t\t\t\t\t\t<i class="tx"><img src="'+imgpath+list[i]['user_avatar']+'"></i>\n' +
+                        '\t\t\t\t\t\t\t\t\t<span>'+list[i]['user_name']+'</span>\n' +
+                        '\t\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t\t<span>'+getTime(list[i]['create_time'])+'</span>\n' +
+                        '\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t</a>');
+				}
+
+				/*点赞*/
+				$('.addPraise').click(function (e) {
+                     e.stopPropagation();
+                    e.preventDefault();
+                    url_post('/Project/projectPraise',{
+                        token:getCookie('token'),
+                        pid:$(this).attr('pid')
+					},function (res) {
+                        alert(res.msg);
+                    })
+                })
+
+                $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+            })
+        }
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <title>参加报名1</title>
+    <style>
+        .bmtopi .four {
+            display: none;
+        }
+        .chnav a{
+            width: auto;
+            min-width: 9%;
+        }
+
+        #lanmu{
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container swiper-container-bn">
+    <div class="swiper-wrapper swiper-wrapper-bn" id="banner"> </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+</div>
+<div class="chnav">
+    <div class="wrap clearfix" id="lanmu"></div>
+</div>
+
+
+<div class="cy_bg">
+    <div class="wrap bgwhite borls">
+        <div class="bm_pd">
+            <div class="bmtop textcenter">
+                <h3 id="titleName">航天科工杯第七届“创青春”中国青年创业就业大赛报名</h3>
+                <span>请认真、如实填写信息，尽可能的完善</span>
+                <div class="bmtopi posrelative disflex">
+                    <div class="bmtopia bmtopia_active">
+                        <i>1</i>
+                        <p>报名信息</p>
+                    </div>
+                    <em></em>
+                    <div class="bmtopia">
+                        <i>2</i>
+                        <p>企业/团队信息</p>
+                    </div>
+                    <em></em>
+                    <div class="bmtopia">
+                        <i>3</i>
+                        <p>项目信息</p>
+                    </div>
+                    <em class="four"></em>
+                    <div class="bmtopia four">
+                        <i>4</i>
+                        <p id="custom"></p>
+                    </div>
+                </div>
+            </div>
+            <form action="">
+                <div class="bmb" id="bmform">
+
+
+                </div>
+            </form>
+            <div class="mt_50 bmba_sbm textcenter">
+                <input class="bmba_sbma" type="submit" name="" onclick="saveData()" value="暂 存"/>
+                <!--<input class="bmba_sbma bmba_sbma_active" type="submit" name="" id="" value="下一步" />-->
+                <a id="up" style="display: none" class="bmba_sbma bmba_sbma_active">上一步</a>
+                <a id="next" class="bmba_sbma bmba_sbma_active">下一步</a>
+            </div>
+            <!--
+                          <div class="bmba disflex">
+                              <span class="bmbal"><i class="colorred">*</i>证件号码</span>
+                              <div class="bmbar bmbar_ipt flex1 marl20">
+                                  <div class="disflex w100">
+                                      <div class="flex1">
+                                          <select name="">
+                                              <option value="">身份证号</option>
+                                              <option value="">学号</option>
+                                          </select>
+                                      </div>
+                                      <div class="" style="width: 380px;margin-left: -1px;">
+                                          <input placeholder="请输入有效证件号码" type="text" name="" id="" value="" />
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          -->
+
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <div class="wrap">
+        <div class="ft1 disflex">
+            <div class="ft1l disflex">
+                <div class="ft1la">
+                    <h3>友情链接</h3>
+                    <p><a href="">中国青年创业就业基金会</a></p>
+                    <p><a href="">团务百科</a></p>
+                    <p><a href="">青年之间</a></p>
+                    <p><a href="">中国青年创业就业大赛</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>关于我们</h3>
+                    <p><a href="">平台介绍</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">用户服务协议</a></p>
+                    <p><a href="">投诉建议</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>服务与支持</h3>
+                    <p><a href="">新手帮助</a></p>
+                    <p><a href="">主办方申请入驻</a></p>
+                    <p><a href="">赛事管理系统</a></p>
+                </div>
+            </div>
+            <div class="ft1r flex1 disflex">
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm1_05.png"/>
+                    <p>评委小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm2_05.png"/>
+                    <p>用户小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm3_05.png"/>
+                    <p>微信公众号</p>
+                </div>
+            </div>
+        </div>
+        <div class="ft2 clearfix">
+            <p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+            <span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+        </div>
+    </div>
+</div>
+
+<script src="js/baoming.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<script src="js/datetime.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var match_id = getParams('id'),//赛事id
+        group_id = '',//分组id
+        projectid = '',//项目id 57
+        sub_num = 1,//当前步骤
+        stage_num = '',//总共有几步
+        fileds = '';//所有的字段
+
+
+    /*获取轮播图*/
+    url_get("/match/matchinfo", {match_id:match_id}, function (res) {
+
+        $('#banner').html('');
+        var list = res.data['banner'].split(',');
+        $('#titleName').html(res.data['name']);
+        for (var i in list) {
+            $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank"  data-background="' + imgpath + list[i] + '"  style="background: rgba(0, 0, 0, 0) url(' + imgpath + list[i] + ') repeat scroll 0% 0%;"></a> </div>');
+        }
+
+        new Swiper('.swiper-container-bn', {
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,//修改swiper的父元素时，自动初始化swiper
+            navigation: {
+                nextEl: '.swiper-button-next-bn',
+                prevEl: '.swiper-button-prev-bn',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+    })
+
+
+
+    /*第一步的表单信息 获取分组id*/
+    url_get('/matchform/match_form_group', {
+        match_id: match_id,
+        token: getCookie('token')
+    }, function (res) {
+        if(res.data[0]['children'] && res.data[0]['children'].length>0){
+            if(res.data[0]['children'][0]['children'] && res.data[0]['children'][0]['children'].length>0){
+                group_id = res.data[0]['children'][0]['children'][0]['id'];
+            }else{
+                group_id = res.data[0]['children'][0]['id'];
+            }
+        }else{
+            group_id = res.data[0]['id'];
+        }
+
+        getFormOne();
+    })
+
+
+    /*下一步*/
+    $('#next').click(function () {
+        if($(this).html() == '提交'){
+            location.href = '/user/user_wdbm.html';
+        }else{
+            submitInfo();//提交数据获取表单
+        }
+
+    })
+    /*上一步*/
+    $('#up').click(function () {
+        saveData()//先保存数据
+        setBuZhou('up');
+        console.log(sub_num);
+        switch (sub_num) {
+            case 1:
+                getFormOne('up');
+                break;
+            case 2:
+                getFormTwo('up');
+                break;
+            case 3:
+                getFormThree('up');
+                break;
+            case 4:
+                getFormFour('up');
+                break;
+        }
+
+    })
+
+    /*栏目列表*/
+    url_get("/matchcolumn/get_column", {match_id: match_id}, function (res) {
+        $('#lanmu').html('<a href="cybs_home.html?id=' + match_id + '&typeid=' + res.data['column_type'] + '">首页</a>');
+        for (var i in res.data) {
+            if (i > 9) continue;
+            if (res.data[i]['column_type'] == 6) {/*参赛项目 */
+                $('#lanmu').append('<a href="cybs_csxm.html?id=' + match_id + '">' + res.data[i]['name'] + '</a>');
+            } else if (res.data[i]['column_type'] == 7) {/*评委导师*/
+                $('#lanmu').append('<a href="cybs_home.html?id=' + match_id + '&typeid=' + res.data[i]['column_type'] + '">' + res.data[i]['name'] + '</a>');
+            } else if (res.data[i]['column_type'] == 10) {/*赛事资讯列表*/
+                $('#lanmu').append('<a href="cybs_sszx.html?id=' + match_id + '">' + res.data[i]['name'] + '</a>');
+            } else {
+                $('#lanmu').append('<a href="cybs_home.html?id=' + match_id + '&typeid=' + res.data[i]['column_type'] + '" >' + res.data[i]['name'] + '</a>');
+            }
+        }
+    })
+
+    /*设置步骤的展示*/
+    function setBuZhou(type = 'next') {
+        if (type == 'next') {
+            sub_num++;
+            if (sub_num > stage_num) {
+                sub_num = stage_num;
+            }
+        } else {
+            sub_num--;
+            if (sub_num < 1) {
+                sub_num = 1;
+            }
+        }
+        /*显示隐藏上一步按钮*/
+        $('#up').hide()
+        console.log(sub_num)
+        if (sub_num > 1) {
+            $('#up').show()
+        }
+        /*最后一步显示提交*/
+        $('#next').html('下一步');
+        console.log(stage_num)
+        if (stage_num == 4 ) {
+            if(sub_num > 3){
+                $('#next').html('提交');
+            }
+        } else if (sub_num > 2) {
+            $('#next').html('提交');
+        }
+        /*步骤显示*/
+        $('.bmtopi .bmtopia').removeClass('bmtopia_active')
+        $('.bmtopi em').removeClass('active')
+        $('.bmtopi .bmtopia').each(function (index) {
+            if (index < sub_num) {
+                $(this).addClass('bmtopia_active');
+                $(this).prev().addClass('active')
+            }
+        })
+    }
+
+    /*提交表单数据*/
+    function submitInfo() {
+        var data = saveData()//先保存数据
+        if(!data)return;//如果没有数据 就不提交
+        switch (sub_num) {
+            case 1:
+                data['token'] = getCookie('token');
+                data['group_id'] = group_id;
+                if(projectid){
+                    data['projectid'] = projectid;
+                }
+                url_post('/matchform/edit_form_one', data, function (res) {
+                    projectid = res.data['projectid']
+                    setBuZhou(); //设置步骤显示
+                    getFormTwo();
+                })
+                break;
+            case 2:
+                data['token'] = getCookie('token');
+                data['projectid'] = projectid;
+                url_post('/matchform/edit_form_two', data, function (res) {
+                    setBuZhou(); //设置步骤显示
+                    getFormThree();
+                })
+                break;
+            case 3:
+                data['token'] = getCookie('token');
+                data['projectid'] = projectid;
+                url_post('/matchform/edit_form_three', data, function (res) {
+                    setBuZhou(); //设置步骤显示
+                    getFormFour();
+                })
+                break;
+            case 4:
+                data['token'] = getCookie('token');
+                data['projectid'] = projectid;
+                url_post('/matchform/edit_form_four', data, function (res) { })
+                break;
+        }
+    }
+
+
+    /*第一步的表单信息*/
+    function getFormOne(type = "") {
+        var data = {
+            match_id: match_id,
+            group_id: group_id,
+            token: getCookie('token'),
+        };
+
+        /*获取表单信息*/
+        url_post('/matchform/match_group_forminfo', data, function (res) {
+            stage_num = res.data['stage'];
+            /*有第四步就显示出出来*/
+            if (res.data['stage'] == 4) {
+                stage_num = res.data['stage'];
+                $('.four').show()
+                $('#custom').html(res.data['custom'])
+            }
+            fileds = res.data;//保存字段
+            BM.init({ //初始化表单
+                data: res.data
+            });
+
+
+            /*点击上一步  并且上一步有值 */
+            if (type == 'up' && getCookie('bm' + sub_num)) {
+                /*设置默认值*/
+                setDefValue();
+            }
+
+        })
+    }
+
+    /*第二步的表单信息*/
+    function getFormTwo(type = "") {
+        /*获取表单信息*/
+        url_post('/matchform/match_group_forminfo_two', {
+            projectid: projectid,
+            token: getCookie('token'),
+        }, function (res) {
+            fileds = res.data;//保存字段
+            BM.init({ //初始化表单
+                data: res.data
+            });
+            $('.bmba').hide();
+            $('.leader .bmba').show();
+            $('.bmba').each(function () {
+                if($(this).find("#subject").length > 0){$(this).show()}
+            })
+
+            /*点击上一步  并且上一步有值 */
+            if (type == 'up' && getCookie('bm' + sub_num)) {
+                /*设置默认值*/
+                setDefValue();
+            }
+
+
+        })
+    }
+
+    /*第三步的表单信息*/
+    function getFormThree(type = "") {
+        /*获取表单信息*/
+        url_post('/matchform/match_group_forminfo_three', {
+            projectid: projectid,
+            token: getCookie('token'),
+        }, function (res) {
+            fileds = res.data;//保存字段
+            BM.init({ //初始化表单
+                data: res.data
+            });
+
+            /*点击上一步  并且上一步有值 */
+            if (type == 'up' && getCookie('bm' + sub_num)) {
+                /*设置默认值*/
+                setDefValue();
+            }
+        })
+    }
+
+    /*第四步的表单信息*/
+    function getFormFour(type = "") {
+        /*获取表单信息*/
+        url_post('/matchform/match_group_forminfo_four', {
+            projectid: projectid,
+            token: getCookie('token'),
+        }, function (res) {
+            fileds = res.data;//保存字段
+            BM.init({ //初始化表单
+                data: res.data
+            });
+        })
+    }
+
+
+
+
+    /*设置默认值*/
+    function setDefValue() {
+        var defData =  JSON.parse(getCookie('bm' + sub_num));
+        var arr = fileds['setting'].concat(fileds['filed']);
+        for(var i in arr ){
+
+            /*项目负责人*/
+            if (arr[i]['type'] == 10) {
+                if(arr[i]['member']){
+                    var brr = defData['member'];
+                }else{
+                    var brr = defData['leader'];
+                }
+                for (var k in brr) {
+                    $('.leader').eq(k).find('.name').val(brr[k]['name']);
+                    $('.leader').eq(k).find('.phone').val(brr[k]['phone']);
+                    $('.leader').eq(k).find('.thumb').val(brr[k]['thumb']);
+                    $('.leader').eq(k).find('.thumb').parent().prev().find('img').attr('src',imgpath+brr[k]['thumb']);
+                    $('.leader').eq(k).find('.cardtype').val(brr[k]['cardtype']);
+                    $('.leader').eq(k).find('.cardid').val(brr[k]['cardid']);
+                    $('.leader').eq(k).find('.position').val(brr[k]['position']);
+                }
+                continue
+            }
+            /*分组三级   是如果有子集就必须选子集  如果没子集  就不用选子集*/
+            if (arr[i]['type'] == 9) {
+                continue
+            }
+            /*地区单独获取 地区是三级的  但是限制不需要必选到最后一级*/
+            if (arr[i]['type'] == 8) {
+                continue
+            }
+            /*通用数据*/
+            $('[name="' + arr[i]['name'] + '"]').val(defData[arr[i]['name']]);
+        }
+    }
+
+
+
+
+</script>

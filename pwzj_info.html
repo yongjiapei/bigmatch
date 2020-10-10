@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>评委详情</title>
+
+		<style>
+			#realname{
+				color: #000;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.xi2ltxtp{
+				padding-left: 20px;
+			}
+			#tab {
+				background: #EBEEF5;
+			}
+			#tab tr{
+				height: 40px;
+			}
+			#tab th{
+				background-color: #F4F5F9;
+				color: #666666;
+				font-weight: normal;
+			}
+			#tab td{
+				background-color: #fff;
+				text-align: center;
+			}
+			.cylar i.li{
+				width: auto;
+			}
+			.cylar i.active{
+				background: #F4F5F9;
+				color: #666666;
+			}
+			.xi2ltxt h3{
+				background-color: #F4F5F9;
+				color: #666666;
+				padding: 10px 10px;
+				font-size: 16px;
+				font-weight: normal;
+			}
+		</style>
+
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="index.html" class="nava">首 页</a></span>
+					<span><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="xmk.html" class="nava">项目库</a></span>
+					<span class="active"><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="cypx.html" class="nava">创业培训</a></span>
+					<span><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sch_pd cy_pd">
+		<div class="wrap">
+			<div class="list_nav">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>评委详情</span>
+			</div>
+			<div class="xi1 pi1 mt_30 disflex">
+				<div class="xi1l xi1l_tx"><img id="avatar" src="images/tx1_04.png"/></div>
+				<div class="xi1m flex1">
+					<h3> <i id="realname" style="margin-left: 0px;"></i><i><i id="address"></i>丨<i id="user_type" style="margin-left: 0px;"></i></i></h3>
+					<div class="xi1mw clearfix">
+						<p class="fl"><span>单位名称:</span> <i id="company"></i></p>
+						<p class="fl"><span>电子邮箱:</span> <i id="email"></i></p>
+						<p class="fl"><span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位:</span><i id="position"></i></p>
+						<p class="fl"><span>微&nbsp;&nbsp;信&nbsp;&nbsp;号:</span><i>暂无</i></p>
+						<p class="fl"><span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历:</span><i id="education"></i></p>
+						<p class="fl"><span>评审项目:</span> <i id="currency_type"></i></p>
+					</div>
+				</div>
+				<div class="xi1r marl20">
+					<div class="xi1r2 textright mt_40">
+						<p><a id="guanzhu" onclick="isguanzhu()"><i class="fa fa-heart-o mr10"></i>关注</a></p>
+						<p><a class="active mt_10" onclick="sendSiXin()"><i class="fa fa-envelope-o mr10"></i>发私信</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="mt_40 xi2 disflex">
+				<div class="xi2l" id="gerenjianjie">
+					<!--<div class="xi2l_top">-->
+						<!--<a data-id="1" class="active" href="javascript:void(0)">个人简介</a>-->
+						<!--<a data-id="2" href="javascript:void(0)">主要从业经历</a>-->
+						<!--<a data-id="3" href="javascript:void(0)">主要业绩及案例</a>-->
+						<!--<a data-id="4" href="javascript:void(0)">获得社会荣誉</a>-->
+					<!--</div>-->
+					<!--<div class="xi2l_top_height"></div>-->
+
+				</div>
+				<div class="xi2r flex1">
+					<div class="xi2rbox">
+						<h3 class="xi2rbox_title">推荐课程</h3>
+						<div class="xi2r1 xi2r1cp" id="tuijianlist">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+
+	
+	<script type="text/javascript">
+
+        /*推荐课程*/
+        tuijianClass()
+
+        /*评委详情*/
+		url_get('/Judges/getDetail',{id:getParams('id')},function (res) {
+			$('#avatar').attr('src',imgpath+res.data['avatar']); //头像
+			$('#realname').html(res.data['realname']); //真实姓名
+			$('#address').html(res.data['prov_name']);//地区
+			$('#user_type').html(getUserType(res.data['user_type']));//评委类型
+            $('#company').html(res.data['company']);//单位名称
+            $('#email').html(res.data['email']);//电子邮箱
+            $('#position').html(res.data['position']);//职位
+            $('#education').html(res.data['education_txt']);//学历
+            $('#currency_type').html(res.data['pro_num']);//评审项目
+
+			if(res.data['is_guanzhu'] == 1){
+			    $('#guanzhu').addClass('active');
+			}
+            //user_type 	string 	评委类型 0：评委，1创业导师，2投资人，3专家学者     创业导师 、 投资人、专家学者
+
+			$('.mp').remove()
+
+            if(res.data['user_type'] == 3){
+                if(res.data['research']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">研究领域</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['research']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+            }
+			if(res.data['user_type'] == 1 ||  res.data['user_type'] == 3){
+                if(res.data['experience']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">主要从业经验</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['experience']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['demo']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">主要业绩及案例</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['demo']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+                if(res.data['honor']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">获得社会荣誉</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['honor']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['description']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">个人简介</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['description']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+                if(res.data['recommend']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">推荐机构</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['recommend']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+			}else if(res.data['user_type'] == 2){
+                if(res.data['resources']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">提供的资源</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['resources']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['leixing_arr'] && res.data['leixing_arr'].length > 0){
+                    var str = '';
+                    for (var i in res.data['leixing_arr']){
+                        str +=  '<i cname="fangxiang" class="fangxiang li active">'+res.data['leixing_arr'][i]+'</i> ';
+                    }
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt cylar">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">身份类别</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if( res.data['jieduan_arr'] && res.data['jieduan_arr'].length > 0){
+                    var str = '';
+                    for (var i in res.data['jieduan_arr']){
+                        str +=  '<i cname="fangxiang" class="fangxiang li active">'+res.data['jieduan_arr'][i]+'</i>';
+                    }
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt cylar">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">投资阶段</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['diqu_arr'] && res.data['diqu_arr'].length > 0){
+                    var str = '';
+                    for (var i in res.data['diqu_arr']){
+                        str += '<i cname="fangxiang" class="fangxiang li active">'+res.data['diqu_arr'][i]+'</i>';
+                    }
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt cylar">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">投资意向地区</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['lingyu_arr'] && res.data['lingyu_arr'].length > 0){
+                    var str = '';
+                    for (var i in res.data['lingyu_arr']){
+                        str += '<i cname="fangxiang" class="fangxiang li active">'+res.data['lingyu_arr'][i]+'</i>';
+                    }
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt cylar">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">投资关注领域</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+                if(res.data['currency_name']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">投资币种</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+res.data['currency_name']+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['invest_quota']){
+                    var str = '';
+                    for (var i in res.data['invest_quota']){
+                        str += '<i cname="fangxiang" class="fangxiang li active">'+res.data['invest_quota'][i]+'</i>';
+                    }
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">单笔投资额度</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+
+                if(res.data['anli_arr'].length > 0){
+                    var str = '<table width="80%" cellspacing="1" cellpadding="0" align="center" id="tab" ><tr><th>项目名称</th><th>项目金额</th><th>项目日期</th></tr>';
+
+                    var list = res.data['anli_arr']
+                    for(var k in list){
+                        str += '<tr><td>'+list[k]['name']+'</td><td>'+list[k]['invest_amount']+'</td><td>'+list[k]['create_time']+'</td></tr>';
+                    }
+                    str += "</table>";
+
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">投资案例</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp">'+str+'</div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+
+                if(res.data['business_name']){
+                    $('#gerenjianjie').append('\t<div class="mp mp1 xi2ltxt">\n' +
+                        '\t\t\t\t\t\t<h3 class="title">企业/机构信息</h3>\n' +
+                        '\t\t\t\t\t\t<div class="xi2ltxtp"><p>企业：'+res.data['business_name']+'</p><p>地址：'+res.data['business_address']+'</p><p>简介：'+res.data['business_content']+'</p></div>\n' +
+                        '\t\t\t\t\t</div>')
+                }
+			}
+
+
+
+
+
+
+
+            /*description 	string 	个人简介
+            experience 	string 	主要从业经验
+            demo 	string 	主要业绩及案例
+            honor 	string 	获得社会荣誉
+            recommend 	string 	推荐机构
+            business_name 	string 	企业名称
+            business_address 	string 	企业地址：
+            business_content 	string 	企业简介：
+            currency_type 	string 	币种类型
+            currency_name 	string 	币种名称
+            invest_quota 	string 	投资额度
+            resources 	string 	提供的资源
+            research 	string 	研究领域
+            is_guanzhu 	string 	是否关注，0未关注，1已关注
+            jieduan_arr 	string 	投资阶段数组
+            diqu_arr 	string 	投资地区数组
+            lingyu_arr 	string 	投资领域数组
+            anli_arr 	string 	投资案例数组
+            leixing_arr 	string 	身份类别数组*/
+
+        })
+
+		/*关注*/
+		function isguanzhu(){
+		    if($('#guanzhu').hasClass('active')){
+                url_post('/Judges/delFollow',{token:getCookie('token'),obj_user_id:getParams('id')},function (res) {
+                    $('#guanzhu').removeClass('active');
+                })
+			}else{
+                url_post('/Judges/userFollow',{token:getCookie('token'),obj_user_id:getParams('id')},function (res) {
+                    $('#guanzhu').addClass('active');
+                })
+			}
+
+		}
+
+
+
+
+		$('.xi2l_top a').click(function(){
+	    	$(this).addClass("active").siblings().removeClass("active");
+	    	var did = $(this).attr("data-id");
+	    	var gtop = $('.mp'+did).offset().top;
+	    	$("html,body").animate({scrollTop: (gtop-50)+'px'},300);
+	    })
+		$(window).scroll(function(){
+	    	var sct = $(window).scrollTop();
+	    	if(sct>460){
+	    		$(".xi2l_top").addClass("xi2l_top_fxd");
+	    		$(".xi2l_top_height").show();
+	    	}
+	    	if(sct<460){
+	    		$(".xi2l_top").removeClass("xi2l_top_fxd")
+	    		$(".xi2l_top_height").hide();
+	    	}
+	    	if(sct>460+$(".xi2l").height()){
+	    		$(".xi2l_top").removeClass("xi2l_top_fxd")
+	    		$(".xi2l_top_height").hide();
+	    	}
+	    	$('.mp').each(function(){
+	    		var gdtop = $(this).offset().top;
+	    		var gidx = $('.mp').index($(this));
+	    		if(sct >= (gdtop-50)){
+	    			$('.xi2l_top a').eq(gidx).addClass("active").siblings().removeClass("active");
+	    		}
+	    	})
+	    });
+	</script>
+	</body>
+</html>

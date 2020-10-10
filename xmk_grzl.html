@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <title>创业者详情</title>
+</head>
+<body>
+
+<div class="head">
+    <div class="hd1">
+        <div class="wrap clearfix">
+            <span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+            <div class="fr hd1r">
+                <span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+                <span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+                <span><a href="helpcenter.html">联系我们</a></span>
+                <span><a href="helpcenter.html">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="hd2">
+        <div class="wrap disflex h100 flex_center">
+            <a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+            <div class="flex1 nav clearfix">
+                <span><a href="index.html" class="nava">首 页</a></span>
+                <span><a href="cybs.html" class="nava">创业比赛</a></span>
+                <span class="active"><a href="xmk.html" class="nava">项目库</a></span>
+                <span><a href="pwzj.html" class="nava">评委专家</a></span>
+                <span><a href="cypx.html" class="nava">创业培训</a></span>
+                <span><a href="sszx.html" class="nava">赛事资讯</a></span>
+                <span><a href="zlxz.html" class="nava">资料下载</a></span>
+            </div>
+            <div class="hd2r disflex">
+                <a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5"
+                                                                   src="images/hdrico_03.png"/>发布项目</a>
+                <div class="hd2ra hd2ra2">
+                    <a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="xmkhm textcenter disflex flex_center">
+    创青春赛事信息服务云平台欢迎您的加入
+</div>
+
+<div class="xmh1 bgwhite">
+    <div class="wrap">
+
+        <div class="textcenter">
+            <div class="xi2r1top">
+                <i><img id="avatar" src=""></i>
+                <h3 class="mt_10 nickname">...</h3>
+                <p class="mt_10" id="add_type_name">...</p>
+                <span class="disblock color666 mt_10" id="sortdes">...</span>
+            </div>
+            <div class="xi2r1bot mt_25">
+                <a href="javascript:;" class="active" onclick="guanzhu()" id="is_guanzhu">关注TA（<span id="gz_num"></span>）</a>
+
+                <a href="javascript:;" onclick='sixin()'>给TA发私信</a>
+            </div>
+        </div>
+        <!--隐藏私信窗口-->
+        <div class="tc">
+            <div class="disflex w100 h100 flex_center">
+                <div class="tcbox sx_tc">
+                    <div class="tcbox_top flex_center posrelative disflex">
+                        <h3 class="flex1">发私信  给  <span class="user_nick_name"></span></h3>
+                        <i class="close_tc"><img src="images/close_03.png"/></i>
+                    </div>
+                    <div class="sxtcw posrelative">
+                        <div class="plk posrelative">
+                            <div class="clearfix posrelative plk1">
+                                <textarea class="form-control" rows="3" id="content"></textarea>
+                                <button onclick="submit_sx()">发送私信</button>
+                            </div>
+                        </div>
+                        <div class="sxtcb textcenter">
+                            <a href="javascript:" class="sxtcba sxtcba_active" onclick="submit_sx()">发送</a>
+                            <a href="javascript:" class="sxtcba close_tc">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="xmh1nav mt_20 textcenter">
+            <a href="xmk_grzl.html" id="info_url" class="active">个人资料</a>
+            <a href="xmk_fbxm.html" id="fb_xm_url">发布项目</a>
+            <a href="xmk_cjbs.html" id="cj_url">参加比赛</a>
+            <a href="xmk_tdsc.html" id="sc_url">TA的收藏</a>
+            <a href="xmk_gzdr.html" id="gz_url">关注的人</a>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="xib_pd">
+    <div class="wrap bgwhite borls">
+        <div class="xmh_title">个人资料</div>
+        <div class="xmh_pd">
+            <div class="xm_gr">
+                <div class="xmgr1">
+                    <h3 class="xmgr_title">个人资料</h3>
+
+                    <div class="xmgr1a disflex">
+                        <span>昵称</span>
+                        <p class="flex1 nickname"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>真实姓名</span>
+                        <p class="flex1" id="realname"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>性别</span>
+                        <p class="flex1" id="gender"></p>
+                    </div>
+
+                    <!--<div class="xmgr1a disflex">-->
+                        <!--<span>年龄</span>-->
+                        <!--<p class="flex1" id="">30</p>-->
+                    <!--</div>-->
+
+                    <!--<div class="xmgr1a disflex">-->
+                        <!--<span>民族</span>-->
+                        <!--<p class="flex1">汉族</p>-->
+                    <!--</div>-->
+
+                    <!--<div class="xmgr1a disflex">-->
+                        <!--<span>政治面貌</span>-->
+                        <!--<p class="flex1">群众</p>-->
+                    <!--</div>-->
+
+                    <div class="xmgr1a disflex">
+                        <span>所在地区</span>
+                        <p class="flex1" id="address_prov"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>现居住详细地址</span>
+                        <p class="flex1" id="address"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>联系电话</span>
+                        <p class="flex1" id="phone"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>电子邮箱</span>
+                        <p class="flex1" id="email"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>工作单位</span>
+                        <p class="flex1" id="company"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>职位</span>
+                        <p class="flex1" id="position"></p>
+                    </div>
+
+                    <div class="xmgr1a disflex">
+                        <span>个人简介</span>
+                        <p class="flex1" id="description">这个家伙很懒，什么也没留下。</p>
+                    </div>
+
+                </div>
+
+
+                <div class="xmgr2 mt_25">
+                    <h3 class="xmgr_title">荣誉</h3>
+                    <div class="xmgr2w posrelative" id="ry_list">
+
+
+
+                        <div class="xmgr2a">
+                            <i></i>
+                            <h3>2020-05-12</h3>
+                            <p>中国青年创业就业大赛-等奖</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <div class="wrap">
+        <div class="ft1 disflex">
+            <div class="ft1l disflex">
+                <div class="ft1la">
+                    <h3>友情链接</h3>
+                    <p><a href="">中国青年创业就业基金会</a></p>
+                    <p><a href="">团务百科</a></p>
+                    <p><a href="">青年之间</a></p>
+                    <p><a href="">中国青年创业就业大赛</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>关于我们</h3>
+                    <p><a href="">平台介绍</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">用户服务协议</a></p>
+                    <p><a href="">投诉建议</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>服务与支持</h3>
+                    <p><a href="">新手帮助</a></p>
+                    <p><a href="">主办方申请入驻</a></p>
+                    <p><a href="">赛事管理系统</a></p>
+                </div>
+            </div>
+            <div class="ft1r flex1 disflex">
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm1_05.png"/>
+                    <p>评委小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm2_05.png"/>
+                    <p>用户小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm3_05.png"/>
+                    <p>微信公众号</p>
+                </div>
+            </div>
+        </div>
+        <div class="ft2 clearfix">
+            <p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+            <span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+        </div>
+    </div>
+</div>
+
+<script src="/share/js/jquery.share.min.js"></script>
+<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/xmk_common.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<script>
+
+    // -获取信息
+    url_get('/member/getUserDetail',{
+        user_id:getParams('id'),
+        token:getCookie('token'),
+        u_token:getCookie('token'),
+
+    },function (res) {
+
+        if(res.data){
+
+            var info=res.data;
+
+            $('.nickname').text(info.nickname);
+            $('#phone').text(info.phone);
+            $('#realname').text(info.realname);
+            var sex='';
+            if(info.gender==0){
+                sex='保密';
+            }
+            if(info.gender==1){
+                sex='男';
+            }if(info.gender==2){
+                sex='女';
+            }
+            $('#gender').text(sex);
+            $('#email').text(info.email);
+
+            $('#company').text(info.company);
+            $('#position').text(info.position);
+            $('#address').text(info.address);
+
+            $('#description').text(info.description);
+            $('#sortdes').text(info.sortdes);
+
+            $('#gz_num').text(info.gz_num);
+
+            //判断是否已关注
+
+            if(info.is_guanzhu==1){
+                $('#is_guanzhu').html('已关注('+info.gz_num+')');
+                $('#is_guanzhu').attr('onclick','d_guanzhu()');
+
+            }
+
+            var city_name='';
+
+            if(info.address_prov.length>0){
+                city_name=info.address_prov[0];
+
+                $('#address_prov').text(city_name);
+            }
+
+            $('#add_type_name').text(city_name+' | '+info.typeName);
+
+            $('#avatar').attr('src',imgpath+res.data.avatar);
+
+            // console.log(info);
+
+
+            //荣誉
+            if(info.honhor){
+
+                $('#ry_list').html('');
+
+                var honhor=info.honhor;
+                for (var i in honhor){
+
+                    var html = '<div class="xmgr2a">\n' +
+                                    '<i></i>\n' +
+                                    '<h3>'+getTime(honhor[i].gettime)+'</h3>\n' +
+                                    '<p>'+honhor[i].description+'</p>\n' +
+                                '</div>'
+                    $('#ry_list').append(html);
+                }
+
+            }else{
+                $('#ry_list').html('暂无');
+
+            }
+        }
+
+    });
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <title>首页</title>
+    <style>
+        .swiper-container-bn .rmssFouce  .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="head">
+    <div class="hd1">
+        <div class="wrap clearfix">
+            <span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+            <div class="fr hd1r">
+                <span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+                <span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+                <span><a href="/helpcenter.html">联系我们</a></span>
+                <span><a href="/helpcenter.html">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="hd2">
+        <div class="wrap disflex h100 flex_center">
+            <a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+            <div class="flex1 nav clearfix">
+                <span class="active"><a href="index.html" class="nava">首 页</a></span>
+                <span><a href="cybs.html" class="nava">创业比赛</a></span>
+                <span><a href="xmk.html" class="nava">项目库</a></span>
+                <span><a href="pwzj.html" class="nava">评委专家</a></span>
+                <span><a href="cypx.html" class="nava">创业培训</a></span>
+                <span><a href="sszx.html" class="nava">赛事资讯</a></span>
+                <span><a href="zlxz.html" class="nava">资料下载</a></span>
+            </div>
+            <div class="hd2r disflex">
+                <a href="user/fabu.html" class="hd2ra hd2ra1">
+                    <img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+                <div class="hd2ra hd2ra2">
+                    <a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--bn-->
+<div class="swiper-container swiper-container-bn">
+    <div class="swiper-wrapper swiper-wrapper-bn" id="banner">
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+</div>
+<div class="md m1">
+    <div class="wrap">
+        <div class="m1t disflex">
+            <div class="m1tl disflex flex_center">
+                <img class="disblock" src="images/m1t_tt_03.png"/>
+            </div>
+            <div class="flex1 m1tm">
+                <div class="clearfix scroll">
+                    <!--公告-->
+                    <ul id="notice"></ul>
+                </div>
+            </div>
+            <div class="m1tr">
+                <a target="_blank" href="sszx.html?type=notice">查看更多>></a>
+            </div>
+        </div>
+        <div class="mdtop textcenter mt_50">
+            <h3>最新资讯</h3>
+            <p>information<span>The latest information</span></p>
+        </div>
+        <div class="m1w mt_40 disflex">
+            <div class="m1l">
+                <div class="swiper-container swiper-container-m1">
+                    <div class="swiper-wrapper" id="NewsBanner"></div>
+                    <div class="swiper-pagination swiper-pagination-m1"></div>
+                </div>
+            </div>
+            <div class="m1r borls marl20 flex1" id="News"></div>
+        </div>
+        <div class="morea mt_60 textcenter">
+            <a target="_blank" href="sszx.html?type=news">more >></a>
+        </div>
+    </div>
+</div>
+<div class="md m2 m_hxpd">
+    <div class="wrap">
+        <div class="mdtop clearfix disflex flex_center">
+            <div class="mdtopl flex1 disflex flex_center fl">
+                <h3>热门赛事</h3>
+                <p class="textcenter marl20">Popular events<span>砥砺吞斗青春  共创强国伟业</span></p>
+            </div>
+            <div class="fr morea">
+                <a target="_blank" href="cybs.html">more >></a>
+            </div>
+        </div>
+        <div class="mt_40 m2m disflex">
+            <div class="flex1 m2ml" id="Match"></div>
+            <div class="m2mr" style="background: none;padding:0px">
+                <div class="swiper-container swiper-container-bn" style="height: 100%;">
+                    <div class="swiper-wrapper " id="ssbanner"></div>
+                    <div class="swiper-pagination rmssFouce"  ></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="m2b mt_40 clearfix">
+            <a href="searchbm.html" class="m2ba m2ba1 fl"><img src="images/m2bico1_03.png"/>报名查询</a>
+            <a href="searchcj.html" class="m2ba m2ba2 fr"><img src="images/m2bico2_03.png"/>成绩查询</a>
+        </div>
+    </div>
+</div>
+<div class="md m3 m_hxpd">
+    <div class="wrap">
+        <div class="mdtop clearfix disflex flex_center">
+            <div class="mdtopl flex1 disflex flex_center fl">
+                <h3>创业培训</h3>
+                <p class="textcenter marl20">entrepreneurship<span>Entrepreneurship training</span></p>
+            </div>
+            <div class="fr morea">
+                <a target="_blank" href="cypx.html">more >></a>
+            </div>
+        </div>
+        <div class="m3t mt_40 clearfix" id="Course"></div>
+        <div class="mt_25 clearfix m3b" id="Course_other"></div>
+    </div>
+</div>
+<div class="md m4 m_hxpd">
+    <div class="wrap">
+        <div class="mdtop clearfix disflex flex_center">
+            <div class="mdtopl flex1 disflex flex_center fl">
+                <h3>项目库</h3>
+                <p class="textcenter marl20">Project library<span>Project library</span></p>
+            </div>
+            <div class="fr morea">
+                <a target="_blank" href="xmk.html">more >></a>
+            </div>
+        </div>
+        <div class="m4w clearfix mt_15" id="Project"></div>
+    </div>
+</div>
+<div class="md m5">
+    <div class="wrap">
+        <div class="mdtop textcenter">
+            <h3>评委专家</h3>
+            <p>experts<span>The judges experts</span></p>
+        </div>
+        <div class="m5w mt_40 posrelative">
+            <div class="swiper-container swiper-container-m5">
+                <div class="swiper-wrapper" id="JUDList"></div>
+            </div>
+            <div class="swiper-button-next swiper-button-next-m5"></div>
+            <div class="swiper-button-prev swiper-button-prev-m5"></div>
+        </div>
+        <div class="morea mt_60 textcenter">
+            <a target="_blank" href="pwzj.html">more >></a>
+        </div>
+    </div>
+</div>
+<div class="md m6">
+    <div class="wrap">
+        <div class="mdtop textcenter">
+            <h3>合作机构</h3>
+            <p>cooperation<span>Cooperation agency</span></p>
+        </div>
+        <div class="m6w mt_20 clearfix" id="Cooper"></div>
+    </div>
+</div>
+<div class="md m7">
+    <div class="wrap">
+        <div class="mdtop textcenter">
+            <h3>关于平台</h3>
+            <p>On the platform<span>我们可以帮您解决比赛、宣传、报名、通知、统计等问题 让组织比赛更加高效</span></p>
+        </div>
+        <br/>
+        <div class="m7w mt_60 clearfix">
+            <div class="m7a textcenter">
+                <h3><em class="counter" id="matchCount">3000</em><i>场</i></h3>
+                <p>发布赛事</p>
+            </div>
+            <div class="m7a textcenter">
+                <h3><em class="counter" id="userCount">5000</em><i>人</i></h3>
+                <p>注册用户</p>
+            </div>
+            <div class="m7a textcenter">
+                <h3><em class="counter" id="projectCount">2000</em><i>个</i></h3>
+                <p>发布项目</p>
+            </div>
+            <div class="m7a textcenter">
+                <h3><em class="counter" id="sponsorCount">10</em><i>家</i></h3>
+                <p>入驻主办方</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="wrap">
+        <div class="ft1 disflex">
+            <div class="ft1l disflex">
+                <div class="ft1la">
+                    <h3>友情链接</h3>
+                    <p><a href="">中国青年创业就业基金会</a></p>
+                    <p><a href="">团务百科</a></p>
+                    <p><a href="">青年之间</a></p>
+                    <p><a href="">中国青年创业就业大赛</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>关于我们</h3>
+                    <p><a href="">平台介绍</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">用户服务协议</a></p>
+                    <p><a href="">投诉建议</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>服务与支持</h3>
+                    <p><a href="">新手帮助</a></p>
+                    <p><a href="">主办方申请入驻</a></p>
+                    <p><a href="">赛事管理系统</a></p>
+                </div>
+            </div>
+            <div class="ft1r flex1 disflex">
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm1_05.png"/>
+                    <p>评委小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm2_05.png"/>
+                    <p>用户小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm3_05.png"/>
+                    <p>微信公众号</p>
+                </div>
+            </div>
+        </div>
+        <div class="ft2 clearfix">
+            <p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+            <span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+        </div>
+    </div>
+</div>
+
+<!--无缝滚动-->
+<script src="js/gd.js" type="text/javascript" charset="utf-8"></script>
+<!--滚动文字-->
+<script src="js/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    /*流量统计 	类型 1创业比赛 2赛事咨询 3培训课程 4评委专家 5项目库 6首页 7资料下载*/
+    setbrowse(6);
+
+    $(function () {
+        /*获取轮播图*/
+        url_get("/auth/getAuthBanner", {model:1}, function (res) {
+            $('#banner').html('');
+            for (var i in res.data) {
+                $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank" title="' + res.data[i]['title'] + '" data-background="' + imgpath + res.data[i]['banner_src'] + '" href="' + res.data[i]['link'] + '" style="background: rgba(0, 0, 0, 0) url(' + imgpath + res.data[i]['banner_src'] + ') repeat scroll 0% 0%;"></a> </div>');
+            }
+
+            new Swiper('.swiper-container-bn', {
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+                navigation: {
+                    nextEl: '.swiper-button-next-bn',
+                    prevEl: '.swiper-button-prev-bn',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+
+        })
+
+        /*公告*/
+        url_get('/auth/getAuthNotice', '', function (res) {
+            $('#notice').html('');
+            for (var i in res.data) {
+                $('#notice').append('<li> <a target="_blank" href="sszx_info1.html?id=' + res.data[i]['id'] + '"><i></i>' + res.data[i]['title'] + '</a> </li>');
+            }
+            $('.scroll').liMarquee();
+        })
+
+        /*资讯banner api/auth/getAuthNewsLBWeb */
+        url_get('/auth/getAuthNewsLBWeb', '', function (res) {
+            $('#NewsBanner').html('');
+            for (var i in res.data) {
+                $('#NewsBanner').append('<div class="swiper-slide">\n' +
+                    '\t\t\t\t\t\t<a target="_blank" href="/sszx_info.html?id='+res.data[i]['id']+'"  class="hvimghover borls posrelative" title="' + res.data[i]['title'] + '">\n' +
+                    '\t\t\t\t\t\t\t<p>' + res.data[i]['title'] + '</p>\n' +
+                    '\t\t\t\t\t\t\t<div class="hvimg" style="background: url(' + imgpath + res.data[i]['image'] + ') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t</a>\n' +
+                    '\t\t\t\t\t</div>');
+            }
+
+            new Swiper('.swiper-container-m1', {
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+
+                pagination: {
+                    el: '.swiper-pagination-m1',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+
+
+        })
+        /*资讯信息*/
+        url_get('/auth/getAuthNews', '', function (res) {
+            $('#News').html('');
+            var tags = '';
+            for (var i in res.data) {
+                if (i > 1) break; //只显示两个
+                if (res.data[i]['tags']) {
+                    tags = '<i>' + res.data[i]['tags'] + '</i>';
+                }
+                $('#News').append('<a target="_blank"  href="sszx_info.html?id=' + res.data[i]['id'] + '" class="m1ra disflex flex_center">\n' +
+                    '\t\t\t\t\t\t<div class="m1raimg borls" style="background: url(' + imgpath + res.data[i]['image'] + ') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t<div class="flex1 m1rtxt">\n' +
+                    '\t\t\t\t\t\t\t<h3 class="posrelative">' + res.data[i]['title'] + '<span>' + getTime(res.data[i]['create_time']) + '</span></h3>\n' +
+                    '\t\t\t\t\t\t\t<p>' + res.data[i]['description'] + '</p>\n' +
+                    '\t\t\t\t\t\t\t<div class="m1rtxtb clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="fl">' + tags + '</div>\n' +
+                    '\t\t\t\t\t\t\t\t<span class="fr">来自：' + res.data[i]['source'] + '</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t</a>');
+            }
+        })
+
+        /*热门赛事*/
+        url_get('/auth/getAuthMatch', '', function (res) {
+            $('#Match').html('');
+            var area = '';
+            for (var i in res.data) {
+                if(i>2)break;
+                area = '';
+                for (var k in res.data['area']) {
+                    area += '<i>' + res.data['area'][k] + '</i>';
+                }
+                $('#Match').append('<div class="m2mla disflex">\n' +
+                    '\t\t\t\t\t\t<a target="_blank"  href="cybs_home.html?id=' + res.data[i]['id'] + '" class="m2mlaimg" style="background: url(' + imgpath + res.data[i]['banner'].split(',')[0] + ') no-repeat center;"><i>已报名：' + res.data[i]['signUp'] + '人</i></a>\n' +
+                    '\t\t\t\t\t\t<div class="m2mlatxt flex1">\n' +
+                    '\t\t\t\t\t\t\t<a href="" class="h3">' + res.data[i]['name'] + '</a>\n' +
+                    '\t\t\t\t\t\t\t<p>主办方：'+ res.data[i]['user_name'] +'</p>\n' +
+                    '\t\t\t\t\t\t\t<p>报名时间：' + getTime(res.data[i]['begin_time']) + '  至  ' + getTime(res.data[i]['begin_time']) + '</p>\n' +
+                    '\t\t\t\t\t\t\t<p>赛事地点：' + res.data[i]['address'] + '</p>\n' +
+                    '\t\t\t\t\t\t\t<div class="m2mlatxtb clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="fl">\n' +
+                    '\t\t\t\t\t\t\t\t\t' + area + '\n' +
+                    '\t\t\t\t\t\t\t\t\t<i>限制 ' + res.data[i]['limit_num'] + '人</i>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<a target="_blank" href="cybs_cjbm.html?id=' + res.data[i]['id'] + '" class="fr">我要报名</a>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t</div>');
+            }
+        })
+        /*赛事接口 /auth/getAuthMatchBanner /auth/getAuthMatchBanner*/
+        url_get('/auth/getAuthMatchBanner','',function (res){
+            $('#ssbanner').html('');
+            for (var i in res.data) {
+                $('#ssbanner').append(' <div class="swiper-slide">\n' +
+                    ' <a class="bnimg" title="' + res.data[i]['title'] + '" data-background="'+imgpath+ res.data[i]['banner_src'] +'" href="'+ res.data[i]['link']+'" style="background: rgba(0, 0, 0, 0) url(' + imgpath + res.data[i]['banner_src'] + ') repeat scroll 0% 0%;height: 100%;"></a>\n' +
+                    ' </div>');
+            }
+
+            new Swiper('.swiper-container-bn', {
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+                navigation: {
+                    nextEl: '.swiper-button-next-bn',
+                    prevEl: '.swiper-button-prev-bn',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+
+        })
+
+        /*创业培训接口*/
+        url_get('/auth/getAuthCourse', '', function (res) {
+            $('#Course').html('');
+            $('#Course_other').html('');
+            var course = '';
+            for (var i in res.data) {
+                if (!res.data[i]) continue
+                switch (i) {
+                    case "online":
+
+                        course += '<a target="_blank" href="' + res.data[i]['live_url'] + '" class="m3ta posrelative disblock fl" style="background: url(' + imgpath + res.data[i]['thumb'] + ') no-repeat center;">\n' +
+                            '\t\t\t\t\t<i class="iyellow"><img class="middle mr5" src="images/zb_03.png"/>直播</i>\n' +
+                            '\t\t\t\t\t<div class="txt clearfix">\n' +
+                            '\t\t\t\t\t\t<p>' + res.data[i]['title'] + '</p>\n' +
+                            '\t\t\t\t\t\t<span>在线  ' + res.data[i]['browse'] + '人</span>\n' +
+                            '\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t</a>';
+                        break;
+                    case 'ofLine':
+                        course += '<a target="_blank" href="cypx_info.html?id=' + res.data[i]['id'] + '" class="m3ta posrelative disblock fr" style="background: url(' + imgpath + res.data[i]['thumb'] + ') no-repeat center;">\n' +
+                            '\t\t\t\t\t<i class="iblue">活动</i>\n' +
+                            '\t\t\t\t\t<div class="txt clearfix">\n' +
+                            '\t\t\t\t\t\t<p>' + res.data[i]['title'] + '</p>\n' +
+                            '\t\t\t\t\t\t<span>已报名  ' + res.data[i]['num'] + '人</span>\n' +
+                            '\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t</a>';
+                        break;
+                    case 'other':
+                        var cinfo = '', tags = '';
+                        for (var k in res.data['other']) {
+                            cinfo = res.data['other'][k];
+                            if (cinfo['tags']) {
+                                tags = '<i class="biaoqian">' + cinfo['tags'] + '</i>';
+                            }
+                            $('#Course_other').append('<a target="_blank" href="cypx_info.html?id=' + cinfo['id'] + '" class="fl m3ba disblock hvimghover">\n' +
+                                '\t\t\t\t\t<div class="img"><div class="hvimg" style="background: url(' + imgpath + cinfo['thumb'] + ');"></div></div>\n' +
+                                '\t\t\t\t\t<div class="txt">\n' +
+                                '\t\t\t\t\t\t<h3>' + cinfo['title'] + '</h3>\n' +
+                                '\t\t\t\t\t\t<p>' + tags + '</p>\n' +
+                                '\t\t\t\t\t\t<div class="txtb clearfix">\n' +
+                                '\t\t\t\t\t\t\t<div class="fl">\n' +
+                                '\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/eye_03.png"/>' + cinfo['browse'] + '</span>\n' +
+                                '\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/pl_03.png"/>' + cinfo['commentNum'] + '</span>\n' +
+                                '\t\t\t\t\t\t\t</div>\n' +
+                                '\t\t\t\t\t\t\t<i class="fr">' + getTime(cinfo['create_time']) + '</i>\n' +
+                                '\t\t\t\t\t\t</div>\n' +
+                                '\t\t\t\t\t</div>\n' +
+                                '\t\t\t\t</a>');
+                        }
+
+                        break;
+                }
+            }
+            $('#Course').html(course);
+        })
+
+        /*项目库接口*/
+        url_get('/auth/getAuthProject', '', function (res) {
+            $('#Project').html('');
+            for (var i in res.data) { //+ res.data[i]['id'] +
+                if(i>5)break;//只显示6个
+                $('#Project').append('<a target="_blank" href="xmk_info.html?id='+ res.data[i]['id'] +'" class="m4a disblock hvimghover">\n' +
+                    '                <div class="img borls">\n' +
+                    '                    <div class="hvimg" style="background: url('+imgpath+ res.data[i]['thumb'] +') no-repeat center;"></div>\n' +
+                    '                </div>\n' +
+                    '                <div class="txt">\n' +
+                    '                    <h3>'+ res.data[i]['name'] +'</h3>\n' +
+                    '                    <p>'+ res.data[i]['description'] +'</p>\n' +
+                    '                    <div class="txtb clearfix">\n' +
+                    '                        <span><img class="middle mr5" src="images/eye_03.png"/>'+ res.data[i]['browse'] +'</span>\n' +
+                    '                        <span><img class="middle mr5" src="images/pl_03.png"/>'+ res.data[i]['comment'] +'</span>\n' +
+                    '                        <span><img class="middle mr5" src="images/zan_03.png"/>'+ res.data[i]['praiseNum'] +'</span>\n' +
+                    '                    </div>\n' +
+                    '                    <div class="txtf mt_10 clearfix disflex flex_center">\n' +
+                    '                        <div class="disflex txtfl flex_center flex1">\n' +
+                    '                            <i class="tx"><img src="'+imgpath+ res.data[i]['avatar'] +'"/></i>\n' +
+                    '                            <span>'+ res.data[i]['nickname'] +'</span>\n' +
+                    '                        </div>\n' +
+                    '                        <span>'+ getTime(res.data[i]['create_time']) +'</span>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '            </a>');
+            }
+        })
+
+        /*评委专家接口*/
+        url_get('/auth/getJUDList', '', function (res) {
+            $('#JUDList').html('');
+            for (var i in res.data) { //+ res.data[i]['id'] +
+                if(i>5)break;//只显示6个
+                $('#JUDList').append('<div class="swiper-slide">\n' +
+                    '                        <div class="m5a textcenter" style="width: 374px">\n' +
+                    '                           <a href="/pwzj_info.html?id='+res.data[i]['id']+'"> <div class="m5txt textcenter" style="height: 341px;">\n' +
+                    '                                <span><img src="' + imgpath + res.data[i]['avatar'] + '"></span>\n' +
+                    '                                <h4>'+ res.data[i]['realname'] +'</h4>\n' +
+                    '                                <p>'+ res.data[i]['description'] +'</p>\n' +
+                    '                            </div></a>\n' +
+                    '                        </div>\n' +
+                    '                    </div>');
+
+
+            }
+            new Swiper('.swiper-container-m5', {
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+
+                navigation: {
+                    nextEl: '.swiper-button-next-m5',
+                    prevEl: '.swiper-button-prev-m5',
+                },
+                slidesPerView: 3,
+                spaceBetween: 40,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        })
+
+        /*合作机构接口*/
+        url_get('/auth/getAuthCooper', '', function (res) {
+            $('#Cooper').html('');
+            for (var i in res.data) { //+ res.data[i]['id'] +
+                $('#Cooper').append('<a target="_blank" href="'+ res.data[i]['link'] +'" title="'+res.data[i]['title']+'" class="m6a disflex flex_center" style="border:none"><img src="'+imgpath+ res.data[i]['banner_src'] +'"/></a>');
+            }
+        })
+
+        /*关于平台接口*/
+        url_get('/auth/getAuthOther', '', function (res) {
+            $('#matchCount').html(res.data['matchCount']);
+            $('#userCount').html(res.data['userCount']);
+            $('#projectCount').html(res.data['projectCount']);
+            $('#sponsorCount').html(res.data['sponsorCount']);
+            $('.counter').countUp();
+        })
+    })
+
+
+</script>
+</body>
+</html>

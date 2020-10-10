@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>成绩查询</title>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span class="active"><a href="index.html" class="nava">首 页</a></span>
+					<span><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="xmk.html" class="nava">项目库</a></span>
+					<span><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="cypx.html" class="nava">创业培训</a></span>
+					<span><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sch_pd">
+		<div class="wrap">
+			<div class="list_nav">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>成绩查询</span>
+			</div>
+			<div class="schw mt_35">
+				<div class="scht disflex">
+					<input placeholder="请输入手机号进行查询" type="text" name="" id="number" value="" />
+					<button onclick="searchcj()"><img class="middle mr5" src="images/schico_03.png"/>查 询</button>
+				</div>
+				<div class="mt_60">
+					<table class="schtab bgwhite w100 borls" id="tab" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>赛事名称</th>
+							<th>参赛组别</th>
+							<th>参赛项目</th>
+							<th>获得奖项</th>
+						</tr>
+					</table>
+					<div class="page mt_40 clearfix">
+						<div class="clearfix pagebox" id="page"> </div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+
+
+	<script>
+        var number = '';
+
+        function onPage(page) {
+            getList(page)
+        }
+        function getList(page = 1){
+            url_get('/auth/checkResult',{
+                'token':getCookie('token'),
+                'page':page,
+                'size':pageSize,
+                'number':number
+            },function (res) {
+                var list = res.data['list'];
+                $('.trs').remove();
+                if(list.length == 0){
+                    layer.msg('无数据!',{ icon:1,time:1000});
+                }
+                for(var i in list){ //+list[i]['name']+
+                    $('#tab').append('<tr class="trs">\n' +
+                        '\t\t\t\t\t\t\t<td>'+list[i]['name']+'</td>\n' +
+                        '\t\t\t\t\t\t\t<td>'+list[i]['group_name']+'</td>\n' +
+                        '\t\t\t\t\t\t\t<td>'+list[i]['project_name']+'</td>\n' +
+                        '\t\t\t\t\t\t\t<td>'+list[i]['prize']+'</td>\n' +
+                        '\t\t\t\t\t\t</tr>');
+                }
+
+                $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+            })
+        }
+        function searchcj() {
+            number = $('#number').val();
+            getList();
+        }
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>参赛项目</title>
+		<style>
+			.sort{
+				cursor: pointer;
+			}
+			.chbnr{
+				right: 10%;
+				top: 20%;
+				z-index: 999;
+			}
+			#lanmu{
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<!--<div class="ch_bn posrelative" style="background: url(images/bh_bn_01.jpg) no-repeat center;">-->
+		<!--<div class="wrap posrelative h100">-->
+			<div class="chbnr textcenter" >
+				<h3>报名时间</h3>
+                <p id="begin_time">2020-07-01  12:00 </p>
+                <p>至</p>
+                <p id="end_time">2020-07-30  12:00</p>
+				<a id="wybm" style="display: none;">我要报名</a>
+			</div>
+		<!--</div>-->
+	<!--</div>-->
+
+	<div class="swiper-container swiper-container-bn">
+		<div class="swiper-wrapper swiper-wrapper-bn" id="banner"> </div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+	</div>
+
+
+	<div class="chnav">
+		<div class="wrap clearfix" id="lanmu"> </div>
+	</div>
+	
+	<div class="cy_bg">
+		<div class="wrap bgwhite borls">
+			<div class="csxt disflex flex_center">
+				<div class="cy2topr disflex">
+					<span>组别：</span>
+					<select id="zubie"> </select>
+				</div>
+				<div class="cy2topr disflex">
+					<span>参赛地区：</span>
+					<select id="area"> </select>
+				</div>
+				<div class="cy2topr disflex">
+					<span>所属行业：</span>
+					<select id="Industry"> </select>
+				</div>
+				<div class="cy2topr cy2toprcp disflex flex1">
+					<span>项目名称：</span>
+					<div class="clearfix csxtsc">
+						<input class="ipt1" placeholder="请输入关键字查询" type="text" name="" id="search" value="">
+						<input class="ipt2" type="submit" name="" onclick="getData()" value="查询">
+					</div>
+				</div>
+			</div>
+			<div class="csxb">
+				<div class="csxbt clearfix">
+					<span class="fl">共 <b id="total">0</b> 条数据</span>
+					<div class="fr csxbtr">
+						<i>排序：</i>
+						<a sortid="0" class="active sort">时间</a> 丨
+						<a sortid="1" class=" sort">浏览</a> 丨
+						<a sortid="2" class=" sort">评论</a> 丨
+						<a sortid="3" class=" sort">点赞</a> 丨
+						<a sortid="4" class=" sort">投票</a>
+					</div>
+				</div>
+				<div class="m4w clearfix" id="list">
+					<a href="/xmk_info.html" class="m4a disblock hvimghover" style="display: none;">
+						<div class="img borls">
+							<div class="hvimg" style="background: url(images/m4pic_03.jpg) no-repeat center;"></div>
+						</div>
+						<div class="txt">
+							<h3>正在创作中，学你们先占个坑</h3>
+							<p>项目简要说明项目项目简要说明项目简要说明项目简要说明项目简要说明项目简要说明项目简要说明...</p>
+							<div class="txtb clearfix">
+								<span><img class="middle mr5" src="images/eye_03.png">321</span>
+								<span><img class="middle mr5" src="images/pl_03.png">321</span>
+								<span><img class="middle mr5" src="images/zan_03.png">321</span>
+							</div>
+							<div class="txtf mt_10 clearfix disflex flex_center">
+								<div class="disflex txtfl flex_center flex1">
+									<i class="tx"><img src="images/m1pic2_03.jpg"></i>
+									<span>用户名</span>
+								</div>
+								<span>2020-08-13</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="page mt_20 clearfix">
+					<div class="clearfix pagebox" id="page"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+<script>
+    var match_id = getParams('id');
+
+    $('#wybm').click(function () {
+        location.href = "cybs_cjbm.html?id="+match_id;
+    })
+
+    /*排序点击事件*/
+    $('.sort').click(function () {
+        $('.sort').removeClass('active');
+        $(this).addClass('active');
+    })
+    
+    /*组别*/
+	url_post('/matchproject/match_group',{match_id:match_id},function (res) {
+	    $('#zubie').html('<option value="">请选择</option>');
+		var list = res.data;
+		for (var i in list){
+            $('#zubie').append('<option value="'+list[i]['id']+'">'+list[i]['name']+'</option>')
+		}
+    })
+    /*参赛地区*/
+    url_post('/matchproject/match_area',{},function (res) {
+        $('#area').html('<option value="">请选择</option>');
+        var list = res.data;
+        for (var i in list){
+            $('#area').append('<option value="'+list[i]['code']+'">'+list[i]['name']+'</option>')
+        }
+    })
+    /*所属行业*/
+    url_post('/setting/getIndustry',{},function (res) {
+        $('#Industry').html('<option value="">请选择</option>');
+        var list = res.data;
+        for (var i in list){
+            $('#Industry').append('<option value="'+list[i]['id']+'">'+list[i]['name']+'</option>')
+        }
+    })
+
+
+
+    /*获取轮播图*/
+    url_get("/match/matchinfo", {match_id:match_id}, function (res) {
+
+        /*判断是不是显示报名*/
+        if(res.data['form'] == 1){
+            $('#wybm').show();
+            $('#begin_time').html(getTime(res.data['begin_time']));
+            $('#end_time').html(getTime(res.data['end_time']));
+        }
+
+      $('#banner').html('');
+      var list = res.data['banner'].split(',');
+      for (var i in list) {
+    	  $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank"  data-background="' + imgpath + list[i] + '"  style="background: rgba(0, 0, 0, 0) url(' + imgpath + list[i] + ') repeat scroll 0% 0%;"></a> </div>');
+      }
+
+        new Swiper('.swiper-container-bn', {
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,//修改swiper的父元素时，自动初始化swiper
+            navigation: {
+                nextEl: '.swiper-button-next-bn',
+                prevEl: '.swiper-button-prev-bn',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+
+
+    })
+
+
+    /*栏目列表*/
+    url_get("/matchcolumn/get_column", {match_id:match_id}, function (res) {
+        $('#lanmu').html('<a href="/">首页</a>');
+        /*6 	参赛项目 【通过 赛事子系统->参赛项目接口获取】
+        7 	评委导师【通过 赛事子系统->评委导师接口获取】
+        8 	赛事资讯 【通过 赛事子系统->赛事资讯接口获取】*/
+        for (var i in res.data) {
+            if(i>9)continue;
+            if(res.data[i]['column_type'] == 6){/*参赛项目 */
+                $('#lanmu').append('<a class="active" href="cybs_csxm.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+            }else if(res.data[i]['column_type'] == 7){/*评委导师*/
+                $('#lanmu').append('<a href="cybs_home.html?id='+match_id+'&typeid='+res.data[i]['column_type']+'">'+res.data[i]['name']+'</a>');
+            }else if(res.data[i]['column_type'] == 10){/*赛事资讯列表*/
+                $('#lanmu').append('<a  href="cybs_sszx.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+            }else{
+                $('#lanmu').append('<a href="cybs_home.html?id='+match_id+'&typeid='+res.data[i]['column_type']+'" >'+res.data[i]['name']+'</a>');
+            }
+        }
+    })
+
+    getData();
+    function onPage(page) {
+        getData( page);
+    }
+	function getData(page=1) {
+		url_post('/matchproject/projectList',{
+            search:$('#search').val(),
+            industry:$('#Industry').val(),
+            match_group:$('#zubie').val(),
+            match_code :$('#area').val(),
+            match_id :match_id,
+            sort :$('.sort.active').attr('sortid'),
+            offset:page
+		},function (res) {
+		    $('#total').html(res.data['total'])
+			$('#list').html('')
+			var list = res.data['rows'];
+			for (var i in list){
+                $('#list').append('<a href="/xmk_info.html" class="m4a disblock hvimghover">\n' +
+                    '\t\t\t\t\t\t<div class="img borls">\n' +
+                    '\t\t\t\t\t\t\t<div class="hvimg" style="background: url('+imgpath+list[i]['thumb']+') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t<div class="txt">\n' +
+                    '\t\t\t\t\t\t\t<h3>'+list[i]['name']+'</h3>\n' +
+                    '\t\t\t\t\t\t\t<p>'+list[i]['description']+'</p>\n' +
+                    '\t\t\t\t\t\t\t<div class="txtb clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/eye_03.png">'+list[i]['browse']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/pl_03.png">'+list[i]['comment']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/zan_03.png">'+list[i]['vote']+'</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t<div class="txtf mt_10 clearfix disflex flex_center">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="disflex txtfl flex_center flex1">\n' +
+                    '\t\t\t\t\t\t\t\t\t<i class="tx"><img src="'+imgpath+list[i]['avatar']+'"></i>\n' +
+                    '\t\t\t\t\t\t\t\t\t<span>'+list[i]['nickname']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    // '\t\t\t\t\t\t\t\t<span>'+getTime(list[i]['nickname'])+'</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t</a>')
+			}
+
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+
+
+</script>

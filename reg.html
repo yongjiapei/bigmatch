@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>注册</title>
+		<script>
+            //如果登录了直接进入个人中心页面
+            if(getCookie('token')){
+                location.href = 'user/user.html';
+            }
+		</script>
+	</head>
+	<body>
+	
+	<div class="head">
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 clearfix lg_hdr">
+					<h3 class="fl">用户注册</h3>
+					<a href="index.html" class="fr">返回首页 ></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="login_bg">
+		<div class="wrap h100 disflex flex_center flex_center_x posrelative">
+			<div class="disflex flex_center flex_center_x">
+				<div class="lgr lgr_center bgwhite posrelative">
+					<div class="lg lg1">
+						<h3 class="title textcenter">中国青年创业就业网</h3>
+						<div class="clearfix mt_20">
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico1_03.png"/></i>
+								<input class="ipt" placeholder="请输入用户昵称" type="text" name="" autocomplete="off" id="nickname" value="" />
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico2_03.png"/></i>
+								<input class="ipt" placeholder="请输入手机号" type="text" name="" autocomplete="off" id="phone" value="" />
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico3_03.png"/></i>
+								<input class="ipt" placeholder="请输入邮箱地址（选填）" type="text" autocomplete="off" name="" id="" value="" />
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico4_03.png"/></i>
+								<input class="ipt" placeholder="请设置登录密码，不少于8个字符" autocomplete="off" type="password" name="" id="password" value="" />
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico4_03.png"/></i>
+								<input class="ipt" placeholder="确认登录密码，不少于8个字符" autocomplete="off" type="password" name="" id="password1" value="" />
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico5_03.png"/></i>
+								<select class="ipt"  name="" id="user_type" >
+									<option value="">请选择用户类型</option>
+									<option value="1">创业者</option>
+									<option value="2">评委</option>
+								</select>
+							</div>
+							<div class="lga posrelative">
+								<i class="ico"><img src="images/lgico6_03.png"/></i>
+								<input class="ipt" placeholder="请输入手机验证码" type="text" autocomplete="off" name="" id="verify" value="" />
+								<button class="hq_code" onclick="getCode()">获取验证码</button>
+							</div>
+						</div>
+						<div class="clearfix mt_30 lgb_ftsz12">
+							<div class="fl lg_label">
+								<label><input type="checkbox" checked name="" id="isagree" value="" />注册即同意</label>
+								<a onclick="xieyi()" href="javascript:">《平台用户服务协议》</a>
+							</div>
+							<div class="fr lg_a">
+								<a href="login.html" class="active"><i>已有账号，</i>立即登录</a>
+							</div>
+						</div>
+						<div class="mt_15 lg_sbm">
+							<!--<input class="lg_sbma" type="submit" name="" id="" value="注册" />-->
+							<a onclick="zccg()" href="javascript:" class="lg_sbma">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lg_foot clearfix">
+				<span class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</span>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	<!--协议隐藏弹窗-->
+	<div class="tc xieyi_tc">
+		<div class="disflex w100 h100 flex_center">
+			<div class="tcbox sx_tc">
+				<div class="tcbox_top flex_center posrelative disflex">
+					<h3 class="flex1">平台用户服务协议</h3>
+					<i class="close_tc"><img src="images/close_03.png"/></i>
+				</div>
+				<div class="sxtcw posrelative">
+					<div class="ci_tc">
+						<div class="xytc_txt">
+							<p>尊敬的用户：</p>
+							<p class="mt_20">欢迎阅读创青春平台服务协议（下称“本协议”），您应当在使用创成汇以及获取相关服务之前认真阅读本协议全部内容。
+							本协议内容包括协议正文、附件及所有创青春已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，
+							与协议正文具有同等法律效力。本协议阐述之条款和条件适用于用户使用创青春中文网站（所涉域名为：www.cqc.com，
+							下称“创青春”）所提供的各种在线工具、服务和衍生的线下服务。 如果您对本协议条款表示异议（以下如无特殊说明，
+							“本协议条款”均包括本协议条款随时所做的修改），您可以选择不使用创青春的服务。注册成为创青春平台的用户，则意
+							味着您对本协议条款无任何异议并自愿遵守本协议。</p>
+							<p class="mt_20">一、定义</p>
+							<p class="mt_20">1. 创青春（或本平台）：中国青年创业就业基金会打造全球专业的创新创业综合服务系统，平台以线上系统为服务载体，整
+							合国内外优质资源，采用大数据、智慧智能等高新技术理念和互联互享的先进产业模式，从而搭建起政府、企业、创投、企
+							服为一体的比赛生态链。创青春网站的运营权归中国青年创业就业基金会所有，两者视为一个主体。</p>
+							<p class="mt_20">2. 用户：是同意遵守本协议，在创青春完成注册，进行创建项目、报名活动、发布信息等享受平台服务的主体，包括项目方、
+							资金方、信息的发布者等所有参与本平台活动的自然人、法人或者其他组织。用户应当具备相应民事行为能力，不具备民事
+							行为能力或者缺乏特定许可资质的用户与创青春签署的协议无效</p>
+						</div>
+					</div>
+					<div class="sxtcb textcenter">
+						<a href="javascript:" class="sxtcba sxtcba_active close_tc">我已阅读，并同意本协议</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--注册成功隐藏弹窗-->
+	<div class="tc zccg_tc">
+		<div class="disflex w100 h100 flex_center">
+			<div class="tcbox sx_tc">
+				<div class="sxtcw posrelative">
+					<div class="ci_tc">
+						<div class="zccg textcenter">
+							<img src="images/cg_ico_03.png"/>
+							<h3 class="mt_20">恭喜您，注册成功!</h3>
+							<p class="mt_20"><i id="snum">3s</i>后自动跳转到登录页面</p>
+							<h4 class="mt_20">温馨提示：请牢记您的登录密码，以方便下次登录</h4>
+						</div>
+					</div>
+					<div class="sxtcb sxtcb_zccg textcenter">
+						<a href="login.html" class="sxtcba sxtcba_active">立即登录</a>
+						<!--<a href="user/user.html" class="sxtcba sxtcba_a2">完善个人信息</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+        $('.login_bg').css('height', $(window).height() - $(".head").height());
+		function xieyi(){ //协议弹窗
+			$("body").addClass("body_hidden");
+			$(".xieyi_tc").addClass("tc_active");
+		}
+        $(".close_tc").click(function(){ //关闭弹窗
+            $("body").removeClass("body_hidden");
+            $(".tc").removeClass("tc_active");
+        })
+
+		/*获取验证码*/
+		function getCode() {
+		    if($(".hq_code").html() != '获取验证码'){
+                return;
+			}
+		    var   phone = $('#phone').val();
+            if(phone == ''){
+                alert('请输入手机号');
+                return;
+            }
+
+            $(".hq_code").html("重新发送(60)");
+            //合法
+            var number=60;//一共60秒
+            var codetime=setInterval(function(){
+                if(number<=0){
+                    $(".hq_code").html("获取验证码");
+                    clearTimeout(codetime);
+                }
+                number--;
+                $(".hq_code").html("重新发送("+number+")");
+            },1000);
+
+            //默认666666
+			url_post('/sms/pushSms',{'mobile':phone},function (res) {
+                alert(res.msg);
+            })
+        }
+		function zccg(){
+		    var nickname = $('#nickname').val(),
+                phone = $('#phone').val(),
+                password = $('#password').val(),
+                password1 = $('#password1').val(),
+                user_type = $('#user_type').val(),
+                verify = $('#verify').val(),
+                email = $('#email').val();
+
+		    if(nickname == ''){
+		        alert('请输入用户昵称');
+		        return;
+			}
+            if(phone == '' || !isPhoneNo(phone)){
+                alert('请输入正确的手机号');
+                return;
+            }
+
+            if(password == '' && password.length<8){
+                alert('请设置登录密码，不少于8个字符');
+                return;
+            }
+            if(password != password1){
+                alert('两次密码不一致');
+                return;
+			}
+            if(user_type == ''){
+                alert('请选择用户类型');
+                return;
+            }
+            if(verify == ''){
+                alert('请输入手机验证码');
+                return;
+            }
+
+            if(!$('#isagree').prop('checked')){
+                alert('请同意平台用户服务协议');
+                return;
+			}
+
+            url_post('/member/register',{
+                'nickname':nickname,
+                'phone':phone,
+                'password':password,
+                'user_type':user_type,
+                'verify':verify,
+                'email':email
+			},function (res) {
+                $("body").addClass("body_hidden");
+                $(".zccg_tc").addClass("tc_active");
+				var number = 3;
+                var codetime=setInterval(function(){
+                    if(number<=0){
+                        location.href = 'login.html';
+                        clearTimeout(codetime);
+                    }
+                    number--;
+                    $(".snum").html(number+"s");
+                },1000);
+
+            })
+
+
+
+		}
+
+	</script>
+
+	</body>
+</html>

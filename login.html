@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>登录</title>
+		<script>
+            //如果登录了直接进入个人中心页面
+            if(getCookie('token')){
+                location.href = 'user/user.html';
+            }
+		</script>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 clearfix lg_hdr">
+					<h3 class="fl">用户登录</h3>
+					<a href="index.html" class="fr">返回首页 ></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="login_bg">
+		<div class="wrap h100 disflex flex_center posrelative">
+			<div class="disflex flex_center">
+				<div class="lgl_img flex1">
+					<img src="images/login_ltxt_03.png"/>
+				</div>
+				<div class="lgr bgwhite posrelative">
+					<div class="lg_box">
+						<div class="lg lg1">
+							<i class="lg_qhico"><img src="images/lgr_ewm_03.png"/></i>
+							<h3 class="title">登录</h3>
+							<div class="clearfix mt_5">
+								<div class="lga posrelative">
+									<i class="ico"><img src="images/lgico1_03.png"/></i>
+									<input class="ipt" placeholder="请输入用户名" type="text" name="" id="account" value="" />
+								</div>
+								<div class="lga posrelative">
+									<i class="ico"><img src="images/lgicosuo_03.png"/></i>
+									<input class="ipt" placeholder="请输入密码" type="password" name="" id="password" value="" />
+								</div>
+							</div>
+							<div class="clearfix mt_50">
+								<div class="fl lg_label">
+									<label><input type="checkbox" name="" id="" value="" />下次自动登录</label>
+								</div>
+								<div class="fr lg_a">
+									<a href="pwd.html" class="active">忘记密码?</a>
+								</div>
+							</div>
+							<div class="mt_15 lg_sbm">
+								<!--<input class="lg_sbma" type="submit" name="" id="" value="登录" />-->
+								<a onclick="loginFun()" class="lg_sbma">登录</a>
+							</div>
+							<div class="mt_25 textcenter lg_a_b">
+								还没有账号？<a href="reg.html">立即注册</a>
+							</div>
+						</div>
+						<div class="lg lg2">
+							<i class="lg_qhico"><img src="images/lgr_dn_03.png"/></i>
+							<h3 class="title">扫码登录</h3>
+							<div class="lg_sm textcenter">
+								<img src="images/saoma_03.png"/>
+								<p>微信扫一扫，立即登录</p>
+							</div>
+							<div class="mt_25 textcenter lg_a_b">
+								还没有账号？<a href="reg.html">立即注册</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lg_foot clearfix">
+				<span class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</span>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$('.login_bg').css('height', $(window).height() - $(".head").height());
+		$(".lg_qhico").click(function(){
+			$(".lg_box").toggleClass("lg_box_active")
+		})
+
+		/*登录*/
+		function loginFun() {
+			var account = $('#account').val(),
+                password = $('#password').val();
+			/*判断登录*/
+			url_post('/member/login',{
+			    'account':account,
+                'password':password
+			},function (res) {
+				setCookie('token',res.data['token']);
+				setCookie('group',res.data['group']); //	用户组 1 代表创业者 2 代表评委
+
+
+				if(res.data['group'] == 1){//	用户组 1 代表创业者 2 代表评委
+                    //获取用户 简要信息
+                    url_get('/member/getUserBriefly',{
+                        token:res.data['token']
+                    },function (res) {
+                        setCookie('nickname',res.data['nickname']); //	用户昵称
+                        setCookie('phone',res.data['phone']); //	手机号
+                        setCookie('avatar',res.data['avatar']);//	头像
+                        setCookie('typeName',res.data['typeName']);//	角色
+                        setCookie('address_prov',res.data['address_prov']);//	地区
+						/*获取用户详细信息*/
+                        url_get('/member/getUserDetail',{
+                            token:getCookie('token')
+                        },function (res) {
+                            setCookie('realname',res.data['realname']); //	用户名称
+                            setCookie('email',res.data['email']); //	邮箱
+
+                            $('#userName').html(res.data['realname']);
+                            $('#userInfo').html(getCookie('address_prov').split(',')[0]+'|'+getCookie('typeName'));
+                            $('#userAvatar').attr('src',imgpath+getCookie('avatar'));
+                            location.href = '/user/user.html';
+                        })
+                    })
+				}else if(res.data['group'] == 2){//	用户组 1 代表创业者 2 代表评委
+                    /*获取评委详细信息*/
+                    url_get('/member/getUserDetail',{
+                        token:getCookie('token')
+                    },function (res) {
+                        setCookie('nickname',res.data['realname']); //	用户昵称
+                        setCookie('phone',res.data['phone']); //	手机号
+                        setCookie('avatar',res.data['avatar']);//	头像
+                        setCookie('realname',res.data['realname']); //	用户名称
+                        setCookie('address_prov',res.data['address_prov']);//	地区
+                        setCookie('email',res.data['email']); //	邮箱
+                        setCookie('typeName',res.data['typeName']); //	邮箱
+
+                        $('#userName').html(res.data['realname']);
+                        $('#userInfo').html(getCookie('address_prov').split(',')[0]+'|'+getUserType(getCookie('user_type')));
+                        $('#userAvatar').attr('src',imgpath+getCookie('avatar'));
+                        location.href = '/user/pingwei_home.html';
+                    })
+                }
+            })
+        }
+	</script>
+	</body>
+</html>

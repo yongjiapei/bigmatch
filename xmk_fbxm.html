@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <title>发布项目</title>
+</head>
+<body>
+
+<div class="head">
+    <div class="hd1">
+        <div class="wrap clearfix">
+            <span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+            <div class="fr hd1r">
+                <span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+                <span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+                <span><a href="helpcenter.html">联系我们</a></span>
+                <span><a href="helpcenter.html">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="hd2">
+        <div class="wrap disflex h100 flex_center">
+            <a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+            <div class="flex1 nav clearfix">
+                <span><a href="index.html" class="nava">首 页</a></span>
+                <span><a href="cybs.html" class="nava">创业比赛</a></span>
+                <span class="active"><a href="xmk.html" class="nava">项目库</a></span>
+                <span><a href="pwzj.html" class="nava">评委专家</a></span>
+                <span><a href="cypx.html" class="nava">创业培训</a></span>
+                <span><a href="sszx.html" class="nava">赛事资讯</a></span>
+                <span><a href="zlxz.html" class="nava">资料下载</a></span>
+            </div>
+            <div class="hd2r disflex">
+                <a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5"
+                                                                   src="images/hdrico_03.png"/>发布项目</a>
+                <div class="hd2ra hd2ra2">
+                    <a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="xmkhm textcenter disflex flex_center">
+    创青春赛事信息服务云平台欢迎您的加入
+</div>
+<div class="xmh1 bgwhite">
+    <div class="wrap">
+          <div class="textcenter">
+            <div class="xi2r1top">
+                <i><img id="avatar" src=""></i>
+                <h3 class="mt_10 nickname">...</h3>
+                <p class="mt_10" id="add_type_name">...</p>
+                <span class="disblock color666 mt_10" id="sortdes">...</span>
+            </div>
+            <div class="xi2r1bot mt_25">
+                <a href="javascript:;" class="active" onclick="guanzhu()" id="is_guanzhu">关注TA（<span id="gz_num"></span>）</a>
+
+                <a href="javascript:;" onclick='sixin()'>给TA发私信</a>
+            </div>
+        </div>
+        <!--隐藏私信窗口-->
+        <div class="tc">
+            <div class="disflex w100 h100 flex_center">
+                <div class="tcbox sx_tc">
+                    <div class="tcbox_top flex_center posrelative disflex">
+                        <h3 class="flex1">发私信  给  <span class="user_nick_name">浪漫&森林</span></h3>
+                        <i class="close_tc"><img src="images/close_03.png"/></i>
+                    </div>
+                    <div class="sxtcw posrelative">
+                        <div class="plk posrelative">
+                            <div class="clearfix posrelative plk1">
+                                <textarea class="form-control" rows="3" id="content"></textarea>
+                                <button onclick="submit_sx()">发送私信</button>
+                            </div>
+                        </div>
+                        <div class="sxtcb textcenter">
+                            <a href="javascript:" class="sxtcba sxtcba_active" onclick="submit_sx()">发送</a>
+                            <a href="javascript:" class="sxtcba close_tc">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xmh1nav mt_20 textcenter">
+            <a href="xmk_grzl.html" id="info_url" >个人资料</a>
+            <a href="xmk_fbxm.html" id="fb_xm_url" class="active">发布项目</a>
+            <a href="xmk_cjbs.html" id="cj_url">参加比赛</a>
+            <a href="xmk_tdsc.html" id="sc_url">TA的收藏</a>
+            <a href="xmk_gzdr.html" id="gz_url">关注的人</a>
+        </div>
+    </div>
+</div>
+<div class="xib_pd">
+    <div class="wrap bgwhite borls">
+        <div class="xmh_title">发布项目</div>
+        <div class="xmh_pd">
+            <div class="m4w clearfix" id="List">
+
+                <!--循环体-->
+
+
+                <a href="" class="m4a disblock hvimghover">
+                    <div class="img borls">
+                        <div class="hvimg" style="background: url(images/m4pic_03.jpg) no-repeat center;"></div>
+                    </div>
+                    <div class="txt">
+                        <h3>正在创作中，学你们先占个坑</h3>
+                        <p>项目简要说明项目项目简要说明项目简要说明项目简要说明项目简要说明项目简要说明项目简要说明...</p>
+                        <div class="txtb clearfix">
+                            <span><img class="middle mr5" src="images/eye_03.png">321</span>
+                            <span><img class="middle mr5" src="images/pl_03.png">321</span>
+                            <span><img class="middle mr5" src="images/zan_03.png">321</span>
+                        </div>
+                        <div class="txtf mt_10 clearfix disflex flex_center">
+                            <div class="disflex txtfl flex_center flex1">
+                                <i class="tx"><img src="images/m1pic2_03.jpg"></i>
+                                <span>用户名</span>
+                            </div>
+                            <span>2020-08-13</span>
+                        </div>
+                    </div>
+                </a>
+
+
+
+            </div>
+
+
+            <div class="page mt_25 clearfix">
+                <div class="clearfix pagebox" id="page">
+                    <a href="" class="pagea">上一页</a>
+                    <a href="">1</a>
+                    <a class="active" href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="" class="pagea">下一页</a>
+                    <div class="fl pgb">
+                        <span class="marl10 fl">到</span>
+                        <input class="fl" type="text" name="" id="" value="">
+                        <span class="fl">页</span>
+                        <a class="pagea1" href="">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <div class="wrap">
+        <div class="ft1 disflex">
+            <div class="ft1l disflex">
+                <div class="ft1la">
+                    <h3>友情链接</h3>
+                    <p><a href="">中国青年创业就业基金会</a></p>
+                    <p><a href="">团务百科</a></p>
+                    <p><a href="">青年之间</a></p>
+                    <p><a href="">中国青年创业就业大赛</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>关于我们</h3>
+                    <p><a href="">平台介绍</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">用户服务协议</a></p>
+                    <p><a href="">投诉建议</a></p>
+                </div>
+                <div class="ft1la">
+                    <h3>服务与支持</h3>
+                    <p><a href="">新手帮助</a></p>
+                    <p><a href="">主办方申请入驻</a></p>
+                    <p><a href="">赛事管理系统</a></p>
+                </div>
+            </div>
+            <div class="ft1r flex1 disflex">
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm1_05.png"/>
+                    <p>评委小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm2_05.png"/>
+                    <p>用户小程序</p>
+                </div>
+                <div class="ft1ra textcenter">
+                    <img src="images/ewm3_05.png"/>
+                    <p>微信公众号</p>
+                </div>
+            </div>
+        </div>
+        <div class="ft2 clearfix">
+            <p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+            <span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+        </div>
+    </div>
+</div>
+
+<script src="/share/js/jquery.share.min.js"></script>
+<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+
+<!--项目库公共文件-->
+<script src="js/xmk_common.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+
+
+    // 找到该用户的发布的项目
+
+    getList();//分页调用
+
+    function onPage(page) {
+        getList(page);
+    }
+
+
+
+    /*查询数据*/
+    function getList(page="1") {
+
+        var data ={
+            user_id:getParams('id'),
+            token:getCookie('token'),
+            page:page,
+            size:pageSize,
+        };
+
+
+        url_get('/myproject/myProject',data,function (res) {
+            $('#List').html('');
+            var list = res.data.list;
+
+            for(var i in list){
+                $('#List').append('<a myhref="xmk_info.html?id='+list[i]['id']+'" onclick="isLogin(this)" class="m4a disblock hvimghover">\n' +
+                    '\t\t\t\t\t\t<div class="img borls">\n' +
+                    '\t\t\t\t\t\t\t<div class="hvimg" style="background: url('+imgpath+list[i]['thumb']+') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t<div class="txt">\n' +
+                    '\t\t\t\t\t\t\t<h3>'+list[i]['name']+'</h3>\n' +
+                    '\t\t\t\t\t\t\t<p>'+list[i]['description']+'</p>\n' +
+                    '\t\t\t\t\t\t\t<div class="txtb clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t<span ><img class="middle mr5" src="images/eye_03.png">'+list[i]['browse']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t<span ><img class="middle mr5" src="images/pl_03.png">'+list[i]['comment']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t<span class="addPraise" pid="'+list[i]['id']+'"><img class="middle mr5" src="images/zan_03.png">'+list[i]['praise']+'</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t<div class="txtf mt_10 clearfix disflex flex_center">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="disflex txtfl flex_center flex1">\n' +
+                    '\t\t\t\t\t\t\t\t\t<i class="tx"><img src="'+imgpath+list[i]['user_avatar']+'"></i>\n' +
+                    '\t\t\t\t\t\t\t\t\t<span>'+list[i]['user_name']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t<span>'+getTime(list[i]['create_time'])+'</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t</a>');
+            }
+
+
+            /*点赞*/
+            $('.addPraise').click(function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                url_post('/Project/projectPraise',{
+                    token:getCookie('token'),
+                    pid:$(this).attr('pid')
+                },function (res) {
+
+                    layer.msg(res.msg,{icon:1,time:2000});
+                    window.location.reload();
+
+                    // alert(res.msg);
+
+                })
+            });
+
+
+
+            if(list.length>0){
+                $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+            }else{
+                $("#page").hide();
+            }
+
+
+
+
+        })
+    }
+</script>
+
+</body>
+</html>

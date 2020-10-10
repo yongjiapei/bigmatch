@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>培训详情</title>
+	</head>
+	<body>
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="helpcenter.html">联系我们</a></span>
+					<span><a href="helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="index.html" class="nava">首 页</a></span>
+					<span><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="xmk.html" class="nava">项目库</a></span>
+					<span><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span class="active"><a href="cypx.html" class="nava">创业培训</a></span>
+					<span><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sch_pd cy_pd">
+		<div class="wrap">
+			<div class="list_nav">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>培训详情</span>
+			</div>
+			<div class="xi1 ci1 mt_30 disflex">
+				<div class="xi1l" id="thumb" style="background: url('') no-repeat center;"></div>
+				<div class="xi1m flex1">
+					<h3 id="title"></i></h3>
+					<div class="xi1mw clearfix">
+						<p class="fl"><img class="middle mr5" src="images/cysxico2_03.png"/><i id="direction"></i></p>
+						<p class="fl"><img class="middle mr5" src="images/cysxico4_03.png"/><i id="begin_time"></i>  <i id="bet_time">至</i>  <i id="end_time"></i></p>
+						<p class="fl"><img class="middle mr5" src="images/cysxico1_03.png"/><i id="type"></i></p>
+					</div>
+					<div class="mt_10 bq">
+						
+					</div>
+				</div>
+				<div class="xi1r marl20">
+					<div class="xi1r2 textright mt_40">
+						<p><a id="shoucang" onclick="shoucang()"><i class="fa fa-heart-o mr10"></i>收藏</a></p>
+						<p id="baoming_p"><a  onclick="baoming()" href="javascript:" class="active mt_10">我要报名</a></p>
+					</div>
+				</div>
+			</div>
+			<!--报名隐藏弹窗-->
+			<div class="tc">
+				<div class="disflex w100 h100 flex_center">
+					<div class="tcbox sx_tc">
+						<div class="tcbox_top flex_center posrelative disflex">
+							<h3 class="flex1">填写报名信息</h3>
+							<i class="close_tc"><img src="images/close_03.png"/></i>
+						</div>
+						<div class="sxtcw posrelative">
+							<div class="ci_tc" >
+								<div class="bmba disflex">
+									<span class="bmbal"><i class="colorred">*</i>姓名</span>
+									<div class="bmbar bmbar_ipt flex1 marl20">
+										<input type="text" placeholder="请输入姓名" id="name" value="" />
+									</div>
+								</div>
+								<div class="bmba disflex">
+									<span class="bmbal"><i class="colorred">*</i>手机号</span>
+									<div class="bmbar bmbar_ipt flex1 marl20">
+										<input type="text" placeholder="请输入手机号" id="phone" value="" />
+									</div>
+								</div>
+								<div class="bmba disflex">
+									<span class="bmbal"><i class="colorred">*</i>电子邮箱</span>
+									<div class="bmbar bmbar_ipt flex1 marl20">
+										<input type="text" placeholder="请输入电子邮箱" id="email" value="" />
+									</div>
+								</div>
+								<div id="bmform">
+
+								</div>
+							</div>
+							<div class="sxtcb textcenter">
+								<a href="javascript:" onclick="sendForm()" class="sxtcba sxtcba_active">立即报名</a>
+								<a href="javascript:" class="sxtcba close_tc">取消</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				function baoming(){
+					$("body").addClass("body_hidden");
+					$(".tc").addClass("tc_active");
+				}
+				$(".close_tc").click(function(){
+					$("body").removeClass("body_hidden");
+					$(".tc").removeClass("tc_active");
+					$(".emoji_btn").hide();
+				})
+			</script>
+			<div class="mt_40 xi2 disflex">
+				<div class="xi2l neirongdiv">
+					<div class="xi2l_top xi2l_top">
+						
+					</div>
+					<div class="clearfix citxt">
+						<div class="xi2ltxtp" id="content"></div>
+						
+					</div>
+				</div>
+				<div class="xi2l mul2" style="display:none">
+					<div class="xi2l_top ">
+						
+					</div>
+				<div class="clearfix ci_km mt_21">
+						
+					</div>
+				</div>
+				<div class="xi2l pingl3" style="display:none">
+					<div class="xi2l_top">
+						
+					</div>
+					<div class="clearfix mt_20">
+						<div class="csipl">
+							<div class="plbox">
+								<h3 class="pl_title">全部评论  </h3>
+								<div class="plk posrelative">
+									<div class="clearfix posrelative plk1">
+										<textarea id="comment_text" class="form-control content" rows="3"></textarea>
+										<button onclick="sub_comment()">发表评论</button>
+									</div>
+								</div>
+							</div>
+							<div class="mt_25 plb">
+								<div class="plbborder">
+								    
+								    
+								
+									
+									
+									<div class="plba_no mt_25 textcenter">
+										没有更多评论了
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xi2r flex1 tjList">
+					<div class="xi2rbox">
+						<h3 class="xi2rbox_title">推荐课程</h3>
+						<div class="xi2r1 xi2r1cp" id="tuijianlist"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="px_id">
+
+
+
+<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/baoming.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script>
+    var  match_id = -1,fileds='',sub_num=-1;
+
+    /*推荐课程*/
+    tuijianClass()
+
+	/*获取表单*/
+	url_get('/course/getCourseForm',{id:getParams('id')},function (res) {
+		var list = res.data;
+		for(var i in list){
+		    list[i]['cn_name'] = list[i]['re_name']
+		    list[i]['required'] = list[i]['must']
+		    list[i]['name'] = "filed"+list[i]['id']
+		}
+		var arr = {
+		    'setting':list
+		}
+        fileds = arr;
+		BM.init({
+			data:arr
+		})
+    })
+    
+	url_get('/Training/trainingDetail',{
+	    id:getParams('id'),
+	    token:getCookie('token')
+	},function (res) {
+	    $('#direction').html(res.data['direction'])
+		$('#thumb').css('background','url('+imgpath+res.data['thumb']+') no-repeat center');//缩略图
+		$('#title').html(res.data['title']);//标题
+		$('#px_id').val(res.data['id']);//id
+		var tags = res.data['tags'];
+		var tag = tags.split( ',' );
+		var tr = '';
+		for(var i in tag){
+		    tr+="<span class='biaoqian' id='tags'>"+tag[i]+"</span>"
+		}
+		$('.bq').html(tr);//标题
+		$('#begin_time').html(getTime(res.data['begin_time']));//开始时间
+		$('#end_time').html(getTime(res.data['end_time']));//开始时间
+		$('#content').html(res.data['content']);//内容
+		
+		
+		//目录
+		var cla = res.data['bookList']
+		str = '';
+		for(var i in cla){
+		    str = '';
+		    if(cla[i]['is_study']==0){
+		        str += "<a href='"+imgpath+cla[i]['file_src']+"' class='ci_kmar active'>立即学习</a>"
+		    }else{
+		        str += "<a href='javascript:;' class='ci_kmar '>已学习</a>"
+		    }
+		    var os = parseInt(i)+1;
+		    $('.mt_21').append("<div class='ci_kma disflex'><div class='flex1 ci_kmal'>"+os+"、"+cla[i]['name']+"</div>"+str+"</div>")
+		    
+		}
+		//目录end
+		
+		
+		
+if(res.data['type']==1){
+ 
+    $('#type').html("线上直播");//线上培训
+    if(res.data['is_from']==0){
+        $('#baoming_p a').removeAttr("onclick");
+         $("#baoming_p a").attr("target","_blank");
+         $('#baoming_p a').text('立即学习');
+        $('#baoming_p a').attr('href',imgpath+res.data['live_url']);
+    }
+    if(res.data['isUserFrom']){
+        $('#baoming_p a').removeAttr("onclick");
+        $('#baoming_p a').text('立即学习');
+         $("#baoming_p a").attr("target","_blank");
+        $('#baoming_p a').attr('href',imgpath+res.data['live_url']);
+    }
+}else{
+    if(res.data['type']==2){
+    $('#type').html("线下培训");//线下培训
+    if(res.data['is_from']==0){
+        $('#baoming_p a').hide();
+    }else
+    if(res.data['isUserFrom']==1){
+        $('#baoming_p a').text('取消报名');
+        $('#baoming_p a').removeClass('active');
+        $('#baoming_p a').css('border','none');
+        $('#baoming_p a').css('background','gray');
+        $('#baoming_p a').css('color','white');
+        $('#baoming_p a').removeAttr("onclick");
+        $('#baoming_p a').on('click',function(){
+            	url_get('/course/fromCancel',{
+	            id:getParams('id'),
+	            token:getCookie('token')
+	        },function (res) {
+	            
+	            
+            });
+            
+        })
+    }
+}else{
+    if(res.data['type']==3){
+        $('#bet_time').text('不限');
+    $('#type').html("音频/视频");//音频视频
+    if(res.data['is_from']==0){
+        $('#baoming_p a').text('立即学习');
+        $('#baoming_p a').removeAttr("onclick");
+        $('#baoming_p a').attr('href',imgpath+res.data['bookList'][0]['file_src']);
+    }else if(res.data['is_from']==1){
+        if(res.data['isUserFrom']==1){
+        $('#baoming_p a').removeAttr("onclick");
+        $('#baoming_p a').text('立即学习');
+        $('#baoming_p a').attr('href',imgpath+res.data['bookList'][0]['file_src']);
+        $("#baoming_p a").attr("target","_blank"); 
+    }
+    }
+}else{
+    if(res.data['type']==4){
+    $('#type').html("课件");//线上培训
+    $('#bet_time').text('不限');
+    if(res.data['is_from']==0){
+        $('#baoming_p a').hide();
+    }else
+    if(res.data['isUserFrom']==1){
+        $('#baoming_p a').text('立即学习');
+        $('#baoming_p a').removeAttr("onclick");
+        $("#baoming_p a").attr("target","_blank");
+        $('#baoming_p a').attr('href',imgpath+res.data['bookList'][0]['file_src']);
+    }
+}
+}
+}
+}
+//获取地址栏参数
+function getQueryVariable(variable)
+{       
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+var ids = getQueryVariable("id")
+if($('#type').text()=='线上直播' || $('#type').text()=='线下培训'){
+    $('.xi2l_top').append("<a class='neirongdj active' href='javascript:;'>内容</a><a class='tabdjpl' href='javascript:;'>评论</a>")
+    // tab切换
+    $('.neirongdj').on("click",function(){
+        console.log(1);
+         $('.neirongdiv').css('display','block').siblings('.pingl3').css('display','none');
+        $('.xi2l_top .neirongdj').addClass('active').siblings().removeClass('active');
+       
+    });
+    $('.tabdjpl').on("click",function(){
+        console.log(3);
+        $('.pingl3').css('display','block').siblings('.neirongdiv').css('display','none');
+        $('.xi2l_top .tabdjpl').addClass('active').siblings().removeClass('active');
+        
+    })
+}else{
+    $('.xi2l_top').append("<a class='active neirongdj' href='javascript:;'>内容</a><a class='tabdjml' href='javascript:;'>目录</a><a class='tabdjpl' href='javascript:;'>评论</a>");
+    //  tab切换
+    $('.neirongdj').on("click",function(){
+        console.log(1);
+        $('.neirongdiv').css('display','block').siblings('.mul2,.pingl3').css('display','none');
+        $('.xi2l_top .neirongdj').addClass('active').siblings().removeClass('active');
+        
+    });
+    $('.tabdjml').on("click",function(){
+        console.log(2);
+        $('.mul2').css('display','block').siblings('.neirongdiv,.pingl3').css('display','none');
+        $('.xi2l_top .tabdjml').addClass('active').siblings().removeClass('active');
+        
+    });
+    $('.tabdjpl').on("click",function(){
+        console.log(3);
+        $('.pingl3').css('display','block').siblings('.neirongdiv,.mul2').css('display','none');
+        $('.xi2l_top .tabdjpl').addClass('active').siblings().removeClass('active');
+        
+    })
+    }
+		if(res.data['is_from'] == 0){ //0就是不允许报名
+		}
+        if(res.data['isCollection'] == 1){
+            $('#shoucang').addClass('active');
+        }
+    })
+    //评论列表
+    url_get('/comment/courseComment',{
+	    id:getParams('id'),
+	    offset:1,
+	    limit:10
+	},function (res) {
+	   
+	    var str = '';
+	    for(var i in res.data){
+	         
+	        if(res.data[i]!=''){
+	           		var html='';
+	    var data=res.data;
+		for (var i in data){
+			var is_dianzan_num=data[i]['praise'];
+			var dianzan_img='';
+			if(!is_dianzan_num){
+				dianzan_img=`<img class="middle mr5" src="images/plico2_03.png"/>`;
+			}else{
+				dianzan_img=`<img class="middle mr5" src="images/plico2_ac_03.png"/>`;
+			}
+			var recomment=data[i]['recomment'];
+			if (recomment) {
+				var son_html='';
+				for (var j in recomment) {
+
+					var is_sondianzan_num=recomment[j].praise;
+					var sondianzan_img='';
+					if(!is_sondianzan_num){
+						sondianzan_img=`<img class="middle mr5" src="images/plico2_03.png"/>`;
+					}else{
+
+						sondianzan_img=`<img class="middle mr5" src="images/plico2_ac_03.png"/>`;
+
+					}
+			son_html += `<div class="disflex plba2a">
+						<div class="plbimg">
+							<img src="`+imgpath+ recomment[j].avatar + `"/>
+						</div>
+						<div class="plbtxt flex1">
+							<h3>` + recomment[j].nicknameA + `</h3>
+							<p>回复<i>` + recomment[j].nicknameB + `：</i>` + recomment[j].content + `</p>
+							<div class="plbtxtb clearfix">
+								<span class="fl">` + getTime(recomment[j].create_time) + `</span>
+								<div class="fr plbtxtbr">
+									<span onclick="comment_dianzan(this,`+recomment[j].course_id+`,`+recomment[j].id+`)">
+									`+sondianzan_img+recomment[j].praise+`</span>
+								</div>
+							</div>
+						</div>
+					</div>`;
+				}
+			}
+
+			//<span class="hf_click" onclick="comment_huifu(`+recomment[j].user_id+`,`+recomment[j].id+`,'`+recomment[j].nicknameA+`',`+data[i].cid+`)">回复</span>
+			// <span><img class="middle mr5" src="images/plico1_03.png"/>` + recomment[j]['views'] + `</span>
+			html+=`<div class="plba">
+				<div class="plba1 disflex">
+
+					<div class="plbimg">
+						<img src="`+imgpath+data[i]['avatar']+`"/>
+					</div>
+					<div class="plbtxt flex1">
+						<h3>`+data[i]['nickname']+`</h3>
+						<p>`+data[i]['content']+`</p>
+
+						<div class="plbtxtb clearfix">
+							<span class="fl">`+getTime(data[i]['create_time'])+`</span>
+							<div class="fr plbtxtbr">
+								<span class="hf_click" data-name="`+data[i]['nickname']+`" onclick="comment_huifu(`+data[i]['user_id']+`,`+data[i]['id']+`,'`+data[i]['nickname']+`',`+data[i]['cid']+`)">回复</span>
+								<span>
+<img onclick="comment_huifu(`+data[i]['user_id']+`,`+data[i]['id']+`,'`+data[i]['nickname']+`',`+data[i]['cid']+`)" class="middle mr5" src="images/plico1_03.png"/>`+data[i]['views']+`
+</span>
+								<span onclick="comment_dianzan(`+data[i]['course_id']+`,`+data[i]['id']+`)">
+
+`+dianzan_img+`
+
+`+data[i]['praise']+`</span>
+							</div>
+						</div>
+						<div class="plba2">
+
+							`+son_html+`
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>`;
+		}
+
+
+
+		$('.plbborder').html(html);
+	        }
+	    }
+	})
+// 	评论回复
+function comment_huifu(user_id,cid,user_name,parent_id){
+	$("#comment_text").val('@'+user_name);
+	$("#comment_text").focus();
+	localStorage.setItem('user_id',user_id);
+	localStorage.setItem('cid',cid);
+	localStorage.setItem('user_name','@'+user_name);
+	localStorage.setItem('parent_id',parent_id);
+}
+// 	发表评论
+    function sub_comment(){
+    var comment_text = $('#comment_text').val();
+    var str=localStorage.getItem('user_name');
+    
+    	comment_text=comment_text.replace(str,'');
+    
+		if(!comment_text){
+			layer.msg('请输入评论内容');
+			return false;
+		}
+		var data={
+			id:getParams('id'),
+			token:getCookie('token'),
+			comment_content:comment_text,
+			cid:parseInt(localStorage.getItem('cid')),
+			comment_id:parseInt(localStorage.getItem('cid'))
+		};
+        url_post('/comment/courseRecomment',data,function(res){
+        	localStorage.clear();
+			layer.msg(res.msg,{icon:1,time:2000});
+			window.location.reload();
+    // 			刷新当前页面.
+        
+    })
+    }
+	/*提交报名信息*/
+	function sendForm() {
+	    var name = $('#name').val(),
+            phone = $('#phone').val(),
+            email = $('#email').val();
+	    if(!name){
+	         layer.msg('请填写姓名!',{icon:2,time:1000 });
+	         return;
+		}
+        if(!phone || !isPhoneNo(phone)){
+            layer.msg('请填写正确的手机号!',{icon:2,time:1000 });
+            return;
+        }
+        if(!email || !isemail(email)){
+            layer.msg('请填写正确的电子邮箱!',{icon:2,time:1000 });
+            return;
+        }
+		var info = saveData();
+        if(info){
+            var data = {
+                token:getCookie('token'),
+                id:getParams('id'),
+                name:name,
+                phone:phone,
+                email:email,
+			}
+			var arr = [];
+			for(var i in info){
+                arr.push({
+					id:i.replace('filed', ''),
+					value:info[i]
+				})
+			}
+            data['other'] = arr;
+			url_post2('/course/setFromValue',data,function (res) {
+				 layer.msg(res.msg,{icon:1,time:1000 });
+                $("body").removeClass("body_hidden");
+                $(".tc").removeClass("tc_active");
+                $(".emoji_btn").hide();
+                if(res.code==1){
+                    if($('#type').text()=='线上直播'){
+                        if(res.live_url){
+                            $('#baoming_p a').removeAttr("onclick");
+                            $('#baoming_p a').text('立即学习');
+                            $('#baoming_p a').attr('href',res.live_url);
+                        }
+                    }else if($('#type').text()=='线下培训'){
+                            $('#baoming_p a').text('取消报名');
+                            $('#baoming_p a').removeClass('active');
+                            $('#baoming_p a').css('border','none');
+                            $('#baoming_p a').css('background','gray');
+                            $('#baoming_p a').css('color','white');
+                            $('#baoming_p a').removeAttr("onclick");
+                            $('#baoming_p a').on('click',function(){
+                                	url_get('/course/fromCancel',{
+                    	            id:getParams('id'),
+                    	            token:getCookie('token')
+                    	        },function (res) {
+                    	            if(res.code==1){
+                    	                layer.msg(res.msg,{icon:1,time:1000},function(){
+                    	                    window.location.reload();
+                    	                });
+                    	            }
+                                });
+                             })
+                    }else if($('#type').text()=='音频/视频'){
+                        if(res.code==1){
+                            window.location.reload();
+                        }
+                        
+                    }else if($('#type').text()=='课件'){
+                         window.location.reload();
+                    }
+                }else if(res.code==0){
+                   
+                }
+               
+            })
+		}
+    }
+// 评论点赞
+function comment_dianzan(obj,id,cid){
+	var data={
+		id:id,
+		cid:cid,
+		token:getCookie('token'),
+	};
+
+	url_post('/comment/coursedianzan',data,function (res) {
+		layer.msg(res.msg,{icon:1,time:2000});
+		$(obj).html('123');
+		// window.location.reload();
+// 			刷新当前页面.
+	})
+}
+
+function url_post2(url, params, success) {
+    $.ajax({
+        type: "post",
+        url: domain + url,
+        data: params,
+        // xhrFields: {
+        //     withCredentials: true
+        // },
+        dataType: 'json',
+        success: function (data) {
+            // if (data.code == 1) {
+                success(data);
+            // } 
+            // else {
+            //     // console.log(data.msg);
+            //     alert(data.msg);
+            // }
+            // if (data.error == '301') {
+            //     setCookie('mycookie', "");
+            //     window.parent.location.href = "/home/login.html";
+            // }
+            // if (data.error == '501') {
+            //
+            //     alert('您没有权限进行此操作');
+            //     return;
+            // }
+            // success(data);
+        },
+        error: function (error) {
+            console.log('网络出错:' + url);
+        }
+    });
+    }
+	/*收藏*/
+	function shoucang() {
+		url_post('/Training/courseCollection',{
+		    id:$('#px_id').val(),
+		    token:getCookie('token')
+		},function (res) {
+		    if($('#shoucang').hasClass('active')){
+                $('#shoucang').removeClass('active')
+			}else{
+                $('#shoucang').addClass('active')
+			}
+            layer.msg(res.msg,{icon:1,time:2000});
+        })
+    }
+</script>
+	</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/stickUp.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>报名官网</title>
+		<style>
+			#lanmu a{
+				cursor: pointer;
+			}
+			.chbnr{
+				right: 10%;
+				top: 20%;
+				z-index: 999;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<!--<div class="ch_bn posrelative" style="background: url(images/bh_bn_01.jpg) no-repeat center;">-->
+	<!--</div>-->
+
+	<div class="chbnr textcenter">
+		<h3>报名时间</h3>
+		<p>2020-07-01  12:00 </p>
+		<p>至</p>
+		<p>2020-07-30  12:00</p>
+		<a id="wybm">我要报名</a>
+	</div>
+		<div class="swiper-container swiper-container-bn">
+			<div class="swiper-wrapper swiper-wrapper-bn" id="banner"> </div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+			<div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+		</div>
+
+
+
+	<div class="chnav">
+		<div class="wrap clearfix wrap_lanmu" id="lanmu"> </div>
+	</div>
+	
+	<div class="cy_bg">
+		<div class="wrap">
+			<div class="ch1 textcenter" id="columnInfo">
+				<h3 class="ch_title textcenter">大赛简介</h3>
+				<div class="ch1txt textcenter mt_20 clfff"> </div>
+			</div>
+
+			<div class="ch1 textcenter" id="pwds">
+				<h3 class="ch_title textcenter">大赛评委</h3>
+				<div class="ch5w clearfix"> </div>
+			</div>
+
+			<!--
+			<div class="ch2 mt_50" id="cstj">
+				<h3 class="ch_title textcenter">参赛条件</h3>
+				<div class="ch2w clearfix">
+					<div class="ch2a ch2al">
+						<h3>参赛人员</h3>
+						<div class="txt">
+							<p>1、中国公民;</p>
+							<p>2、申报人年龄35岁以下（含）。年龄划分以2020年6月30日为界。其中由团队申报的参赛项目，团 队总人数不多余5人，且团队平均年龄不超过30周岁（含）;</p>
+						</div>
+					</div>
+					<div class="ch2a ch2ar">
+						<h3>参赛人员</h3>
+						<div class="txt">
+							<p>1、符合国家法律法规和国家产业政策</p>
+							<p>2、不得侵犯他人知识产权</p>
+							<p>3、具有良好的经济效益、社会效益，经营规范，社会信誉良好。</p>
+							<p>4、尚未接受过投资或仅接受过早期投资（种子轮、天使轮或A轮投 资）。</p>
+							<p>5、掌握具有较大投资价值的独特产 品、技术或商业模式。</p>
+						</div>
+					</div>
+					<div class="ch2a ch2al">
+						<h3>参赛人员</h3>
+						<div class="txt">
+							<p>根据参赛项目所处的创业阶段及企业创办年限（以工商登记为准），商工组和互联网组分设创新组、初创组、成长组；农业农村组分设初创组、成长组、电商组。企业创办年限划分以2020年6月30日为界。</p>
+							<p>1、创新组为未进行企业登记注册，尚处于商业计划书阶段的创业项目。</p>
+							<p>2、初创组为企业登记注册时间不超过2年（含）的创业项目</p>
+							<p>3、成长组为企业登记注册时间在2至5年（含）之间的创业项目。</p>
+							<p>4、电商组为企业登记注册时间在5年（含）以内的创业项目</p>
+						</div>
+					</div>
+					<div class="ch2a ch2ar">
+						<h3>参赛人员</h3>
+						<div class="txt">
+							<p>1、未进行企业登记的参赛项目，须提交商业计划书，对市场调研、创业构想、项目发展等有详细介绍；附上专利、获奖、技术等级等省级以上行业主管部门出具的证书或证明；第一申报人须为产品开发、项目设计主要负责人，与相关证书或证明一致。</p>
+							<p>2、已进行企业登记的参赛项目，须提交营业执照、税务登记证副本、银行开户许可证复印件等相关文件，项目成长过程或生产流程相关介绍，项目发展构想及阶段性成果等资料；涉及国家限制行业和领域的，需有相关资质证明；第一申报人须为企业法人代表，且所占股份不低于30%（含）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ch3 mt_50" id="bsfz">
+				<h3 class="ch_title textcenter">比赛分组</h3>
+				<div class="ch3w clearfix">
+					<div class="ch3a posrelative">
+						<i><img class="disblock" src="images/ch31_04.png"/></i>
+						<h3>互联网组</h3>
+						<p>重点关注移动互联网、互联网设备、共享经济、大数据、人工智能、智慧城市等互联网技术与应用相关产业，及运用互联网手段改造发展传统产业</p>
+						<a href="">我要报名</a>
+					</div>
+					<div class="ch3a posrelative">
+						<i><img class="disblock" src="images/ch32_04.png"/></i>
+						<h3>商工组</h3>
+						<p>重点关注节能环保、信息科技、先进制造、生物医药、新能源、新材料等领域相关产业，强调对实体经济给予重点倾斜</p>
+						<a href="">我要报名</a>
+					</div>
+					<div class="ch3a posrelative">
+						<i><img class="disblock" src="images/ch33_04.png"/></i>
+						<h3>农村农业组</h3>
+						<p>重点关注先进种植养殖技术、农产品加工及销售、农业社会化服务、乡村旅游等涉农领域相关产业，着重对精准扶贫、精准脱贫攻坚相关项目给予重点倾斜</p>
+						<a href="">我要报名</a>
+					</div>
+				</div>
+			</div>
+			<div class="ch4 mt_60" id="scap">
+				<h3 class="ch_title textcenter">赛程安排</h3>
+				<div class="ch4w mt_50 textcenter posrelative">
+					<img src="images/ch4bg_04.png"/>
+					<div class="ch4txt clearfix">
+						<div class="ch4a textcenter">
+							<h3>报名及审核</h3>
+							<p>06/01 - 08/30</p>
+						</div>
+						<div class="ch4a textcenter">
+							<h3>地区赛</h3>
+							<p>8月30日前完成</p>
+						</div>
+						<div class="ch4a textcenter">
+							<h3>全国赛</h3>
+							<p>10月份</p>
+						</div>
+						<div class="ch4a textcenter">
+							<h3>获奖公布</h3>
+							<p>12/01 - 12/05</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ch5 mt_60" id="pwds">
+				<h3 class="ch_title textcenter">大赛评委</h3>
+				<div class="ch5w clearfix">
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+					<div class="ch5a textcenter fl">
+						<img src="images/tx1_04.png"/>
+						<h3>冯铁</h3>
+						<p>曼妙设计师Memorydesign创始人站酷十年成就奖获奖者</p>
+					</div>
+				</div>
+			</div>
+			<div class="ch6 mt_60" id="hjsz">
+				<h3 class="ch_title textcenter">奖项设置</h3>
+				<div class="ch6w clearfix mt_50">
+					<div class="ch6a textcenter">
+						<img src="images/ch61_04.png"/>
+						<p>金奖  1名</p>
+					</div>
+					<div class="ch6a textcenter">
+						<img src="images/ch62_04.png"/>
+						<p>银奖  10名</p>
+					</div>
+					<div class="ch6a textcenter">
+						<img src="images/ch63_04.png"/>
+						<p>铜奖  50名</p>
+					</div>
+					<div class="ch6a textcenter">
+						<img src="images/ch64_04.png"/>
+						<p>优秀奖  若干名</p>
+					</div>
+				</div>
+			</div>
+			<div class="ch7 mt_60" id="zzjg">
+				<h3 class="ch_title textcenter">组织单位</h3>
+				<div class="ch7w mt_60 posrelative">
+					<img class="img1" src="images/ch7l_04.png"/>
+					<img class="img2" src="images/ch7r_04.png"/>
+					<div class="ch7a disflex">
+						<span>主办单位：</span>
+						<div class="ch7ar flex1 disflex flexwrap">
+							<i>共青团中央</i>
+							<i>人力资源社会保障部</i>
+							<i>国务院扶贫办</i>
+							<i>中央网信办</i>
+							<i>教育部</i>
+							<i>农业农村部</i>
+							<i>黑龙江省人民政府</i>
+							<i>江西省人民政府</i>
+							<i>工业和信息化部</i>
+						</div>
+					</div>
+					<div class="ch7a mt_20 disflex">
+						<span>主办单位：</span>
+						<div class="ch7ar flex1 disflex flexwrap">
+							<i>中国青年创业就业基金会</i>
+							<i>中国农村青年致富带头人协会</i>
+							<i>中国青年企业家协会</i>
+							<i>中国青年创业联盟</i>
+							<i>共青团黑龙江省委</i>
+							<i>共青团江西省委</i>
+							<i>哈尔滨市人民政府</i>
+							<i>共青城市人民政</i>
+						</div>
+					</div>
+					<div class="ch7a mt_20 disflex">
+						<span>协办单位：</span>
+						<div class="ch7ar flex1 disflex flexwrap">
+							<i>共青团哈尔滨市委</i>
+							<i>共青团共青城市委</i>
+						</div>
+					</div>
+					<div class="ch7a mt_20 disflex">
+						<span>赞助单位：</span>
+						<div class="ch7ar flex1 disflex flexwrap">
+							<i>中国航天科工集团有限公司</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var match_id = getParams('id');
+		var type_id = getParams('typeid');
+
+		$('#wybm').click(function () {
+			location.href = "cybs_cjbm.html?id="+match_id;
+        })
+
+
+        /*获取轮播图*/
+        // url_get("/auth/getAuthBanner", {model:1}, function (res) {
+        //     $('#banner').html('');
+        //     for (var i in res.data) {
+        //         $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank" title="' + res.data[i]['title'] + '" data-background="' + imgpath + res.data[i]['banner_src'] + '" href="' + res.data[i]['link'] + '" style="background: rgba(0, 0, 0, 0) url(' + imgpath + res.data[i]['banner_src'] + ') repeat scroll 0% 0%;"></a> </div>');
+        //     }
+        //     /*固定顶部*/
+        //     //initiating jQuery
+        //     jQuery(function($) {
+        //         $(document).ready( function() {
+        //             //enabling stickUp on the '.navbar-wrapper' class
+        //             $('.chnav').stickUp();
+        //         });
+        //     });
+		//
+		//
+        // })
+
+
+		/*获取轮播图*/
+		url_get("/match/matchinfo", {match_id:match_id}, function (res) {
+		  $('#banner').html('');
+		  var list = res.data['banner'].split(',');
+		  for (var i in list) {
+			  $('#banner').append('<div class="swiper-slide"> <a class="bnimg" target="_blank"  data-background="' + imgpath + list[i] + '"  style="background: rgba(0, 0, 0, 0) url(' + imgpath + list[i] + ') repeat scroll 0% 0%;"></a> </div>');
+		  }
+
+            /*固定顶部*/
+            //initiating jQuery
+            jQuery(function($) {
+                $(document).ready( function() {
+                    //enabling stickUp on the '.navbar-wrapper' class
+                    $('.chnav').stickUp();
+                });
+            });
+		})
+
+		/*栏目列表*/
+        url_get("/matchcolumn/get_column", {match_id:match_id}, function (res) {
+            $('#lanmu').html('<a href="/">首页</a>');
+            /*6 	参赛项目 【通过 赛事子系统->参赛项目接口获取】
+			7 	评委导师【通过 赛事子系统->评委导师接口获取】
+			8 	赛事资讯 【通过 赛事子系统->赛事资讯接口获取】*/
+            for (var i in res.data) {
+                column_type = res.data[i]['column_type'];
+                column_id = res.data[i]['id'];
+                if(i>9)continue;
+				if(res.data[i]['column_type'] == 6){/*参赛项目 */
+                    $('#lanmu').append('<a column_type="'+column_type+'"  href="cybs_csxm.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+				}else if(res.data[i]['column_type'] == 7){/*评委导师*/
+                    $('#lanmu').append('<a column_type="'+column_type+'" onclick="getInfo(this,'+column_id+','+column_type+')">'+res.data[i]['name']+'</a>');
+				}else if(res.data[i]['column_type'] == 10){/*赛事资讯列表*/
+                    $('#lanmu').append('<a column_type="'+column_type+'" href="cybs_sszx.html?id='+match_id+'">'+res.data[i]['name']+'</a>');
+				}else{
+                    $('#lanmu').append('<a column_type="'+column_type+'" onclick="getInfo(this,'+column_id+')">'+res.data[i]['name']+'</a>');
+				}
+            }
+
+            /*默认点击*/
+            if(type_id == ''){
+                $('#lanmu a').eq(1).click();
+			}else{
+                $('#lanmu a').each(function () {
+					if($(this).attr('column_type') == type_id){
+					    $(this).click();
+					}
+                })
+			}
+        })
+
+		/*栏目详情*/
+		function getInfo(obj,id,column_type='') {
+            $('#lanmu a').removeClass('active');
+            $(obj).addClass('active');
+		    $('.ch1').hide();
+		    if(column_type == ''){
+		        $('#columnInfo').show();
+                url_post('/matchcolumn/get_column_info',{id:id},function (res) {
+                    $('#columnInfo h3').html(res.data['name'])
+                    $('#columnInfo div').html(res.data['description'])
+                })
+			}else{/*评委导师*/
+                $('#pwds').show();
+                $('#columnInfo h3').html('')
+                $('#columnInfo div').html('')
+                url_post('/matchcolumn/get_column_leader',{match_id:id},function (res) {
+                    $('#pwds .ch5w').html('')
+                    for(var i in res.data){
+                        $('#pwds .ch5w').html('<div class="ch5a textcenter fl">\n' +
+                            '\t\t\t\t\t\t<img src="'+imgpath+res.data[i]['thumb']+'"/>\n' +
+                            '\t\t\t\t\t\t<h3>'+res.data[i]['name']+'('+res.data[i]['position']+')'+'</h3>\n' +
+                            '\t\t\t\t\t\t<p>'+res.data[i]['description']+'</p>\n' +
+                            '\t\t\t\t\t</div>')
+					}
+                })
+			}
+        }
+
+
+
+        $('.wrap_lanmu a').click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            var did = $(this).attr("data-id");
+            var gtop = $('.mp'+did).offset().top;
+            $("html,body").animate({scrollTop: (gtop-50)+'px'},300);
+        })
+        $(window).scroll(function(){
+            var sct = $(window).scrollTop();
+            if(sct>460){
+                $(".xi2l_top").addClass("xi2l_top_fxd");
+                $(".xi2l_top_height").show();
+            }
+            if(sct<460){
+                $(".xi2l_top").removeClass("xi2l_top_fxd")
+                $(".xi2l_top_height").hide();
+            }
+            if(sct>460+$(".xi2l").height()){
+                $(".xi2l_top").removeClass("xi2l_top_fxd")
+                $(".xi2l_top_height").hide();
+            }
+            $('.mp').each(function(){
+                var gdtop = $(this).offset().top;
+                var gidx = $('.mp').index($(this));
+                if(sct >= (gdtop-50)){
+                    $('.xi2l_top a').eq(gidx).addClass("active").siblings().removeClass("active");
+                }
+            })
+        });
+
+
+
+	</script>
+	</body>
+</html>

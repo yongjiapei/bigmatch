@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanren.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>     <script src="/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<title>赛事资讯</title>
+		<style>
+			.sszx_title{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div class="head"> 
+		<div class="hd1">
+			<div class="wrap clearfix">
+				<span class="fl">欢迎访问：创青春 · 一站式赛事服务云平台    全国热线：010-88922341</span>
+				<div class="fr hd1r">
+					<span><a target="_blank" href="https://cmpmatch.digilinx.net.cn/admin">管理入口</a></span>
+					<span>
+						<a href=""><img class="middle mr5" src="images/hdweixin_03.png"/>小程序</a>
+						<div class="hdrhide">
+							<div class="hdrh1 flex1 disflex">
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm1_05.png">
+									<p>评委小程序</p>
+								</div>
+								<div class="hdrh1a textcenter">
+									<img src="images/ewm2_05.png">
+									<p>用户小程序</p>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span><a href="/helpcenter.html">联系我们</a></span>
+					<span><a href="/helpcenter.html">帮助中心</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="hd2">
+			<div class="wrap disflex h100 flex_center">
+				<a href="index.html" class="logo"><img src="images/logo_03.png"/></a>
+				<div class="flex1 nav clearfix">
+					<span><a href="index.html" class="nava">首 页</a></span>
+					<span><a href="cybs.html" class="nava">创业比赛</a></span>
+					<span><a href="xmk.html" class="nava">项目库</a></span>
+					<span><a href="pwzj.html" class="nava">评委专家</a></span>
+					<span><a href="cypx.html" class="nava">创业培训</a></span>
+					<span class="active"><a href="sszx.html" class="nava">赛事资讯</a></span>
+					<span><a href="zlxz.html" class="nava">资料下载</a></span>
+				</div>
+				<div class="hd2r disflex">
+					<a href="user/fabu.html" class="hd2ra hd2ra1"><img class="middle mr5" src="images/hdrico_03.png"/>发布项目</a>
+					<div class="hd2ra hd2ra2">
+						<a href="login.html">登录</a> 丨 <a href="reg.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sch_pd cy_pd">
+		<div class="wrap">
+			<div class="cypxbn mt_25">
+				<div class="swiper-container swiper-container-cypx">
+				    <div class="swiper-wrapper" id="banner"> </div>
+				    <div class="swiper-pagination swiper-pagination-cypx"></div>
+					<div class="swiper-button-next swiper-button-next-bn swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-prev-bn swiper-button-white"></div>
+				</div>
+			</div>
+			<div class="list_nav mt_5">
+				<a href="index.html"><img class="middle mr5" src="images/hmico_03.png"/>首页</a>
+				<i>></i>
+				<span>赛事资讯</span>
+			</div>
+			<div class="sszx disflex mt_35">
+				<div class="sszxl">
+					<div class="sszxtop flex_center disflex">
+						<div class="sszxtop_nav flex1">
+							<a cname="news" class="sszx_title active">新闻资讯</a>
+							<a cname="notice" class="sszx_title" >通知公告</a>
+						</div>
+						<div class="cy2topr_sc clearfix marl20">
+							<input class="ipt1" placeholder="请输入关键字查询" type="text" autocomplete="off" id="search" value="" />
+							<input class="ipt2" type="submit" onclick="getData()" value="" />
+						</div>
+					</div>
+					<div class="sszw" id="list"> </div>
+					<div class="page mt_40 clearfix">
+						<div class="clearfix pagebox" id="page"> </div>
+					</div>
+					<!--<div class="morea textcenter mt_30">-->
+						<!--<a href="">加载更多</a>-->
+					<!--</div>-->
+				</div>
+				<div class="sszxr flex1">
+					<div class="sszxr_title">
+						<img class="middle mr10" src="images/hotico_03.png"/>点击TOP10
+					</div>
+					<div class="sszxrw mt_10" id="newsHot">
+						<a href="" class="sszxra sszxra_active disflex">
+							<div class="sszxra_img posrelative" style="background: url(images/newpic_03.jpg) no-repeat center;">
+								<i>1</i>
+							</div>
+							<div class="txt flex1">
+								<h3>路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</h3>
+								<p class="color999 mt_5"><img class="middle mr5" src="images/eye_03.png"/>666</p>
+							</div>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>2</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>3</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>4</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>5</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>6</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>7</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>8</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>9</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+						<a href="" class="sszxra disflex">
+							<i>10</i>
+							<p class="flex1 sszxrar">路边摊不再列入文明城市测评，“小吃小喝”迎来政策红利</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="wrap">
+			<div class="ft1 disflex">
+				<div class="ft1l disflex">
+					<div class="ft1la">
+						<h3>友情链接</h3>
+						<p><a href="">中国青年创业就业基金会</a></p>
+						<p><a href="">团务百科</a></p>
+						<p><a href="">青年之间</a></p>
+						<p><a href="">中国青年创业就业大赛</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>关于我们</h3>
+						<p><a href="">平台介绍</a></p>
+						<p><a href="">联系我们</a></p>
+						<p><a href="">用户服务协议</a></p>
+						<p><a href="">投诉建议</a></p>
+					</div>
+					<div class="ft1la">
+						<h3>服务与支持</h3>
+						<p><a href="">新手帮助</a></p>
+						<p><a href="">主办方申请入驻</a></p>
+						<p><a href="">赛事管理系统</a></p>
+					</div>
+				</div>
+				<div class="ft1r flex1 disflex">
+					<div class="ft1ra textcenter">
+						<img src="images/ewm1_05.png"/>
+						<p>评委小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm2_05.png"/>
+						<p>用户小程序</p>
+					</div>
+					<div class="ft1ra textcenter">
+						<img src="images/ewm3_05.png"/>
+						<p>微信公众号</p>
+					</div>
+				</div>
+			</div>
+			<div class="ft2 clearfix">
+				<p class="fl">Copyright 2020-2030 中国青年创业就业基金会 版权所有 京ICP备16021889号</p>
+				<span class="fr">技术支持：至德讯通（北京）科技有限公司</span>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+</html>
+<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    /*流量统计 	类型 1创业比赛 2赛事咨询 3培训课程 4评委专家 5项目库 6首页 7资料下载*/
+    setbrowse(2);
+
+
+
+	$('.sszx_title').click(function () {
+        $('.sszx_title').removeClass('active');
+        $(this).addClass('active')
+        var cname = $(this).attr('cname');
+        if(cname == 'news'){
+            getNews();
+        }else{
+            getNotices();
+        }
+    })
+	if(getParams('type')){
+        $('.sszx_title').each(function () {
+            console.log($(this).attr('cname') + '===='+getParams('type'))
+            if($(this).attr('cname') == getParams('type')){
+                $(this).click();
+            }
+        })
+	}else{
+        getNews();
+	}
+
+
+
+    /*获取轮播图*/
+    url_get("/auth/getAuthNewsBanner",'', function (res) {
+        $('#banner').html('');
+        for (var i in res.data) {
+            $('#banner').append('<div class="swiper-slide"> <a class="cypxbna" target="_blank" title="' + res.data[i]['title'] + '" data-background="' + imgpath + res.data[i]['banner_src'] + '" href="' + res.data[i]['link'] + '" style="background: rgba(0, 0, 0, 0) url(' + imgpath + res.data[i]['banner_src'] + ') repeat scroll center;background-size: cover"></a> </div>');
+        }
+
+        new Swiper('.swiper-container-cypx', {
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,//修改swiper的父元素时，自动初始化swiper
+            navigation: {
+                nextEl: '.swiper-button-next-bn',
+                prevEl: '.swiper-button-prev-bn',
+            },
+            pagination: {
+                el: '.swiper-pagination-cypx',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+    })
+	/*点击率top10*/
+    url_get("/News/newsHot", {model:3}, function (res) {
+        $('#newsHot').html('');
+        var list = res.data['rows'];
+        for (var i in list) {
+            if(i<1){
+                $('#newsHot').append('<a href="sszx_info.html?id='+list[i]['id']+'" " class="sszxra sszxra_active disflex">\n' +
+                    '\t\t\t\t\t\t\t<div class="sszxra_img posrelative" style="background: url('+imgpath+list[i]['image']+') no-repeat center;">\n' +
+                    '\t\t\t\t\t\t\t\t<i>'+(+i+1)+'</i>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t<div class="txt flex1">\n' +
+                    '\t\t\t\t\t\t\t\t<h3>'+list[i]['title']+'</h3>\n' +
+                    '\t\t\t\t\t\t\t\t<p class="color999 mt_5"><img class="middle mr5" src="images/eye_03.png"/>'+list[i]['show_num']+'</p>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</a>')
+			}else{
+                $('#newsHot').append('<a href="sszx_info.html?id='+list[i]['id']+'" class="sszxra disflex">\n' +
+                    '\t\t\t\t\t\t\t<i>'+(+i+1)+'</i>\n' +
+                    '\t\t\t\t\t\t\t<p class="flex1 sszxrar">'+(list[i]['title']?list[i]['title']:'无标题')+'</p>\n' +
+                    '\t\t\t\t\t\t</a>')
+			}
+
+        }
+    })
+
+	
+	function getData() {
+		var cname = $('.sszx_title.active').attr('cname');
+		if(cname == 'news'){
+            getNews();
+		}else{
+            getNotices();
+		}
+    }
+    function onPage(page) {
+        var cname = $('.sszx_title.active').attr('cname');
+        if(cname == 'news'){
+            getNews(page);
+        }else{
+            getNotices(page);
+        }
+    }
+
+    /*新闻咨询列表*/
+	function getNews(page=1) {
+        // search 	是 	string 	关键字检索
+        // sort 	是 	string 	排序字段 默认主键
+        // order 	否 	string 	排序 默认DESC 降序
+        // offset 	否 	string 	页码
+        // limit 	否 	string 	每页数量
+        var data = {
+            search:$('#search').val(),
+            offset:page,
+            limit:pageSize
+		};
+		url_get('/News/newsList',data,function (res) {
+		    $('#list').html('');
+		    var list = res.data['rows'];
+		    for (var i in list){
+                $('#list').append('<a myhref="sszx_info.html?id='+list[i]['id']+'" onclick="isLogin(this)" class="ssza disflex hvimghover flex_center">\n' +
+                    '\t\t\t\t\t\t\t<div class="sszaimg">\n' +
+                    '\t\t\t\t\t\t\t\t<div class="hvimg" style="background: url('+imgpath+list[i]['image']+') no-repeat center;"></div>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t<div class="sszatxt marl20 flex1">\n' +
+                    '\t\t\t\t\t\t\t\t<h3>'+list[i]['title']+'</h3>\n' +
+                    '\t\t\t\t\t\t\t\t<p>'+list[i]['description']+'</p>\n' +
+                    '\t\t\t\t\t\t\t\t<span class="disblock"  style="background: rgba(212,248,255,0.3);display: inline-block">'+list[i]['tags']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t<div class="sszatxtb clearfix">\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="fl sszx_bq">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<i style="background: none">来自：'+list[i]['source']+'</i>\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t\t<div class="fr">\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<span><img class="middle mr5" src="images/eye_03.png">'+list[i]['show_num']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t\t<span class="marl20"><img class="middle mr5" src="images/cy2aico2_03.png">发布时间：'+list[i]['create_time_format']+'</span>\n' +
+                    '\t\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</a>');
+			}
+
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+    /*通知公告列表*/
+    function getNotices(page=1) { ///News/notice_List
+        // search 	是 	string 	搜索的关键字
+        // sort 	是 	string 	排序字段
+        // order 	否 	string 	排序方式
+        // offset 	否 	string 	页码
+        // limit 	否 	string 	每页长度
+        var data = {
+            search:$('#search').val(),
+            offset:page,
+            limit:pageSize
+        };
+        url_get('/News/notice_List',data,function (res) {
+            $('#list').html('');
+            var list = res.data['rows'];
+            for (var i in list){
+                $('#list').append('<a myhref="sszx_info1.html?id='+list[i]['id']+'" onclick="isLogin(this)" class="ssza disflex hvimghover flex_center">\n' +
+                    '\t\t\t\t\t\t\t<div class="sszatxt marl20 flex1">\n' +
+                    '\t\t\t\t\t\t\t\t<h3 >'+list[i]['title']+'</h3> <br>\n' +
+                    '\t\t\t\t\t\t\t\t<span class="fl disblock">来自：'+list[i]['source']+'</span> <span class="fr marl20" style="font-size: 14px;font-weight: normal;"><img class="middle mr5" src="images/cy2aico2_03.png">发布时间：'+list[i]['create_time_format']+'</span>\n' +
+                    '\t\t\t\t\t\t\t</div>\n' +
+                    '\t\t\t\t\t\t</a>');
+            }
+
+            $("#page").html(LoadPage(page, Math.ceil(res.data['total']/pageSize), pageSize));
+        })
+    }
+
+
+
+
+</script>
